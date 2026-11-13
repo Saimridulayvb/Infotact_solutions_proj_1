@@ -1,16 +1,35 @@
-# Python
-__pycache__/
-*.pyc
-venv/
-.env
 
-# Node.js
-node_modules/
-dist/
+# Python virtual environment
+venv/
+.venv/
+**/venv/
+**/.venv/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Testing and coverage
+.pytest_cache/
+.coverage
+htmlcov/
 
 # VS Code
 .vscode/
 
-# Operating system
+# Node.js (for future frontend)
+node_modules/
+dist/
+build/
+
+# Operating system files
 .DS_Store
 Thumbs.db
