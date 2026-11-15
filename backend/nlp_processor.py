@@ -4,38 +4,33 @@ import json
 
 
 # ==========================================
-# 1. LOAD SPACY ENGLISH MODEL
+# 1. LOAD SPACY NLP MODEL
 # ==========================================
 
 nlp = spacy.load("en_core_web_sm")
 
 
 # ==========================================
-# 2. DISRUPTION KEYWORD DICTIONARY
+# 2. DISRUPTION KEYWORDS
 # ==========================================
 
 DISRUPTION_KEYWORDS = {
-
     "strike": "LABOUR_STRIKE",
-
     "flood": "NATURAL_DISASTER",
     "earthquake": "NATURAL_DISASTER",
-
     "fire": "INDUSTRIAL_ACCIDENT",
     "explosion": "INDUSTRIAL_ACCIDENT",
-
     "delay": "SHIPPING_DELAY",
-
-    "disrupt": "SUPPLY_CHAIN_DISRUPTION",
+    "delays": "SHIPPING_DELAY",
+    "disrupted": "SUPPLY_CHAIN_DISRUPTION",
     "disruption": "SUPPLY_CHAIN_DISRUPTION",
-
-    "close": "PORT_CLOSURE",
-    "closure": "PORT_CLOSURE"
+    "closure": "PORT_CLOSURE",
+    "closed": "PORT_CLOSURE"
 }
 
 
 # ==========================================
-# 3. NEWS ANALYSIS FUNCTION
+# 3. ANALYZE NEWS ARTICLE
 # ==========================================
 
 def analyze_news(text):
@@ -57,29 +52,20 @@ def analyze_news(text):
         })
 
     # --------------------------------------
-    # Detect Disruptions Using Lemmatization
+    # Detect Supply Chain Disruptions
     # --------------------------------------
 
     disruptions = []
 
     for token in doc:
 
-        # Convert word into its base form
-        base_word = token.lemma_.lower()
+        word = token.text.lower()
 
-        # Handle flooding manually
-        if token.text.lower() == "flooding":
-            base_word = "flood"
-
-        # Check base word in dictionary
-        if base_word in DISRUPTION_KEYWORDS:
+        if word in DISRUPTION_KEYWORDS:
 
             disruptions.append({
-
-                "keyword": token.text.lower(),
-
-                "event_type": DISRUPTION_KEYWORDS[base_word]
-
+                "keyword": word,
+                "event_type": DISRUPTION_KEYWORDS[word]
             })
 
     # --------------------------------------
@@ -87,13 +73,9 @@ def analyze_news(text):
     # --------------------------------------
 
     result = {
-
         "original_text": text,
-
         "entities": entities,
-
         "disruptions": disruptions
-
     }
 
     return result
@@ -106,12 +88,14 @@ def analyze_news(text):
 if __name__ == "__main__":
 
     news = """
-    Workers are striking at Hamburg Port.
-    Heavy flooding has disrupted operations.
-    Shipping delays are affecting manufacturers.
-    The port was closed due to severe weather.
+    A major strike has disrupted operations at Hamburg Port.
+    Samsung Components and Nova Components may face shipping delays.
     """
 
     result = analyze_news(news)
 
+    print("\n========== ATMOGRAPH NLP ANALYSIS ==========\n")
+
     print(json.dumps(result, indent=4))
+
+    print("\n========== ANALYSIS COMPLETED ==========\n")
