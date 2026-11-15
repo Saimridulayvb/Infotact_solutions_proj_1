@@ -79,7 +79,29 @@ class NewsRequest(BaseModel):
 
 
 # ==========================================
-# 5. HOME API
+# 5. RISK CLASSIFICATION FUNCTION
+# ==========================================
+
+def calculate_risk(severity, total_impact):
+
+    if total_impact >= 5:
+
+        if severity == "HIGH":
+            return "CRITICAL"
+
+        elif severity == "MEDIUM":
+            return "HIGH"
+
+        else:
+            return "MEDIUM"
+
+    else:
+
+        return severity
+
+
+# ==========================================
+# 6. HOME API
 # ==========================================
 
 @app.get("/")
@@ -93,7 +115,7 @@ def home():
 
 
 # ==========================================
-# 6. APPLICATION HEALTH CHECK
+# 7. APPLICATION HEALTH CHECK
 # ==========================================
 
 @app.get("/health")
@@ -106,7 +128,7 @@ def health_check():
 
 
 # ==========================================
-# 7. NEO4J DATABASE HEALTH CHECK
+# 8. NEO4J DATABASE HEALTH CHECK
 # ==========================================
 
 @app.get("/db-health")
@@ -135,7 +157,7 @@ def database_health():
 
 
 # ==========================================
-# 8. NLP NEWS ANALYSIS API
+# 9. NLP NEWS ANALYSIS API
 # ==========================================
 
 @app.post("/analyze-news")
@@ -160,7 +182,7 @@ def analyze_news_api(request: NewsRequest):
 
 
 # ==========================================
-# 9. EXISTING DISRUPTION IMPACT API
+# 10. EXISTING DISRUPTION IMPACT API
 # ==========================================
 
 @app.post("/analyze-disruption")
@@ -217,12 +239,15 @@ def analyze_disruption(request: DisruptionRequest):
             retailers = record["retailers"]
             alternative_ports = record["alternative_ports"]
 
-            total_impact = len(manufacturers) + len(retailers)
+            total_impact = (
+                len(manufacturers) + len(retailers)
+            )
 
-            if request.severity == "HIGH" and total_impact >= 3:
-                risk_level = "CRITICAL"
-            else:
-                risk_level = request.severity
+            # Calculate improved risk level
+            risk_level = calculate_risk(
+                request.severity,
+                total_impact
+            )
 
             route_status = (
                 "ALTERNATIVE ROUTE AVAILABLE"
@@ -231,15 +256,25 @@ def analyze_disruption(request: DisruptionRequest):
             )
 
             return {
+
                 "disruption": request.disruption,
+
                 "disrupted_port": record["disrupted_port"],
+
                 "original_severity": request.severity,
+
                 "affected_manufacturers": manufacturers,
+
                 "affected_retailers": retailers,
+
                 "alternative_ports": alternative_ports,
+
                 "total_affected_entities": total_impact,
+
                 "risk_level": risk_level,
+
                 "route_status": route_status
+
             }
 
     except HTTPException:
@@ -254,7 +289,7 @@ def analyze_disruption(request: DisruptionRequest):
 
 
 # ==========================================
-# 10. AUTOMATIC NEWS-TO-GRAPH IMPACT API
+# 11. AUTOMATIC NEWS-TO-GRAPH IMPACT API
 # ==========================================
 
 @app.post("/analyze-news-impact")
@@ -367,27 +402,25 @@ def analyze_news_impact(request: NewsRequest):
             retailers = record["retailers"]
             alternative_ports = record["alternative_ports"]
 
-            # STEP 7: Calculate impact
+            # STEP 7: Calculate total impact
             total_impact = (
                 len(manufacturers) + len(retailers)
             )
 
-            if request.severity == "HIGH" and total_impact >= 3:
+            # STEP 8: Calculate improved risk level
+            risk_level = calculate_risk(
+                request.severity,
+                total_impact
+            )
 
-                risk_level = "CRITICAL"
-
-            else:
-
-                risk_level = request.severity
-
-            # STEP 8: Check alternative route availability
+            # STEP 9: Check alternative route availability
             route_status = (
                 "ALTERNATIVE ROUTE AVAILABLE"
                 if alternative_ports
                 else "NO ALTERNATIVE ROUTE"
             )
 
-            # STEP 9: Return complete analysis
+            # STEP 10: Return complete analysis
             return {
 
                 "status": "success",
@@ -436,10 +469,11 @@ def analyze_news_impact(request: NewsRequest):
 
 
 # ==========================================
-# 11. CLOSE DATABASE CONNECTION
+# 12. CLOSE DATABASE CONNECTION
 # ==========================================
 
 @app.on_event("shutdown")
 def shutdown():
 
     driver.close()
+    
