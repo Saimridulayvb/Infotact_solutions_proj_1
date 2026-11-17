@@ -1,0 +1,51 @@
+# Python virtual environments
+venv/
+.venv/
+env/
+.env_*/
+ENV/
+
+# Byte-compiled / optimized files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Environment variables and secrets
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+
+# Testing and code coverage
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+eggs/
+*.egg
+
+# IDE and Editor configurations
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Operating system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs and databases
+*.log
+*.sqlite3
+mlflow.db
+.system_generated/
