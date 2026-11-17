@@ -1,0 +1,77 @@
+id:ID(Input),name,type,stage_name
+N20,EUV lithography tools,tool_resource,Fabrication
+N77,Integrated assembly tools,tool_resource,Fabrication
+N130,Direct write systems (adv. pkg.),tool_resource,Fabrication
+N22,ArF immersion (DUV) lithography tools,tool_resource,Fabrication
+N21,ArF dry (DUV) lithography tools,tool_resource,Fabrication
+N32,Resist processing tools,tool_resource,Fabrication
+N45,Electrochemical plating tools,tool_resource,Fabrication
+N122,Resist processing tools (adv. pkg.),tool_resource,Fabrication
+N104,Plasma modification tools,tool_resource,Fabrication
+N67,Defect inspection tools,tool_resource,Fabrication
+N134,Auto ball bonders for IC,tool_resource,Fabrication
+N127,Lithography tools (adv. pkg.),tool_resource,Fabrication
+N42,Physical vapor deposition tools,tool_resource,Fabrication
+N19,Lithography tools,tool_resource,Fabrication
+N113,ECP tools (adv. pkg.),tool_resource,Fabrication
+N102,Dry clean tools,tool_resource,Fabrication
+N40,High-temperature CVD tools,tool_resource,Fabrication
+N111,PVD tools (adv. pkg.),tool_resource,Fabrication
+N43,Rapid thermal processing tools,tool_resource,Fabrication
+N116,Defect review stations,tool_resource,Fabrication
+N66,Critical dimensions metrology tools,tool_resource,Fabrication
+N124,CMP tools (adv. pkg.),tool_resource,Fabrication
+N137,Wafer level stud bonders,tool_resource,Fabrication
+N105,KrF (DUV) lithography tools,tool_resource,Fabrication
+N74,Wire bonding tools,tool_resource,Fabrication
+N17,Ion implanters,tool_resource,Fabrication
+N54,Misc. dry etch tools,tool_resource,Fabrication
+N70,Assembly inspection tools,tool_resource,Fabrication
+N136,Automatic wedge bonders,tool_resource,Fabrication
+N60,Process control tools,tool_resource,Fabrication
+N63,Inspection tools (adv. pkg.),tool_resource,Fabrication
+N51,Insulator etching tools,tool_resource,Fabrication
+N41,Atomic layer deposition tools,tool_resource,Fabrication
+N106,i-line lithography tools,tool_resource,Fabrication
+N114,Overlay metrology tools,tool_resource,Fabrication
+N50,Conductor etching tools,tool_resource,Fabrication
+N44,Tube-based diffusion and deposition tools,tool_resource,Fabrication
+N110,CVD tools (adv. pkg.),tool_resource,Fabrication
+N38,Plasma CVD tools,tool_resource,Fabrication
+N135,Auto ball bonders for non-IC,tool_resource,Fabrication
+N86,CMP tools,tool_resource,Fabrication
+N47,Chemical vapor deposition tools,tool_resource,Fabrication
+N62,Photomask inspection and repair tools,tool_resource,Fabrication
+N65,"Film, stack, and shape metrology tools",tool_resource,Fabrication
+N115,E-beam metrology tools,tool_resource,Fabrication
+N128,Deposition tools (adv. pkg.),tool_resource,Fabrication
+N48,Dry etching and cleaning tools,tool_resource,Fabrication
+N36,Deposition tools,tool_resource,Fabrication
+N103,Dry etch tools,tool_resource,Fabrication
+N125,Single wafer spin & spray systems (adv. pkg.),tool_resource,Fabrication
+N55,Etch and clean tools,tool_resource,Fabrication
+N132,Die attaching tools for non-IC,tool_resource,Fabrication
+N53,Dry stripping tools,tool_resource,Fabrication
+N101,Dry etching tools (adv. pkg.),tool_resource,Fabrication
+N39,Low-pressure CVD tools,tool_resource,Fabrication
+N49,Wet etching and cleaning tools,tool_resource,Fabrication
+N30,Mask exposure systems - laser beam,tool_resource,Fabrication
+N129,Etch and clean tools (adv. pkg.),tool_resource,Fabrication
+N10,Wafer bonding and aligning tools,tool_resource,Fabrication
+N109,Fabrication tools (for advanced packaging),tool_resource,Fabrication
+N138,Other deposition tools (non-IC),tool_resource,Fabrication
+N73,Die attaching tools,tool_resource,Fabrication
+N83,Handlers and probers,tool_resource,Fabrication
+N72,Bonding tools,tool_resource,Fabrication
+N76,Packaging tools,tool_resource,Fabrication
+N131,Die attaching tools for IC,tool_resource,Fabrication
+N11,Wafer handlers,tool_resource,Fabrication
+N59,Wafer and photomask handlers,tool_resource,Fabrication
+N75,Other interconnect tools,tool_resource,Fabrication
+N71,Dicing tools,tool_resource,Fabrication
+N93,Lead frames,material_resource,Fabrication
+N95,Ceramic packages,material_resource,Fabrication
+N97,Encapsulation resins,material_resource,Fabrication
+N98,Die attach materials,material_resource,Fabrication
+N90,CMP materials,material_resource,Fabrication
+N91,Electronic gases,material_resource,Fabrication
