@@ -1,0 +1,28 @@
+app:
+  name: "AtmoGraph"
+  version: "0.2.0"
+  env: "development"
+
+paths:
+  data_dir: "data"
+  raw_data_dir: "data/raw"
+  processed_data_dir: "data/processed"
+  graph_export_dir: "data/processed/graph"
+
+preprocessing:
+  top_companies_limit: 20
+  exclude_providers:
+    - "Various companies"
+    - "Unknown"
+    - "Other"
+  min_connected_inputs: 1
+
+neo4j:
+  uri: "bolt://localhost:7687"
+  username: "neo4j"
+  database: "neo4j"
+  batch_size: 500
+
+logging:
+  level: "INFO"
+  format: "%(asctime)s [%(levelname)s] %(name)s: %(message)s"
