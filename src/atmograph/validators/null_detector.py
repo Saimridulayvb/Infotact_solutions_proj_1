@@ -1,0 +1,44 @@
+"""
+Missing value detector and null threshold analyzer.
+"""
+
+from typing import Dict, Optional
+import pandas as pd
+from .report import Severity, ValidationIssue, ValidationResult
+
+class NullDetector:
+    """Checks for missing values and reports critical vs warning null ratios."""
+
+    def __init__(self, critical_threshold: float = 0.50):
+        self.critical_threshold = critical_threshold
+
+    def analyze(self, dataset_name: str, df: pd.DataFrame, non_nullable: Optional[list] = None) -> ValidationResult:
+        result = ValidationResult(dataset_name=dataset_name, passed=True)
+        non_nullable = non_nullable or []
+
+        total_rows = len(df)
+        if total_rows == 0:
+            return result
+
+        for col in df.columns:
+            null_count = int(df[col].isnull().sum())
+            null_ratio = null_count / total_rows
+
+            if null_count > 0:
+                if col in non_nullable:
+                    result.passed = False
+                    result.issues.append(ValidationIssue(
+                        check_name="non_nullable_violation",
+                        severity=Severity.ERROR,
+                        message=f"Column '{col}' in {dataset_name} has {null_count} nulls but is non-nullable.",
+                        details={"column": col, "null_count": null_count, "null_ratio": null_ratio}
+                    ))
+                elif null_ratio >= self.critical_threshold:
+                    result.issues.append(ValidationIssue(
+                        check_name="high_null_ratio",
+                        severity=Severity.WARNING,
+                        message=f"Column '{col}' has {null_ratio:.1%} missing values in {dataset_name}.",
+                        details={"column": col, "null_count": null_count, "null_ratio": null_ratio}
+                    ))
+
+        return result
