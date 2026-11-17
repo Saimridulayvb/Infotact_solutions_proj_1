@@ -1,0 +1,88 @@
+input_id,input_name,is_type_of_id,is_type_of_name
+N20,EUV lithography tools,N19,Lithography tools
+N21,ArF dry (DUV) lithography tools,N19,Lithography tools
+N22,ArF immersion (DUV) lithography tools,N19,Lithography tools
+N28,Maskless lithography tools,N19,Lithography tools
+N29,Mask exposure systems - e-beam,N28,Maskless lithography tools
+N30,Mask exposure systems - laser beam,N28,Maskless lithography tools
+N32,Resist processing tools,N19,Lithography tools
+N38,Plasma CVD tools,N47,Chemical vapor deposition tools
+N39,Low-pressure CVD tools,N47,Chemical vapor deposition tools
+N40,High-temperature CVD tools,N47,Chemical vapor deposition tools
+N41,Atomic layer deposition tools,N36,Deposition tools
+N42,Physical vapor deposition tools,N36,Deposition tools
+N43,Rapid thermal processing tools,N36,Deposition tools
+N44,Tube-based diffusion and deposition tools,N36,Deposition tools
+N45,Electrochemical plating tools,N36,Deposition tools
+N47,Chemical vapor deposition tools,N36,Deposition tools
+N50,Conductor etching tools,N103,Dry etch tools
+N51,Insulator etching tools,N103,Dry etch tools
+N11,Wafer handlers,N59,Wafer and photomask handlers
+N12,Photomask handlers,N59,Wafer and photomask handlers
+N10,Wafer bonding and aligning tools,N109,Fabrication tools (for advanced packaging)
+N61,Wafer inspection tools,N60,Process control tools
+N62,Photomask inspection and repair tools,N60,Process control tools
+N63,Inspection tools (adv. pkg.),N109,Fabrication tools (for advanced packaging)
+N64,Process monitoring tools,N60,Process control tools
+N65,"Film, stack, and shape metrology tools",N61,Wafer inspection tools
+N66,Critical dimensions metrology tools,N61,Wafer inspection tools
+N67,Defect inspection tools,N61,Wafer inspection tools
+N70,Assembly inspection tools,N119,Assembly tools
+N71,Dicing tools,N119,Assembly tools
+N72,Bonding tools,N119,Assembly tools
+N73,Die attaching tools,N72,Bonding tools
+N74,Wire bonding tools,N72,Bonding tools
+N75,Other interconnect tools,N72,Bonding tools
+N77,Integrated assembly tools,N119,Assembly tools
+N80,SoC test tools,N120,Test tools
+N81,Burn-in test tools,N120,Test tools
+N82,Linear and discrete testing tools,N120,Test tools
+N93,Lead frames,N100,Packaging materials
+N94,Bond wires,N100,Packaging materials
+N95,Ceramic packages,N100,Packaging materials
+N96,Substrates,N100,Packaging materials
+N97,Encapsulation resins,N100,Packaging materials
+N98,Die attach materials,N100,Packaging materials
+N1,Advanced CPUs,N6,Logic chip design
+N2,Discrete GPUs,N6,Logic chip design
+N3,FPGAs,N6,Logic chip design
+N4,AI ASICs,N6,Logic chip design
+N107,Imprint lithography,N19,Lithography tools
+N105,KrF (DUV) lithography tools,N19,Lithography tools
+N106,i-line lithography tools,N19,Lithography tools
+N108,Direct write systems,N28,Maskless lithography tools
+N104,Plasma modification tools,N36,Deposition tools
+N103,Dry etch tools,N48,Dry etching and cleaning tools
+N102,Dry clean tools,N48,Dry etching and cleaning tools
+N54,Misc. dry etch tools,N103,Dry etch tools
+N52,Ion milling tools,N48,Dry etching and cleaning tools
+N53,Dry stripping tools,N48,Dry etching and cleaning tools
+N114,Overlay metrology tools,N61,Wafer inspection tools
+N115,E-beam metrology tools,N61,Wafer inspection tools
+N116,Defect review stations,N61,Wafer inspection tools
+N79,Memory test tools,N120,Test tools
+N101,Dry etching tools (adv. pkg.),N129,Etch and clean tools (adv. pkg.)
+N110,CVD tools (adv. pkg.),N128,Deposition tools (adv. pkg.)
+N111,PVD tools (adv. pkg.),N128,Deposition tools (adv. pkg.)
+N112,Spin-on deposition tools (adv. pkg.),N128,Deposition tools (adv. pkg.)
+N113,ECP tools (adv. pkg.),N128,Deposition tools (adv. pkg.)
+N122,Resist processing tools (adv. pkg.),N127,Lithography tools (adv. pkg.)
+N123,Mask aligners,N19,Lithography tools
+N124,CMP tools (adv. pkg.),N109,Fabrication tools (for advanced packaging)
+N125,Single wafer spin & spray systems (adv. pkg.),N129,Etch and clean tools (adv. pkg.)
+N90,CMP materials,N126,Process-specific fabrication materials
+N88,Deposition materials,N126,Process-specific fabrication materials
+N33,Photomasks,N126,Process-specific fabrication materials
+N31,Photoresists,N126,Process-specific fabrication materials
+N127,Lithography tools (adv. pkg.),N109,Fabrication tools (for advanced packaging)
+N128,Deposition tools (adv. pkg.),N109,Fabrication tools (for advanced packaging)
+N129,Etch and clean tools (adv. pkg.),N109,Fabrication tools (for advanced packaging)
+N130,Direct write systems (adv. pkg.),N127,Lithography tools (adv. pkg.)
+N131,Die attaching tools for IC,N73,Die attaching tools
+N132,Die attaching tools for non-IC,N73,Die attaching tools
+N133,Manual wire bonders,N74,Wire bonding tools
+N134,Auto ball bonders for IC,N74,Wire bonding tools
+N135,Auto ball bonders for non-IC,N74,Wire bonding tools
+N136,Automatic wedge bonders,N74,Wire bonding tools
+N137,Wafer level stud bonders,N74,Wire bonding tools
+N138,Other deposition tools (non-IC),N36,Deposition tools
