@@ -1,0 +1,42 @@
+"""
+Schema and column presence validator.
+"""
+
+from typing import Dict, List, Optional
+import pandas as pd
+from .report import Severity, ValidationIssue, ValidationResult
+
+class SchemaValidator:
+    """Validates expected columns and basic types across datasets."""
+
+    EXPECTED_SCHEMAS: Dict[str, List[str]] = {
+        "providers": ["provider_name", "provider_id", "provider_type"],
+        "provision": ["provider_name", "provider_id", "provided_name", "provided_id", "year"],
+        "inputs": ["input_id", "input_name", "type"],
+        "stages": ["stage_id", "stage_name"],
+        "sequence": ["input_name", "input_id"]
+    }
+
+    def validate(self, dataset_name: str, df: pd.DataFrame) -> ValidationResult:
+        result = ValidationResult(dataset_name=dataset_name, passed=True)
+        expected = self.EXPECTED_SCHEMAS.get(dataset_name, [])
+
+        missing_cols = [c for c in expected if c not in df.columns]
+        if missing_cols:
+            result.passed = False
+            result.issues.append(ValidationIssue(
+                check_name="column_presence",
+                severity=Severity.ERROR,
+                message=f"Missing required columns in {dataset_name}: {missing_cols}",
+                details={"missing": missing_cols}
+            ))
+
+        if df.empty:
+            result.passed = False
+            result.issues.append(ValidationIssue(
+                check_name="non_empty",
+                severity=Severity.ERROR,
+                message=f"Dataset {dataset_name} is empty."
+            ))
+
+        return result
