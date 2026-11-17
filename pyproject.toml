@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "atmograph"
+version = "0.2.0"
+description = "Supply Chain Ripple Effect Predictor for Semiconductor Manufacturing"
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [
+    {name = "Subramani", email = "subramaniu2006@gmail.com"}
+]
+dependencies = [
+    "pandas>=2.0.0",
+    "numpy>=1.24.0",
+    "neo4j>=5.10.0",
+    "python-dotenv>=1.0.0",
+    "pyyaml>=6.0",
+    "pydantic>=2.0.0",
+    "networkx>=3.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "pytest-cov>=4.1.0",
+    "black>=23.7.0",
+    "flake8>=6.1.0"
+]
+
+[project.scripts]
+atmograph = "atmograph.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+addopts = "-ra -q --import-mode=importlib"
+testpaths = ["tests"]
+pythonpath = ["src"]
