@@ -1,0 +1,53 @@
+input_id,input_name,goes_into_id,goes_into_name
+N8,Crystal growing furnaces,N26,Wafer
+N9,Crystal machining tools,N26,Wafer
+N19,Lithography tools,N25,Photolithography
+N16,Ion implantation,N57,Chemical mechanical planarization
+N46,Etch and clean,N16,Ion implantation
+N33,Photomasks,N25,Photolithography
+N31,Photoresists,N25,Photolithography
+N36,Deposition tools,N35,Deposition
+N0,Chip design,N35,Deposition
+N35,Deposition,N25,Photolithography
+N25,Photolithography,N46,Etch and clean
+N48,Dry etching and cleaning tools,N55,Etch and clean tools
+N49,Wet etching and cleaning tools,N55,Etch and clean tools
+N86,CMP tools,N57,Chemical mechanical planarization
+N118,Process control and handling,N25,Photolithography
+N118,Process control and handling,N46,Etch and clean
+N118,Process control and handling,N57,Chemical mechanical planarization
+N118,Process control and handling,N16,Ion implantation
+N118,Process control and handling,N35,Deposition
+N57,Chemical mechanical planarization,N69,Assembly and packaging
+N76,Packaging tools,N69,Assembly and packaging
+N69,Assembly and packaging,N78,Testing
+N83,Handlers and probers,N78,Testing
+N85,Core intellectual property,N7,EDA and Core IP
+N84,Electronic design automation software,N7,EDA and Core IP
+N90,CMP materials,N57,Chemical mechanical planarization
+N88,Deposition materials,N35,Deposition
+N117,Fabrication materials,N25,Photolithography
+N117,Fabrication materials,N46,Etch and clean
+N117,Fabrication materials,N57,Chemical mechanical planarization
+N117,Fabrication materials,N16,Ion implantation
+N117,Fabrication materials,N35,Deposition
+N78,Testing,N99,Finished logic chip
+N109,Fabrication tools (for advanced packaging),N69,Assembly and packaging
+N5,Memory chip design,N0,Chip design
+N13,DAO chip design,N0,Chip design
+N6,Logic chip design,N0,Chip design
+N7,EDA and Core IP,N0,Chip design
+N26,Wafer,N117,Fabrication materials
+N59,Wafer and photomask handlers,N118,Process control and handling
+N60,Process control tools,N118,Process control and handling
+N91,Electronic gases,N117,Fabrication materials
+N92,Wet chemicals,N117,Fabrication materials
+N119,Assembly tools,N69,Assembly and packaging
+N120,Test tools,N78,Testing
+N17,Ion implanters,N16,Ion implantation
+N121,ATP materials,N69,Assembly and packaging
+N121,ATP materials,N78,Testing
+N91,Electronic gases,N121,ATP materials
+N100,Packaging materials,N121,ATP materials
+N126,Process-specific fabrication materials,N117,Fabrication materials
+N55,Etch and clean tools,N46,Etch and clean

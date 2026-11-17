@@ -1,0 +1,21 @@
+provider_id,connected_inputs,provider_name,country
+P81,31,Applied Materials,USA
+P111,22,Lam Research,USA
+P105,22,Tokyo Electron,JPN
+P115,21,NAURA,CHN
+P145,20,ASM Pacific,SGP
+P118,19,KLA,USA
+P73,14,SEMES,KOR
+P97,12,Hitachi,JPN
+P414,9,Yamaha Robotics,JPN
+P347,9,Shibaura Mechatronics,JPN
+P88,9,ASML,NLD
+P123,9,AMEC,CHN
+P112,8,ASM International,NLD
+P164,8,Kulicke & Soffa,SGP
+P159,8,Canon,JPN
+P106,7,Screen,JPN
+P116,7,Kokusai,JPN
+P263,7,Wonik,KOR
+P121,6,Veeco,USA
+P139,6,Onto Innovation,USA
