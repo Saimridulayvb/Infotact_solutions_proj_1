@@ -90,3 +90,4 @@ Dependency hierarchy and taxonomy relationships between inputs.
 - **29. Laser Stealth Dicing Engine:** Infrared pulsed laser focusing internal optical cracks inside silicon wafers for zero-kerf separation.
 - **30. Ball Grid Array Solder Spheres:** Lead-free tin-silver-copper solder microspheres forming board-level interconnect arrays.
 - **31. Underfill Capillary Encapsulant:** Low-viscosity epoxy resin underfilling flip-chip gap to redistribute thermal mechanical stress.
+- **32. Mold Compound Epoxy Resin:** Silica-filled thermosetting epoxy encapsulating wire-bonded leadframe assemblies against moisture.
