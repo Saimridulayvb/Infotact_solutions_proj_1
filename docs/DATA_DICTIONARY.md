@@ -103,3 +103,4 @@ Dependency hierarchy and taxonomy relationships between inputs.
 - **42. Waste Acid Neutralization Unit:** Cleanroom industrial scrubber treating exhausted hydrofluoric and nitric acids prior to discharge.
 - **43. Deionized Water Polishing Filter:** Polypropylene sub-micron membrane filter delivering 18.2 megohm-cm ultra-pure rinse water.
 - **44. Spectroscopic Ellipsometer:** Non-destructive optical instrument measuring thin-film thickness and refractive index down to angstroms.
+- **45. X-Ray Fluorescence Metrology:** Non-destructive XRF tool verifying thin-film alloy composition and electroplated layer thickness.
