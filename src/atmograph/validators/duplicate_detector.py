@@ -9,11 +9,15 @@ from .report import Severity, ValidationIssue, ValidationResult
 class DuplicateDetector:
     """Detects exact row duplicates and composite primary key violations."""
 
+    def count_exact_duplicates(self, df: pd.DataFrame) -> int:
+        """Return count of exact duplicate rows in DataFrame."""
+        return int(df.duplicated().sum())
+
     def detect(self, dataset_name: str, df: pd.DataFrame, key_subset: Optional[List[str]] = None) -> ValidationResult:
         result = ValidationResult(dataset_name=dataset_name, passed=True)
 
         # Check full row duplicates
-        full_dups = int(df.duplicated().sum())
+        full_dups = self.count_exact_duplicates(df)
         if full_dups > 0:
             result.issues.append(ValidationIssue(
                 check_name="exact_duplicate_rows",
