@@ -22,6 +22,16 @@ class SuppliesRel:
             "source": self.source or "Unknown"
         }
 
+    @classmethod
+    def from_dict(cls, data: Dict[str, Any]) -> "SuppliesRel":
+        return cls(
+            from_id=str(data["from_id"]),
+            to_id=str(data["to_id"]),
+            share_provided=float(data["share_provided"]) if data.get("share_provided") is not None else None,
+            year=int(data["year"]) if data.get("year") is not None else None,
+            source=data.get("source")
+        )
+
 @dataclass(frozen=True)
 class GoesIntoRel:
     from_id: str  # Component input ID
