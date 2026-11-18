@@ -5,7 +5,7 @@ Resilient CSV loader with encoding detection and automatic whitespace cleaning.
 from pathlib import Path
 from typing import List, Optional, Union, Dict
 import pandas as pd
-from .base_loader import BaseLoader
+from .base_loader import BaseLoader, LoaderError
 
 class CSVLoader(BaseLoader):
     """Resilient CSV loader supporting multiple encodings and basic sanitization."""
@@ -31,4 +31,9 @@ class CSVLoader(BaseLoader):
                 last_error = exc
                 continue
 
-        raise RuntimeError(f"Failed to load {self.file_path} with supported encodings. Last error: {last_error}")
+        raise LoaderError(f"Failed to load {self.file_path} with supported encodings. Last error: {last_error}")
+
+    def read_sample(self, n_rows: int = 5) -> pd.DataFrame:
+        """Quickly inspect first n rows without full table processing."""
+        self.validate_path()
+        return pd.read_csv(self.file_path, nrows=n_rows)
