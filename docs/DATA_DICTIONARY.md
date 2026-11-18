@@ -105,3 +105,4 @@ Dependency hierarchy and taxonomy relationships between inputs.
 - **44. Spectroscopic Ellipsometer:** Non-destructive optical instrument measuring thin-film thickness and refractive index down to angstroms.
 - **45. X-Ray Fluorescence Metrology:** Non-destructive XRF tool verifying thin-film alloy composition and electroplated layer thickness.
 - **46. EUV Photomask Inspection System:** Actinic wavelength optical inspection tool scanning reticles for nanometer-scale phase defects.
+- **47. Wafer Edge Trimming Wheel:** Bevel grinding diamond tool removing fragile wafer perimeter edges to prevent cracking during CMP.
