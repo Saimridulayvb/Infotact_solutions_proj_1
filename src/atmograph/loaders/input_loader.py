@@ -3,7 +3,7 @@ Loader for inputs dataset (tools, materials, processes, wafers, chips).
 """
 
 from pathlib import Path
-from typing import Union
+from typing import Union, List
 import pandas as pd
 from .csv_loader import CSVLoader
 
@@ -18,3 +18,8 @@ class InputLoader(CSVLoader):
     def load_by_type(self, input_type: str) -> pd.DataFrame:
         df = self.load()
         return df[df["type"] == input_type].copy()
+
+    def get_resource_types(self) -> List[str]:
+        """Return all unique input categories present in dataset."""
+        df = self.load()
+        return sorted(df["type"].dropna().unique().tolist())
