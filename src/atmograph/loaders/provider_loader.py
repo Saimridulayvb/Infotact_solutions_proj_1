@@ -3,7 +3,7 @@ Loader for providers dataset (organizations and countries).
 """
 
 from pathlib import Path
-from typing import Union, Optional
+from typing import Union, List
 import pandas as pd
 from .csv_loader import CSVLoader
 
@@ -22,3 +22,8 @@ class ProviderLoader(CSVLoader):
     def load_countries(self) -> pd.DataFrame:
         df = self.load()
         return df[df["provider_type"] == "country"].copy()
+
+    def get_unique_countries(self) -> List[str]:
+        """Return sorted list of distinct country codes where suppliers are headquartered."""
+        df = self.load_organizations()
+        return sorted([str(c) for c in df["country"].dropna().unique()])
