@@ -2,7 +2,7 @@
 Data loaders package for AtmoGraph.
 """
 
-from .base_loader import BaseLoader
+from .base_loader import BaseLoader, LoaderError, DatasetNotFoundError
 from .csv_loader import CSVLoader
 from .provider_loader import ProviderLoader
 from .provision_loader import ProvisionLoader
@@ -13,6 +13,8 @@ from .dataset_bundle import DatasetBundle, load_dataset_bundle
 
 __all__ = [
     "BaseLoader",
+    "LoaderError",
+    "DatasetNotFoundError",
     "CSVLoader",
     "ProviderLoader",
     "ProvisionLoader",
