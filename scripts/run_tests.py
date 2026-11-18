@@ -9,7 +9,9 @@ from pathlib import Path
 def main():
     root = Path(__file__).parent.parent
     cmd = [sys.executable, "-m", "pytest", "tests"]
-    print("Running AtmoGraph automated test suite...")
+    print("=" * 60)
+    print("Running AtmoGraph Automated Test Suite")
+    print("=" * 60)
     res = subprocess.run(cmd, cwd=root)
     sys.exit(res.returncode)
 
