@@ -27,6 +27,12 @@ def test_load_providers(sample_data_dir: Path):
     orgs = loader.load_organizations()
     assert (orgs["provider_type"] == "organization").all()
 
+def test_load_providers_unique_countries(sample_data_dir: Path):
+    loader = ProviderLoader(sample_data_dir / "providers.csv")
+    countries = loader.get_unique_countries()
+    assert len(countries) > 0
+    assert "USA" in countries
+
 def test_load_provision(sample_data_dir: Path):
     loader = ProvisionLoader(sample_data_dir / "provision.csv")
     df = loader.load_clean()
