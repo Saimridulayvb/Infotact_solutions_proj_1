@@ -56,3 +56,8 @@ flowchart TD
 - `(:Input)-[:GOES_INTO]->(:Input)`
 - `(:Input)-[:IS_TYPE_OF]->(:Input)`
 - `(:Input)-[:BELONGS_TO]->(:Stage)`
+
+## 3. Data Flow Metrics
+- **Raw Ingestion:** 5 relational tables totaling ~1,900 rows.
+- **Top Supplier Extraction:** Top 20 organizations ranked by unique input connectivity.
+- **Hierarchical Propagation:** Multi-tier stage assignment resolving missing stages for tool and material resources.
