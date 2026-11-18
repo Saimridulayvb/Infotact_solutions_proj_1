@@ -5,7 +5,7 @@ Produces all standard processed datasets.
 
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Optional, Union
+from typing import Optional, Union, Dict, Any
 import pandas as pd
 
 from atmograph.loaders.dataset_bundle import DatasetBundle, load_dataset_bundle
@@ -22,6 +22,14 @@ class ProcessedBundle:
     selected_relationships: pd.DataFrame
     goes_into_relationships: pd.DataFrame
     is_type_of_relationships: pd.DataFrame
+
+    def summary(self) -> Dict[str, int]:
+        return {
+            "companies_count": len(self.selected_companies),
+            "relationships_count": len(self.selected_relationships),
+            "goes_into_count": len(self.goes_into_relationships),
+            "is_type_of_count": len(self.is_type_of_relationships)
+        }
 
 class PreprocessingPipeline:
     """Orchestrates data cleaning, company ranking, relationship filtering, and file export."""
