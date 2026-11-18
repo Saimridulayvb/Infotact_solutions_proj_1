@@ -27,3 +27,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Verified Milestones
 - **Verification Check 01 (wafer-fabrication):** Validated raw wafer fabrication supply chains and upstream tier-1 vendor linkages.
+- **Verification Check 02 (photolithography):** Confirmed photolithography chemical dependencies and high-purity chemical suppliers.
