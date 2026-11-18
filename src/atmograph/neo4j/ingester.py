@@ -17,6 +17,10 @@ class Neo4jIngester:
         self.client = client
         self.batch_size = batch_size
 
+    def get_batch_size(self) -> int:
+        """Return configured batch transaction size."""
+        return self.batch_size
+
     def apply_schema(self) -> bool:
         if not self.client.is_connected:
             logger.info("[Dry-Run] Schema constraints would be applied to Neo4j.")
