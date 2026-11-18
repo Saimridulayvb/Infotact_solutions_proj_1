@@ -2,7 +2,7 @@
 Missing value detector and null threshold analyzer.
 """
 
-from typing import Dict, Optional
+from typing import Dict, Optional, List
 import pandas as pd
 from .report import Severity, ValidationIssue, ValidationResult
 
@@ -12,7 +12,11 @@ class NullDetector:
     def __init__(self, critical_threshold: float = 0.50):
         self.critical_threshold = critical_threshold
 
-    def analyze(self, dataset_name: str, df: pd.DataFrame, non_nullable: Optional[list] = None) -> ValidationResult:
+    def get_null_counts(self, df: pd.DataFrame) -> Dict[str, int]:
+        """Return dictionary mapping column names to missing value counts."""
+        return {col: int(df[col].isnull().sum()) for col in df.columns}
+
+    def analyze(self, dataset_name: str, df: pd.DataFrame, non_nullable: Optional[List[str]] = None) -> ValidationResult:
         result = ValidationResult(dataset_name=dataset_name, passed=True)
         non_nullable = non_nullable or []
 
@@ -20,8 +24,8 @@ class NullDetector:
         if total_rows == 0:
             return result
 
-        for col in df.columns:
-            null_count = int(df[col].isnull().sum())
+        null_counts = self.get_null_counts(df)
+        for col, null_count in null_counts.items():
             null_ratio = null_count / total_rows
 
             if null_count > 0:
