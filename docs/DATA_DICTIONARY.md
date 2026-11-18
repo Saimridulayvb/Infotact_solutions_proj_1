@@ -112,3 +112,4 @@ Dependency hierarchy and taxonomy relationships between inputs.
 - **51. Cryogenic Trap Condenser:** Refrigerated cold trap capturing condensable process byproducts before reaching mechanical vacuum pumps.
 - **52. Excimer Laser Light Source:** 193nm argon fluoride excimer laser firing short high-energy pulses into immersion scanners.
 - **53. Immersion Fluid Purifier:** High-index ultrapure water circulation unit maintaining bubble-free fluid between lens and wafer.
+- **54. Reticle Pod Storage Stocker:** Automated dry-air purged storage tower holding hundreds of production photomasks at zero humidity.
