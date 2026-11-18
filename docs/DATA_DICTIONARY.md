@@ -109,3 +109,4 @@ Dependency hierarchy and taxonomy relationships between inputs.
 - **48. Cluster Tool Transfer Chamber:** Multi-sided vacuum transfer hub connecting independent etch, strip, and deposition reactors.
 - **49. RF Plasma Generator Matchbox:** Auto-tuning impedance matching network coupling 13.56 MHz RF power into process plasma reactors.
 - **50. Gas Box Mass Flow Controller:** Thermal-sensor gas mass flow controller regulating process gas deliveries to 0.1 sccm precision.
+- **51. Cryogenic Trap Condenser:** Refrigerated cold trap capturing condensable process byproducts before reaching mechanical vacuum pumps.
