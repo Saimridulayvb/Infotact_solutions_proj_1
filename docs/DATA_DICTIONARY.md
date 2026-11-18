@@ -86,3 +86,4 @@ Dependency hierarchy and taxonomy relationships between inputs.
 - **25. Secondary Ion Mass Spectrometer:** Analytical surface instrument measuring depth profiles of implanted dopant atoms in silicon.
 - **26. Critical Dimension SEM:** Scanning electron microscope measuring sub-nanometer linewidths across patterned photoresist lines.
 - **27. Wafer Backside Grinding Wheel:** Diamond-impregnated resin abrasive disc thinning silicon wafers down to 50 microns for stacking.
+- **28. Dicing Blade Contactor:** Resin-bonded diamond circular saw dicing completed wafers into individual semiconductor micro-dies.
