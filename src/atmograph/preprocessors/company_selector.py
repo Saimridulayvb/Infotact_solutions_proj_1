@@ -45,7 +45,10 @@ class CompanySelector:
         # Filter by min connections
         qualified = deduped[deduped["connected_inputs"] >= min_connections]
 
-        # Sort descending
-        sorted_companies = qualified.sort_values(by="connected_inputs", ascending=False).reset_index(drop=True)
+        # Sort descending by connected_inputs, secondary by provider_name
+        sorted_companies = qualified.sort_values(
+            by=["connected_inputs", "provider_name"],
+            ascending=[False, True]
+        ).reset_index(drop=True)
 
         return sorted_companies.head(top_n).copy()
