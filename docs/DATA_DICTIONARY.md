@@ -68,3 +68,4 @@ Dependency hierarchy and taxonomy relationships between inputs.
 - **07. Tetraethyl Orthosilicate Precursor:** Liquid organosilicon source used in chemical vapor deposition to deposit silicon dioxide dielectric films.
 - **08. High-k Hafnium Oxide Dielectric:** Advanced gate insulator material providing high capacitance with minimal gate leakage current in FinFETs.
 - **09. Extreme Ultraviolet Pellicle:** Carbon nanotube or polysilicon ultra-thin membrane shielding reticles from airborne cleanroom debris.
+- **10. Automated Material Handling FOUP:** Front Opening Unified Pod hermetically sealing 25 wafers during automated cleanroom transit.
