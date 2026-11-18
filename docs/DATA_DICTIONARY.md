@@ -101,3 +101,4 @@ Dependency hierarchy and taxonomy relationships between inputs.
 - **40. Static Eliminator Ionizer Bar:** Cleanroom ionizing bar neutralising electrostatic charges on non-conductive wafer carrier boxes.
 - **41. Chemical Dispense Pump System:** Fluoropolymer bellows metering pump dispensing corrosive photoresist with sub-microliter accuracy.
 - **42. Waste Acid Neutralization Unit:** Cleanroom industrial scrubber treating exhausted hydrofluoric and nitric acids prior to discharge.
+- **43. Deionized Water Polishing Filter:** Polypropylene sub-micron membrane filter delivering 18.2 megohm-cm ultra-pure rinse water.
