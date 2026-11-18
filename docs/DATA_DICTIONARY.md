@@ -80,3 +80,4 @@ Dependency hierarchy and taxonomy relationships between inputs.
 - **19. Atomic Layer Deposition Valve:** High-speed pneumatic diaphragm valve cycling precursor pulses with sub-millisecond precision.
 - **20. Liquid Nitrogen Cleanroom Coolant:** Cryogenic fluid maintaining thermal stability in high-vacuum cryopumps and sensor chillers.
 - **21. Quartz Reaction Furnace Tube:** High-purity fused silica furnace enclosure withstanding thermal oxidation temperatures up to 1200C.
+- **22. Silicon Carbide Wafer Boat:** Ultra-rigid ceramic carrier holding 100 wafers during high-temperature thermal diffusion processing.
