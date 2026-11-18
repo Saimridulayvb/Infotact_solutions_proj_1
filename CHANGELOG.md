@@ -41,3 +41,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Verification Check 13 (mask-blanks):** Verified photomask blank manufacturers and electron-beam pattern generation vendors.
 - **Verification Check 14 (wafer-cleaning):** Validated ultra-pure hydrogen peroxide and sulfuric acid wet chemical supply sources.
 - **Verification Check 15 (doping-gases):** Audited phosphine, arsine, and boron trifluoride ion implantation gas providers.
+- **Verification Check 16 (cleanroom-filters):** Verified ultra-low particulate air ULPA filter fabricators for cleanroom standards.
