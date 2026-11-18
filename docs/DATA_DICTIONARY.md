@@ -115,3 +115,4 @@ Dependency hierarchy and taxonomy relationships between inputs.
 - **54. Reticle Pod Storage Stocker:** Automated dry-air purged storage tower holding hundreds of production photomasks at zero humidity.
 - **55. Wafer Map Correlation Engine:** Software analytics system mapping defect clustering patterns from probe test back to fab equipment.
 - **56. Electronic Design Automation Compiler:** Logic synthesis and physical routing tool optimizing timing, area, and power for custom ASICs.
+- **57. SPICE Circuit Simulation Engine:** Transistor-level analog circuit simulator predicting transient responses across process corners.
