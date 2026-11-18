@@ -9,6 +9,10 @@ from typing import List, Optional
 import yaml
 from pydantic import BaseModel, Field
 
+class ConfigurationError(Exception):
+    """Raised when configuration loading or validation fails."""
+    pass
+
 class AppSettings(BaseModel):
     name: str = "AtmoGraph"
     version: str = "0.2.0"
@@ -19,6 +23,10 @@ class PathSettings(BaseModel):
     raw_data_dir: Path = Field(default_factory=lambda: Path("data/raw"))
     processed_data_dir: Path = Field(default_factory=lambda: Path("data/processed"))
     graph_export_dir: Path = Field(default_factory=lambda: Path("data/processed/graph"))
+
+    def validate_existence(self) -> bool:
+        """Verify data paths exist."""
+        return self.data_dir.exists()
 
 class PreprocessingSettings(BaseModel):
     top_companies_limit: int = 20
@@ -31,6 +39,8 @@ class Neo4jSettings(BaseModel):
     password: Optional[str] = None
     database: str = "neo4j"
     batch_size: int = 500
+    connection_timeout: int = 30
+    max_retry_attempts: int = 3
 
 class LoggingSettings(BaseModel):
     level: str = "INFO"
@@ -49,7 +59,10 @@ class Config(BaseModel):
         target_path = Path(config_path) if config_path else Path("config/default_config.yaml")
         if target_path.exists():
             with open(target_path, "r", encoding="utf-8") as f:
-                config_data = yaml.safe_load(f) or {}
+                try:
+                    config_data = yaml.safe_load(f) or {}
+                except yaml.YAMLError as exc:
+                    raise ConfigurationError(f"Failed to parse config file: {exc}") from exc
 
         # Merge environment overrides
         neo4j_dict = config_data.get("neo4j", {})
