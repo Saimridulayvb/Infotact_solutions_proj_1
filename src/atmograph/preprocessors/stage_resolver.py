@@ -17,6 +17,11 @@ class StageResolver:
         "ultimate_output": "Assembly, testing, and packaging (ATP)"
     }
 
+    @classmethod
+    def get_default_stage_map(cls) -> Dict[str, str]:
+        """Return immutable copy of the default stage heuristic mapping."""
+        return dict(cls.DEFAULT_STAGE_MAP)
+
     def resolve_stages(self, inputs_df: pd.DataFrame, sequence_df: pd.DataFrame) -> pd.DataFrame:
         resolved = inputs_df.copy()
 
