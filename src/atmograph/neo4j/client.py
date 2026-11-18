@@ -55,6 +55,10 @@ class Neo4jClient:
     def is_connected(self) -> bool:
         return self._driver is not None
 
+    def get_uri(self) -> str:
+        """Return configured target URI."""
+        return self.uri
+
     def close(self) -> None:
         if self._driver is not None:
             self._driver.close()
