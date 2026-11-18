@@ -36,3 +36,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Verification Check 08 (die-attach):** Validated epoxy resin and die-attach paste suppliers for thermal dissipation standards.
 - **Verification Check 09 (wire-bonding):** Audited gold, copper, and silver wire bonding material vendors across packaging stages.
 - **Verification Check 10 (sputtering-targets):** Verified high-purity metal sputtering targets for physical vapor deposition steps.
+- **Verification Check 11 (chemical-cmp):** Validated chemical mechanical planarization CMP slurry and pad manufacturer integrity.
