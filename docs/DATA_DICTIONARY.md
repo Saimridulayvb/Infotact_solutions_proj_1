@@ -118,3 +118,4 @@ Dependency hierarchy and taxonomy relationships between inputs.
 - **57. SPICE Circuit Simulation Engine:** Transistor-level analog circuit simulator predicting transient responses across process corners.
 - **58. Design Rule Checker DRC Engine:** Geometric verification software checking physical layouts against foundry manufacturing constraints.
 - **59. Optical Proximity Correction OPC Unit:** Computational lithography tool modifying mask polygon edges to compensate for diffraction distortion.
+- **60. Yield Management Analytics Core:** Multi-sensor telemetry analytics engine correlating in-line metrology anomalies with final wafer yield.
