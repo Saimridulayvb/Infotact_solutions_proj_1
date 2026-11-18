@@ -12,6 +12,12 @@ def test_company_node():
     assert d["name"] == "Applied Materials"
     assert d["connected_inputs"] == 31
 
+def test_company_node_from_dict():
+    data = {"id": "P81", "name": "Applied Materials", "country": "USA", "connected_inputs": 31}
+    node = CompanyNode.from_dict(data)
+    assert node.id == "P81"
+    assert node.name == "Applied Materials"
+
 def test_cypher_generator():
     ddl = CypherGenerator.get_schema_ddl()
     assert len(ddl) > 0
