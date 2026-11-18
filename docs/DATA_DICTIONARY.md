@@ -64,3 +64,4 @@ Dependency hierarchy and taxonomy relationships between inputs.
 - **03. Silicon Epitaxial Wafer:** High-purity single-crystal silicon substrate with grown epitaxial layer for defect-free device channels.
 - **04. Copper Sputtering Target:** 99.9999% ultra-high purity copper disc used in physical vapor deposition for dual-damascene interconnects.
 - **05. Photoresist Stripper Chemistry:** Organic solvent formulation designed to dissolve crosslinked photoresist without etching underlying copper.
+- **06. Boron Trifluoride Dopant Gas:** Gaseous ion implantation precursor used to create p-type electrical junctions in crystalline silicon.
