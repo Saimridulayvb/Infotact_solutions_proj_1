@@ -60,3 +60,4 @@ Dependency hierarchy and taxonomy relationships between inputs.
 ## 4. Semiconductor Domain Ontology & Technical Entity Specifications
 
 - **01. EUV Photolithography Scanner:** High-numerical-aperture 13.5nm extreme ultraviolet scanner systems for sub-3nm node printing.
+- **02. Chemical Mechanical Planarization Pad:** Polyurethane polishing pads used with silica or ceria slurries for wafer surface planarization.
