@@ -14,6 +14,12 @@ class EntityFilter:
         exclusions = custom_exclusions or self.DEFAULT_EXCLUSIONS
         self.stoplist = {e.lower().strip() for e in exclusions}
 
+    def is_generic_entity(self, name: Optional[str]) -> bool:
+        """Check if an individual entity name matches the generic stoplist."""
+        if not name:
+            return False
+        return str(name).lower().strip() in self.stoplist
+
     def filter_providers(self, df: pd.DataFrame, col: str = "provider_name") -> pd.DataFrame:
         if col not in df.columns:
             return df
