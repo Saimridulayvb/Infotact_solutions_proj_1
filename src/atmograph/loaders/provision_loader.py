@@ -3,7 +3,7 @@ Loader for provision dataset (supply relationships between providers and inputs)
 """
 
 from pathlib import Path
-from typing import Union
+from typing import Union, Optional
 import pandas as pd
 from .csv_loader import CSVLoader
 
@@ -21,3 +21,8 @@ class ProvisionLoader(CSVLoader):
         df["share_provided"] = pd.to_numeric(df["share_provided"], errors="coerce")
         df["year"] = pd.to_numeric(df["year"], errors="coerce").astype("Int64")
         return df
+
+    def filter_by_year_range(self, start_year: int, end_year: int) -> pd.DataFrame:
+        """Filter provisions observed within a specific calendar year range."""
+        df = self.load_clean()
+        return df[(df["year"] >= start_year) & (df["year"] <= end_year)].copy()
