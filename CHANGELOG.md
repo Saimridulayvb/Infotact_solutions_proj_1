@@ -50,3 +50,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Verification Check 22 (lead-times):** Audited lead-time variability distributions across Tier-2 raw material supply pipelines.
 - **Verification Check 23 (choke-points):** Verified single-point-of-failure choke points across critical chemical processing hubs.
 - **Verification Check 24 (geographic-clusters):** Validated geographical concentration metrics in East Asia and European semiconductor fabs.
+- **Verification Check 25 (transport-routes):** Audited multimodal maritime and air freight corridors for critical wafer transport.
