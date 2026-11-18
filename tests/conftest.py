@@ -24,3 +24,10 @@ def sample_inputs_df() -> pd.DataFrame:
         {"input_id": "N8", "input_name": "Crystal growing furnaces", "type": "tool_resource", "stage_name": None, "stage_id": None},
         {"input_id": "N26", "input_name": "Wafer", "type": "material_resource", "stage_name": "Fabrication", "stage_id": "S2"}
     ])
+
+@pytest.fixture
+def sample_stages_df() -> pd.DataFrame:
+    return pd.DataFrame([
+        {"stage_id": "S1", "stage_name": "Design", "description": "Semiconductor design"},
+        {"stage_id": "S2", "stage_name": "Fabrication", "description": "Chip manufacturing"}
+    ])
