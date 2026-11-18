@@ -95,3 +95,4 @@ Dependency hierarchy and taxonomy relationships between inputs.
 - **34. Through-Silicon Via Copper Plating:** Acidic copper sulfate electroplating bath filling high-aspect-ratio vertical TSV blind vias.
 - **35. Micro-Bump Soldering Flux:** No-clean rosin flux activating copper-tin intermetallic bonding in fine-pitch 3D packaging.
 - **36. Laser Marking Inscription System:** Ultraviolet solid-state laser scribing alphanumeric traceability codes onto IC package tops.
+- **37. Automated Test Handler Tri-Temp:** Environmental test chamber maintaining IC packages at -40C to 125C during high-speed sorting.
