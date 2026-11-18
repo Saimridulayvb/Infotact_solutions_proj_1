@@ -10,7 +10,7 @@ from .company_selector import CompanySelector
 from .relationship_extractor import RelationshipExtractor
 from .stage_resolver import StageResolver
 from .sequence_processor import SequenceProcessor
-from .pipeline import PreprocessingPipeline
+from .pipeline import PreprocessingPipeline, ProcessedBundle
 
 __all__ = [
     "StringSanitizer",
@@ -22,4 +22,5 @@ __all__ = [
     "StageResolver",
     "SequenceProcessor",
     "PreprocessingPipeline",
+    "ProcessedBundle",
 ]
