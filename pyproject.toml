@@ -11,6 +11,12 @@ requires-python = ">=3.9"
 authors = [
     {name = "Subramani", email = "subramaniu2006@gmail.com"}
 ]
+keywords = ["semiconductor", "supply-chain", "graph-database", "neo4j", "network-analytics"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering :: Information Analysis"
+]
 dependencies = [
     "pandas>=2.0.0",
     "numpy>=1.24.0",
@@ -28,6 +34,10 @@ dev = [
     "black>=23.7.0",
     "flake8>=6.1.0"
 ]
+
+[project.urls]
+Homepage = "https://github.com/Saimridulayvb/Infotact_solutions_proj_1"
+Repository = "https://github.com/Saimridulayvb/Infotact_solutions_proj_1.git"
 
 [project.scripts]
 atmograph = "atmograph.cli:main"
