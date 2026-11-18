@@ -1,5 +1,6 @@
 """
 Structured logging setup for AtmoGraph.
+Provides centralized logging with console, file, and context loggers.
 """
 
 import logging
@@ -33,5 +34,10 @@ def get_logger(name: str = "atmograph", level: Optional[str] = None, log_file: O
         logger.addHandler(file_handler)
 
     return logger
+
+def set_log_level(level_name: str) -> None:
+    """Dynamically adjust logging level for root atmograph logger."""
+    target_level = getattr(logging, level_name.upper(), logging.INFO)
+    logging.getLogger("atmograph").setLevel(target_level)
 
 logger = get_logger("atmograph")
