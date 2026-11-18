@@ -1,5 +1,6 @@
 """
 Graph modeling and Neo4j preparation package.
+Provides node and edge dataclasses, builder, Cypher generator, and NetworkX analytics.
 """
 
 from .models import CompanyNode, InputNode, StageNode
