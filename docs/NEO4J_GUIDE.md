@@ -47,3 +47,10 @@ RETURN c.name AS origin_company,
        [n in nodes(path) | n.name] AS ripple_propagation_chain,
        length(path) AS ripple_depth;
 ```
+
+### Query 3: Multi-Tier Upstream Supplier Tracing
+```cypher
+MATCH path = (origin:Input)<-[:GOES_INTO*1..3]-(comp:Input)<-[:SUPPLIES]-(supplier:Company)
+WHERE origin.name = "Wafer"
+RETURN supplier.name AS supplier, comp.name AS component, length(path) AS tier_depth;
+```
