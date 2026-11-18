@@ -70,3 +70,4 @@ Dependency hierarchy and taxonomy relationships between inputs.
 - **09. Extreme Ultraviolet Pellicle:** Carbon nanotube or polysilicon ultra-thin membrane shielding reticles from airborne cleanroom debris.
 - **10. Automated Material Handling FOUP:** Front Opening Unified Pod hermetically sealing 25 wafers during automated cleanroom transit.
 - **11. Advanced MEMS Probe Card:** Vertical micro-spring contactor array executing simultaneous wafer-level parametric and functional tests.
+- **12. Flip-Chip Bumping Substrate:** Organic build-up substrate featuring micro-bumps for high-density flip-chip package assembly.
