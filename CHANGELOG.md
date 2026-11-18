@@ -47,3 +47,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Verification Check 19 (automated-handlers):** Audited automated material handling system AMHS robotic overhead transport suppliers.
 - **Verification Check 20 (probe-cards):** Verified advanced MEMS probe card manufacturers for wafer sort and parametric testing.
 - **Verification Check 21 (test-sockets):** Validated high-frequency automated test equipment ATE contact socket vendors.
+- **Verification Check 22 (lead-times):** Audited lead-time variability distributions across Tier-2 raw material supply pipelines.
