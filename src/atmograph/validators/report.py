@@ -48,3 +48,7 @@ class DataQualityReport:
             "datasets_checked": len(self.results),
             "error_count": sum(sum(1 for i in r.issues if i.severity in (Severity.ERROR, Severity.CRITICAL)) for r in self.results)
         }
+
+    def to_dict(self) -> Dict[str, Any]:
+        """Export report summary as structured dictionary."""
+        return self.summary()
