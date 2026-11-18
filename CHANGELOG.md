@@ -54,3 +54,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Verification Check 26 (buffer-stocks):** Verified safety stock buffer capacities for specialty precursor organometallic gases.
 - **Verification Check 27 (supplier-redundancy):** Validated dual-sourcing resilience scores across critical semiconductor inputs.
 - **Verification Check 28 (tariff-exposure):** Audited geopolitical tariff exposure indices across multinational provider networks.
+- **Verification Check 29 (capacity-utilization):** Verified fabrication capacity utilization rates and surge demand response latency.
