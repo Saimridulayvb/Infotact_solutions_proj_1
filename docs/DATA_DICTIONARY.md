@@ -66,3 +66,4 @@ Dependency hierarchy and taxonomy relationships between inputs.
 - **05. Photoresist Stripper Chemistry:** Organic solvent formulation designed to dissolve crosslinked photoresist without etching underlying copper.
 - **06. Boron Trifluoride Dopant Gas:** Gaseous ion implantation precursor used to create p-type electrical junctions in crystalline silicon.
 - **07. Tetraethyl Orthosilicate Precursor:** Liquid organosilicon source used in chemical vapor deposition to deposit silicon dioxide dielectric films.
+- **08. High-k Hafnium Oxide Dielectric:** Advanced gate insulator material providing high capacitance with minimal gate leakage current in FinFETs.
