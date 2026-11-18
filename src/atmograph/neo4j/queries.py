@@ -26,3 +26,8 @@ class SupplyChainQueries:
            count(DISTINCT i) AS input_count
     ORDER BY supplier_count DESC
     """
+
+    GET_SUPPLIER_COUNT = """
+    MATCH (c:Company)
+    RETURN count(c) AS total_suppliers
+    """
