@@ -77,3 +77,4 @@ Dependency hierarchy and taxonomy relationships between inputs.
 - **16. Anhydrous Hydrogen Fluoride:** Highly pure selective gaseous etchant used for sacrificial silicon dioxide oxide removal steps.
 - **17. CMP Colloidal Ceria Slurry:** Nanoparticle cerium oxide suspension providing high oxide-to-nitride selectivity during planarization.
 - **18. Argon Ion Plasma Gas:** Inert gas ionizing in RF electric fields to deliver energetic bombardment during reactive ion etching.
+- **19. Atomic Layer Deposition Valve:** High-speed pneumatic diaphragm valve cycling precursor pulses with sub-millisecond precision.
