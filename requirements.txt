@@ -1,7 +1,12 @@
+# Core Data Processing
 pandas>=2.0.0,<3.0.0
 numpy>=1.24.0,<3.0.0
+
+# Graph Database & Network Modeling
 neo4j>=5.10.0,<7.0.0
+networkx>=3.0
+
+# Configuration & Environment
 python-dotenv>=1.0.0
 pyyaml>=6.0
 pydantic>=2.0.0
-networkx>=3.0
