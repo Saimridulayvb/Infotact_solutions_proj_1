@@ -92,3 +92,4 @@ Dependency hierarchy and taxonomy relationships between inputs.
 - **31. Underfill Capillary Encapsulant:** Low-viscosity epoxy resin underfilling flip-chip gap to redistribute thermal mechanical stress.
 - **32. Mold Compound Epoxy Resin:** Silica-filled thermosetting epoxy encapsulating wire-bonded leadframe assemblies against moisture.
 - **33. Silicon Interposer Wafer:** High-density passive silicon carrier with through-silicon vias TSVs for 2.5D chiplet integration.
+- **34. Through-Silicon Via Copper Plating:** Acidic copper sulfate electroplating bath filling high-aspect-ratio vertical TSV blind vias.
