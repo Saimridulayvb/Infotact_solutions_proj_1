@@ -3,7 +3,7 @@ Unit tests for schema and null detection validators.
 """
 
 import pandas as pd
-from atmograph.validators import SchemaValidator, NullDetector, Severity
+from atmograph.validators import SchemaValidator, NullDetector, Severity, DataQualityReport, ValidationResult
 
 def test_schema_validator_valid():
     validator = SchemaValidator()
@@ -25,3 +25,10 @@ def test_null_detector_non_nullable():
     res = detector.analyze("providers", df, non_nullable=["provider_id"])
     assert not res.passed
     assert any(i.severity == Severity.ERROR for i in res.issues)
+
+def test_data_quality_report_to_dict():
+    rep = DataQualityReport()
+    rep.results.append(ValidationResult(dataset_name="test", passed=True))
+    d = rep.to_dict()
+    assert d["is_valid"] is True
+    assert d["datasets_checked"] == 1
