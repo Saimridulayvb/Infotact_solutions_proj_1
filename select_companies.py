@@ -8,7 +8,7 @@ from pathlib import Path
 from atmograph.loaders.dataset_bundle import load_dataset_bundle
 from atmograph.preprocessors.pipeline import PreprocessingPipeline
 
-def run_legacy_flow():
+def run_legacy_flow(top_n: int = 20):
     base_dir = Path(__file__).parent
     raw_dir = base_dir / "data" / "raw"
     processed_dir = base_dir / "data" / "processed"
@@ -25,10 +25,10 @@ def run_legacy_flow():
     print(f"Total provider records: {len(bundle.providers)}")
     print(f"Total organization records: {len(orgs)}")
 
-    pipeline = PreprocessingPipeline(top_n=20)
+    pipeline = PreprocessingPipeline(top_n=top_n)
     processed = pipeline.run_and_save(bundle, output_dir=processed_dir)
 
-    print("\n--- TOP 20 CONNECTED COMPANIES ---")
+    print(f"\n--- TOP {top_n} CONNECTED COMPANIES ---")
     print(processed.selected_companies.to_string(index=False))
 
     print("\n--- SELECTED COMPANY SUPPLY RELATIONSHIPS (Sample) ---")
@@ -42,4 +42,4 @@ def run_legacy_flow():
     print("All preprocessing operations completed successfully!")
 
 if __name__ == "__main__":
-    run_legacy_flow()
+    run_legacy_flow(top_n=20)
