@@ -17,9 +17,19 @@ class StringSanitizer:
         text = re.sub(r"\s+", " ", text)
         return text if text else None
 
+    @staticmethod
+    def strip_special_quotes(val: Optional[str]) -> Optional[str]:
+        """Remove surrounding matched quotes from strings."""
+        if not val:
+            return val
+        s = val.strip()
+        if (s.startswith('"') and s.endswith('"')) or (s.startswith("'") and s.endswith("'")):
+            return s[1:-1].strip()
+        return s
+
     @classmethod
     def sanitize_dataframe(cls, df: pd.DataFrame) -> pd.DataFrame:
         cleaned = df.copy()
         for col in cleaned.select_dtypes(include="object").columns:
-            cleaned[col] = cleaned[col].apply(cls.clean_text)
+            cleaned[col] = cleaned[col].apply(cls.clean_text).apply(cls.strip_special_quotes)
         return cleaned
