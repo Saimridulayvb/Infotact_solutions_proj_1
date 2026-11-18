@@ -9,6 +9,13 @@ class RelationshipDeduplicator:
     """Deduplicates provision relationships using configurable strategy."""
 
     @staticmethod
+    def count_duplicates(df: pd.DataFrame, subset: List[str] = ["provider_id", "provided_id", "year"]) -> int:
+        """Return count of duplicate records on key subset."""
+        if not all(c in df.columns for c in subset):
+            return 0
+        return int(df.duplicated(subset=subset).sum())
+
+    @staticmethod
     def deduplicate(
         df: pd.DataFrame,
         subset: List[str] = ["provider_id", "provided_id", "year"],
