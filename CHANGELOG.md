@@ -33,3 +33,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Verification Check 05 (rare-gases):** Validated neon, krypton, and xenon gas supplier distribution across semiconductor fabs.
 - **Verification Check 06 (stepper-optics):** Audited extreme ultraviolet EUV lithography optics and mirrors manufacturing partners.
 - **Verification Check 07 (leadframes):** Confirmed copper leadframe and substrate suppliers for packaging operations integrity.
+- **Verification Check 08 (die-attach):** Validated epoxy resin and die-attach paste suppliers for thermal dissipation standards.
