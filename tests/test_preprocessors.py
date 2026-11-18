@@ -24,6 +24,11 @@ def test_entity_filter_stoplist():
     assert len(res) == 1
     assert res.iloc[0]["provider_name"] == "Applied Materials"
 
+def test_entity_filter_is_generic():
+    filt = EntityFilter()
+    assert filt.is_generic_entity("Various companies") is True
+    assert filt.is_generic_entity("Applied Materials") is False
+
 def test_relationship_deduplicator():
     df = pd.DataFrame([
         {"provider_id": "P1", "provided_id": "N1", "year": 2022, "share_provided": 10.0},
