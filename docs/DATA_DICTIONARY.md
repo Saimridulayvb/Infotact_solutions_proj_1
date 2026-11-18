@@ -72,3 +72,4 @@ Dependency hierarchy and taxonomy relationships between inputs.
 - **11. Advanced MEMS Probe Card:** Vertical micro-spring contactor array executing simultaneous wafer-level parametric and functional tests.
 - **12. Flip-Chip Bumping Substrate:** Organic build-up substrate featuring micro-bumps for high-density flip-chip package assembly.
 - **13. Gold Wire Bonding Alloy:** Ultra-fine 15-micron diameter alloy wire connecting silicon die bond pads to external leadframe pins.
+- **14. Die-Attach Epoxy Adhesive:** Silver-filled conductive thermoset adhesive securing silicon dies to package copper substrates.
