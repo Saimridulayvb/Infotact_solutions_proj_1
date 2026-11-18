@@ -2,11 +2,19 @@
 Sequence taxonomy separator for GOES_INTO and IS_TYPE_OF edges.
 """
 
-from typing import Tuple
+from typing import Tuple, Dict
 import pandas as pd
 
 class SequenceProcessor:
     """Separates and cleans GOES_INTO dependencies and IS_TYPE_OF classifications."""
+
+    @staticmethod
+    def count_edges(sequence_df: pd.DataFrame) -> Dict[str, int]:
+        """Return count of goes_into vs is_type_of edges in sequence data."""
+        return {
+            "goes_into_count": int(sequence_df["goes_into_id"].notna().sum()),
+            "is_type_of_count": int(sequence_df["is_type_of_id"].notna().sum())
+        }
 
     @staticmethod
     def process(sequence_df: pd.DataFrame) -> Tuple[pd.DataFrame, pd.DataFrame]:
