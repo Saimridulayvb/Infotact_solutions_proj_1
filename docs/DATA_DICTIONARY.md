@@ -106,3 +106,4 @@ Dependency hierarchy and taxonomy relationships between inputs.
 - **45. X-Ray Fluorescence Metrology:** Non-destructive XRF tool verifying thin-film alloy composition and electroplated layer thickness.
 - **46. EUV Photomask Inspection System:** Actinic wavelength optical inspection tool scanning reticles for nanometer-scale phase defects.
 - **47. Wafer Edge Trimming Wheel:** Bevel grinding diamond tool removing fragile wafer perimeter edges to prevent cracking during CMP.
+- **48. Cluster Tool Transfer Chamber:** Multi-sided vacuum transfer hub connecting independent etch, strip, and deposition reactors.
