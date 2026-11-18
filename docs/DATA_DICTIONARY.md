@@ -75,3 +75,4 @@ Dependency hierarchy and taxonomy relationships between inputs.
 - **14. Die-Attach Epoxy Adhesive:** Silver-filled conductive thermoset adhesive securing silicon dies to package copper substrates.
 - **15. Silane Precursor Gas:** Pyrophoric silicon hydride gas used for plasma-enhanced deposition of silicon nitride dielectric barriers.
 - **16. Anhydrous Hydrogen Fluoride:** Highly pure selective gaseous etchant used for sacrificial silicon dioxide oxide removal steps.
+- **17. CMP Colloidal Ceria Slurry:** Nanoparticle cerium oxide suspension providing high oxide-to-nitride selectivity during planarization.
