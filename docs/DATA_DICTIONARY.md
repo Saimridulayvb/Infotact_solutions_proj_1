@@ -93,3 +93,4 @@ Dependency hierarchy and taxonomy relationships between inputs.
 - **32. Mold Compound Epoxy Resin:** Silica-filled thermosetting epoxy encapsulating wire-bonded leadframe assemblies against moisture.
 - **33. Silicon Interposer Wafer:** High-density passive silicon carrier with through-silicon vias TSVs for 2.5D chiplet integration.
 - **34. Through-Silicon Via Copper Plating:** Acidic copper sulfate electroplating bath filling high-aspect-ratio vertical TSV blind vias.
+- **35. Micro-Bump Soldering Flux:** No-clean rosin flux activating copper-tin intermetallic bonding in fine-pitch 3D packaging.
