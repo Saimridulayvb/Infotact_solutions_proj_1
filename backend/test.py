@@ -4,6 +4,7 @@ Verifies semiconductor supply chain nodes, relationships, and disruption queries
 """
 
 import os
+import sys
 from pathlib import Path
 from dotenv import load_dotenv
 
@@ -17,7 +18,12 @@ logger = get_logger("backend.test")
 env_path = Path(__file__).parent.parent / ".env"
 load_dotenv(env_path)
 
-def main():
+def main() -> int:
+    """Run backend connectivity and disruption query validation.
+    
+    Returns:
+        int: 0 if validation completed successfully.
+    """
     print("==================================================")
     print(" AtmoGraph: Semiconductor Supply Chain Validation ")
     print("==================================================")
@@ -27,6 +33,7 @@ def main():
 
     if connected:
         print("[SUCCESS] Live connection to Neo4j instance established!")
+        print(f"Target Database: {client.database}")
         print("\nExecuting Semiconductor Disruption Analysis Query...")
         try:
             with client._driver.session(database=client.database) as session:
@@ -42,6 +49,7 @@ def main():
         print("AtmoGraph graph models, Cypher generators, and processed CSV datasets are valid.")
 
     print("\nValidation script finished cleanly.")
+    return 0
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())
