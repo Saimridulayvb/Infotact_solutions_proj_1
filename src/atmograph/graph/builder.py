@@ -11,6 +11,11 @@ class GraphBuilder:
     """Converts tabular preprocessed datasets into typed graph node and edge objects."""
 
     @staticmethod
+    def get_company_ids(df: pd.DataFrame) -> List[str]:
+        """Return list of distinct company IDs from dataframe."""
+        return df["provider_id"].dropna().astype(str).unique().tolist()
+
+    @staticmethod
     def build_companies(df: pd.DataFrame) -> List[CompanyNode]:
         nodes = []
         for _, row in df.iterrows():
