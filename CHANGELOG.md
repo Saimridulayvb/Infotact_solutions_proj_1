@@ -52,3 +52,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Verification Check 24 (geographic-clusters):** Validated geographical concentration metrics in East Asia and European semiconductor fabs.
 - **Verification Check 25 (transport-routes):** Audited multimodal maritime and air freight corridors for critical wafer transport.
 - **Verification Check 26 (buffer-stocks):** Verified safety stock buffer capacities for specialty precursor organometallic gases.
+- **Verification Check 27 (supplier-redundancy):** Validated dual-sourcing resilience scores across critical semiconductor inputs.
