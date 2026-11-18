@@ -1,5 +1,6 @@
 """
 Neo4j database integration package for AtmoGraph.
+Provides connection management, batch ingester, and Cypher queries.
 """
 
 from .client import Neo4jClient
