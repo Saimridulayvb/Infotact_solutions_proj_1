@@ -42,3 +42,7 @@ class GraphAnalytics:
     def top_degree_nodes(self, top_n: int = 5) -> List[tuple]:
         degrees = sorted(self.graph.degree(), key=lambda x: x[1], reverse=True)
         return degrees[:top_n]
+
+    def get_node_count(self) -> int:
+        """Return total node count in graph."""
+        return self.graph.number_of_nodes()
