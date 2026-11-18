@@ -3,10 +3,18 @@ Market share distribution and range validator.
 """
 
 import pandas as pd
+from typing import Tuple
 from .report import Severity, ValidationIssue, ValidationResult
 
 class MarketShareValidator:
     """Validates numerical bounds and consistency of market shares."""
+
+    def get_share_range(self, provision_df: pd.DataFrame) -> Tuple[float, float]:
+        """Return (min_share, max_share) observed in dataset."""
+        shares = pd.to_numeric(provision_df["share_provided"], errors="coerce").dropna()
+        if shares.empty:
+            return 0.0, 0.0
+        return float(shares.min()), float(shares.max())
 
     def validate(self, provision_df: pd.DataFrame) -> ValidationResult:
         result = ValidationResult(dataset_name="market_shares", passed=True)
