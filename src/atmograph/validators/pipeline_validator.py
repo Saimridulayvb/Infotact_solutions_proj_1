@@ -2,6 +2,7 @@
 Composite data pipeline validation runner.
 """
 
+from typing import Dict, Any
 from atmograph.loaders.dataset_bundle import DatasetBundle
 from .report import DataQualityReport
 from .schema_validator import SchemaValidator
@@ -21,6 +22,17 @@ class PipelineValidator:
         self.integrity_chk = IntegrityChecker()
         self.graph_val = GraphValidator()
         self.share_val = MarketShareValidator()
+
+    def get_validators(self) -> Dict[str, Any]:
+        """Return mapping of active sub-validator components."""
+        return {
+            "schema": self.schema_val,
+            "null": self.null_det,
+            "duplicate": self.dup_det,
+            "integrity": self.integrity_chk,
+            "graph": self.graph_val,
+            "share": self.share_val
+        }
 
     def run_all(self, bundle: DatasetBundle) -> DataQualityReport:
         report = DataQualityReport()
