@@ -53,3 +53,10 @@ Dependency hierarchy and taxonomy relationships between inputs.
 - `selected_relationships.csv`: Cleaned, deduplicated supply edges for the selected companies with stage metadata.
 - `goes_into_relationships.csv`: 52 cleaned physical assembly and material dependency edges.
 - `is_type_of_relationships.csv`: 87 cleaned categorical taxonomy classification edges.
+
+
+---
+
+## 4. Semiconductor Domain Ontology & Technical Entity Specifications
+
+- **01. EUV Photolithography Scanner:** High-numerical-aperture 13.5nm extreme ultraviolet scanner systems for sub-3nm node printing.
