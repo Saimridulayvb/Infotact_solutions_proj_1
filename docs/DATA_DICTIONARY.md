@@ -82,3 +82,4 @@ Dependency hierarchy and taxonomy relationships between inputs.
 - **21. Quartz Reaction Furnace Tube:** High-purity fused silica furnace enclosure withstanding thermal oxidation temperatures up to 1200C.
 - **22. Silicon Carbide Wafer Boat:** Ultra-rigid ceramic carrier holding 100 wafers during high-temperature thermal diffusion processing.
 - **23. Direct-Drive Vacuum Robot:** High-vacuum compatible dual-arm robotic handler transferring wafers between cluster chamber modules.
+- **24. Turbomolecular Vacuum Pump:** High-speed rotor blade pump evacuating process chambers to ultra-high vacuum base pressures below 1e-7 torr.
