@@ -20,3 +20,8 @@ class CypherGenerator:
             "CREATE INDEX input_type_idx IF NOT EXISTS FOR (i:Input) ON (i.type);",
             "CREATE INDEX stage_name_idx IF NOT EXISTS FOR (s:Stage) ON (s.name);"
         ]
+
+    @staticmethod
+    def get_constraint_count() -> int:
+        """Return count of uniqueness constraints generated."""
+        return 3
