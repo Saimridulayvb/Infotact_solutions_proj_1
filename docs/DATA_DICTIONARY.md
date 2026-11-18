@@ -100,3 +100,4 @@ Dependency hierarchy and taxonomy relationships between inputs.
 - **39. Leadframe Stamping Die Tooling:** Tungsten carbide high-precision stamping punch forming multi-pin copper leadframes at high speed.
 - **40. Static Eliminator Ionizer Bar:** Cleanroom ionizing bar neutralising electrostatic charges on non-conductive wafer carrier boxes.
 - **41. Chemical Dispense Pump System:** Fluoropolymer bellows metering pump dispensing corrosive photoresist with sub-microliter accuracy.
+- **42. Waste Acid Neutralization Unit:** Cleanroom industrial scrubber treating exhausted hydrofluoric and nitric acids prior to discharge.
