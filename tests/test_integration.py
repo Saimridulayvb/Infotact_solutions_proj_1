@@ -23,6 +23,9 @@ def test_pipeline_integration(tmp_path: Path):
     assert (out_dir / "selected_companies.csv").exists()
     assert (out_dir / "selected_relationships.csv").exists()
 
+    summary = processed.summary()
+    assert summary["companies_count"] == 10
+
     graph_dir = tmp_path / "graph"
     GraphCSVExporter.export(
         processed.selected_companies,
