@@ -97,3 +97,4 @@ Dependency hierarchy and taxonomy relationships between inputs.
 - **36. Laser Marking Inscription System:** Ultraviolet solid-state laser scribing alphanumeric traceability codes onto IC package tops.
 - **37. Automated Test Handler Tri-Temp:** Environmental test chamber maintaining IC packages at -40C to 125C during high-speed sorting.
 - **38. Burn-In Test Sockets:** High-durability polyimide test socket subjecting packaged chips to high-voltage thermal stress screening.
+- **39. Leadframe Stamping Die Tooling:** Tungsten carbide high-precision stamping punch forming multi-pin copper leadframes at high speed.
