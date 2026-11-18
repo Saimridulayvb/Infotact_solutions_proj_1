@@ -2,7 +2,7 @@
 Referential integrity and foreign key relationship checker.
 """
 
-from typing import Set
+from typing import Set, Dict, Any
 import pandas as pd
 from .report import Severity, ValidationIssue, ValidationResult
 
