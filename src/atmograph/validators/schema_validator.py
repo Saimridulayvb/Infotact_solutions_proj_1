@@ -17,9 +17,13 @@ class SchemaValidator:
         "sequence": ["input_name", "input_id"]
     }
 
+    def get_expected_columns(self, dataset_name: str) -> List[str]:
+        """Return expected column list for a dataset."""
+        return self.EXPECTED_SCHEMAS.get(dataset_name, [])
+
     def validate(self, dataset_name: str, df: pd.DataFrame) -> ValidationResult:
         result = ValidationResult(dataset_name=dataset_name, passed=True)
-        expected = self.EXPECTED_SCHEMAS.get(dataset_name, [])
+        expected = self.get_expected_columns(dataset_name)
 
         missing_cols = [c for c in expected if c not in df.columns]
         if missing_cols:
