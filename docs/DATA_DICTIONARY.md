@@ -67,3 +67,4 @@ Dependency hierarchy and taxonomy relationships between inputs.
 - **06. Boron Trifluoride Dopant Gas:** Gaseous ion implantation precursor used to create p-type electrical junctions in crystalline silicon.
 - **07. Tetraethyl Orthosilicate Precursor:** Liquid organosilicon source used in chemical vapor deposition to deposit silicon dioxide dielectric films.
 - **08. High-k Hafnium Oxide Dielectric:** Advanced gate insulator material providing high capacitance with minimal gate leakage current in FinFETs.
+- **09. Extreme Ultraviolet Pellicle:** Carbon nanotube or polysilicon ultra-thin membrane shielding reticles from airborne cleanroom debris.
