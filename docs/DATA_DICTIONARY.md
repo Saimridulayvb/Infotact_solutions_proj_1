@@ -74,3 +74,4 @@ Dependency hierarchy and taxonomy relationships between inputs.
 - **13. Gold Wire Bonding Alloy:** Ultra-fine 15-micron diameter alloy wire connecting silicon die bond pads to external leadframe pins.
 - **14. Die-Attach Epoxy Adhesive:** Silver-filled conductive thermoset adhesive securing silicon dies to package copper substrates.
 - **15. Silane Precursor Gas:** Pyrophoric silicon hydride gas used for plasma-enhanced deposition of silicon nitride dielectric barriers.
+- **16. Anhydrous Hydrogen Fluoride:** Highly pure selective gaseous etchant used for sacrificial silicon dioxide oxide removal steps.
