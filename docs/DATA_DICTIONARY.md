@@ -78,3 +78,4 @@ Dependency hierarchy and taxonomy relationships between inputs.
 - **17. CMP Colloidal Ceria Slurry:** Nanoparticle cerium oxide suspension providing high oxide-to-nitride selectivity during planarization.
 - **18. Argon Ion Plasma Gas:** Inert gas ionizing in RF electric fields to deliver energetic bombardment during reactive ion etching.
 - **19. Atomic Layer Deposition Valve:** High-speed pneumatic diaphragm valve cycling precursor pulses with sub-millisecond precision.
+- **20. Liquid Nitrogen Cleanroom Coolant:** Cryogenic fluid maintaining thermal stability in high-vacuum cryopumps and sensor chillers.
