@@ -38,3 +38,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Verification Check 10 (sputtering-targets):** Verified high-purity metal sputtering targets for physical vapor deposition steps.
 - **Verification Check 11 (chemical-cmp):** Validated chemical mechanical planarization CMP slurry and pad manufacturer integrity.
 - **Verification Check 12 (photoresist):** Audited deep ultraviolet DUV and extreme ultraviolet EUV photoresist formulation suppliers.
+- **Verification Check 13 (mask-blanks):** Verified photomask blank manufacturers and electron-beam pattern generation vendors.
