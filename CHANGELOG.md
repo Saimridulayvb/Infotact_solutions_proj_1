@@ -44,3 +44,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Verification Check 16 (cleanroom-filters):** Verified ultra-low particulate air ULPA filter fabricators for cleanroom standards.
 - **Verification Check 17 (substrate-silicon):** Audited 300mm silicon polished and epitaxial wafer substrate manufacturing supply.
 - **Verification Check 18 (pellicles):** Validated extreme ultraviolet pellicle membrane vendors for mask defect prevention.
+- **Verification Check 19 (automated-handlers):** Audited automated material handling system AMHS robotic overhead transport suppliers.
