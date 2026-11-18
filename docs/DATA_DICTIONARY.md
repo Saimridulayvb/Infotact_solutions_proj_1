@@ -98,3 +98,4 @@ Dependency hierarchy and taxonomy relationships between inputs.
 - **37. Automated Test Handler Tri-Temp:** Environmental test chamber maintaining IC packages at -40C to 125C during high-speed sorting.
 - **38. Burn-In Test Sockets:** High-durability polyimide test socket subjecting packaged chips to high-voltage thermal stress screening.
 - **39. Leadframe Stamping Die Tooling:** Tungsten carbide high-precision stamping punch forming multi-pin copper leadframes at high speed.
+- **40. Static Eliminator Ionizer Bar:** Cleanroom ionizing bar neutralising electrostatic charges on non-conductive wafer carrier boxes.
