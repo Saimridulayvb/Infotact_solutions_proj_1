@@ -3,11 +3,24 @@ Neo4j LOAD CSV formatted dataset exporter.
 """
 
 from pathlib import Path
-from typing import Union
+from typing import Union, List
 import pandas as pd
 
 class GraphCSVExporter:
     """Exports graph nodes and edges to CSV files formatted for Neo4j LOAD CSV."""
+
+    EXPECTED_FILES = [
+        "companies_nodes.csv",
+        "inputs_nodes.csv",
+        "supplies_edges.csv",
+        "goes_into_edges.csv",
+        "is_type_of_edges.csv"
+    ]
+
+    @classmethod
+    def get_expected_filenames(cls) -> List[str]:
+        """Return list of standard graph CSV file basenames."""
+        return list(cls.EXPECTED_FILES)
 
     @staticmethod
     def export(
