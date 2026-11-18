@@ -9,6 +9,12 @@ from .report import Severity, ValidationIssue, ValidationResult
 class GraphValidator:
     """Validates sequence edges for DAG properties and self-referencing loops."""
 
+    def check_self_loops(self, sequence_df: pd.DataFrame) -> int:
+        """Count self loops where input_id equals goes_into_id."""
+        if "goes_into_id" not in sequence_df.columns:
+            return 0
+        return int((sequence_df["input_id"] == sequence_df["goes_into_id"]).sum())
+
     def validate_sequence(self, sequence_df: pd.DataFrame) -> ValidationResult:
         result = ValidationResult(dataset_name="sequence_graph", passed=True)
 
