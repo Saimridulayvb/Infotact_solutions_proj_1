@@ -62,3 +62,4 @@ Dependency hierarchy and taxonomy relationships between inputs.
 - **01. EUV Photolithography Scanner:** High-numerical-aperture 13.5nm extreme ultraviolet scanner systems for sub-3nm node printing.
 - **02. Chemical Mechanical Planarization Pad:** Polyurethane polishing pads used with silica or ceria slurries for wafer surface planarization.
 - **03. Silicon Epitaxial Wafer:** High-purity single-crystal silicon substrate with grown epitaxial layer for defect-free device channels.
+- **04. Copper Sputtering Target:** 99.9999% ultra-high purity copper disc used in physical vapor deposition for dual-damascene interconnects.
