@@ -1,5 +1,6 @@
 """
 Data validation and quality assurance module.
+Provides comprehensive integrity, schema, null, and duplicate detection.
 """
 
 from .report import Severity, ValidationIssue, ValidationResult, DataQualityReport
