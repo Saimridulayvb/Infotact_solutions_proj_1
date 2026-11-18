@@ -44,3 +44,10 @@ class CypherQueries:
     MATCH (b:Input {id: row.to_id})
     MERGE (a)-[:IS_TYPE_OF]->(b)
     """
+
+    # Analysis queries
+    COUNT_NODES_AND_EDGES = """
+    MATCH (n)
+    OPTIONAL MATCH (n)-[r]->()
+    RETURN count(DISTINCT n) AS total_nodes, count(DISTINCT r) AS total_edges
+    """
