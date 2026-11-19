@@ -97,3 +97,4 @@ flowchart TD
 - **ADR-28: Configuration Environment Overrides** — Evaluates config priorities: CLI arguments override environment variables, which override YAML configs.
 - **ADR-29: Ephemeral Test Fixture Scoping** — Sets pytest fixture lifetimes to function scope for mutations and session scope for static raw CSV reads.
 - **ADR-30: Relationship Deduplication Priority** — Resolves duplicate (provider, input) tuples by preserving the record with the most recent year timestamp.
+- **ADR-31: Single Point of Failure Flagging** — Flags any input entity with exactly one supplier having market share greater than 70 percent as a critical SPoF.
