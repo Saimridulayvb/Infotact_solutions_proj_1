@@ -120,3 +120,4 @@ flowchart TD
 - **ADR-51: Edge Attribute Timestamping** — Injects processing timestamp and pipeline version into every generated graph relationship edge.
 - **ADR-52: High-Concurreny Read Replicas** — Configures Neo4j routing drivers to direct intensive impact ripple queries to read-only cluster replicas.
 - **ADR-53: Bounded In-Memory Queue** — Implements bounded producer-consumer queue for parallel CSV parsing during massive multi-country data ingest.
+- **ADR-54: Custom Cypher User Defined Procedures** — Prepares interfaces for compiled Java APOC graph algorithms for high-performance path expansions.
