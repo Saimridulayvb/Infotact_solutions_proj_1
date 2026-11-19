@@ -73,3 +73,4 @@ flowchart TD
 - **ADR-04: Resilient Connection Pooling** — Configures Neo4j driver with dynamic acquire timeout backoff and exponential keep-alive health checks.
 - **ADR-05: Pydantic Strict Coercion** — Applies strict validation on market share floats, rejecting values outside 0.0 to 100.0 percent ranges.
 - **ADR-06: Deterministic Company Ranking** — Combines unique input counts with lexicographical provider ID secondary sorting to eliminate non-deterministic ties.
+- **ADR-07: Normalized Market Share Imputation** — Distributes residual missing market shares equally among unranked providers within the same input category.
