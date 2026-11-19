@@ -89,3 +89,4 @@ flowchart TD
 - **ADR-20: ACID Transactional Atomicity** — Wraps stage-by-stage graph ingestion in discrete transaction blocks with automatic rollback on network interrupts.
 - **ADR-21: Circuit Breaker for Neo4j Outages** — Halts write queries and triggers fallback local CSV serialization when consecutive driver errors exceed 3.
 - **ADR-22: Granular Error Hierarchy** — Extends Python standard exceptions into LoaderError, ValidationError, and GraphError domain hierarchies.
+- **ADR-23: Automated Data Quality Auditing** — Generates schema compliance, null density, and duplicate ratios into a structured DataQualityReport object.
