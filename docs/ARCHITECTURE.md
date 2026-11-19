@@ -79,3 +79,4 @@ flowchart TD
 - **ADR-10: Memory-Bounded CSV Streaming** — Employs chunked Pandas read operations with explicit memory budgets for raw datasets exceeding 100MB.
 - **ADR-11: Structured JSON Diagnostic Telemetry** — Emits machine-parsable JSON execution metrics alongside human-readable console log outputs.
 - **ADR-12: Zero-Downtime Index Rebuilding** — Uses parallel background index workers in Neo4j enterprise configurations to eliminate write lockups.
+- **ADR-13: Parameterized UNWIND Batch Ingestion** — Packages tabular node and relationship arrays into 1,000-row parameterized UNWIND Cypher batches.
