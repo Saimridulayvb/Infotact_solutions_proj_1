@@ -82,3 +82,4 @@ flowchart TD
 - **ADR-13: Parameterized UNWIND Batch Ingestion** — Packages tabular node and relationship arrays into 1,000-row parameterized UNWIND Cypher batches.
 - **ADR-14: Fail-Safe Dry-Run Mode** — Activates mock graph persistence layers when database credentials or active cluster sockets are unavailable.
 - **ADR-15: NetworkX Memory Representation** — Maintains lightweight directed graph in-memory representations for rapid local graph analysis without network I/O.
+- **ADR-16: Betweenness Centrality Optimization** — Uses Brandes algorithm on local graph snapshots to calculate bottleneck criticality in under 200ms.
