@@ -90,3 +90,4 @@ flowchart TD
 - **ADR-21: Circuit Breaker for Neo4j Outages** — Halts write queries and triggers fallback local CSV serialization when consecutive driver errors exceed 3.
 - **ADR-22: Granular Error Hierarchy** — Extends Python standard exceptions into LoaderError, ValidationError, and GraphError domain hierarchies.
 - **ADR-23: Automated Data Quality Auditing** — Generates schema compliance, null density, and duplicate ratios into a structured DataQualityReport object.
+- **ADR-24: Edge Weight Normalization** — Scales SUPPLIES relationship market shares into normalized [0.0, 1.0] weight floats for shortest path algorithms.
