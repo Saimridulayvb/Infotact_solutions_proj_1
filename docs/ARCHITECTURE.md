@@ -74,3 +74,4 @@ flowchart TD
 - **ADR-05: Pydantic Strict Coercion** — Applies strict validation on market share floats, rejecting values outside 0.0 to 100.0 percent ranges.
 - **ADR-06: Deterministic Company Ranking** — Combines unique input counts with lexicographical provider ID secondary sorting to eliminate non-deterministic ties.
 - **ADR-07: Normalized Market Share Imputation** — Distributes residual missing market shares equally among unranked providers within the same input category.
+- **ADR-08: Generic Entity Isolation** — Strips placeholder entries like 'Other Countries' into a quarantine table before graph node construction.
