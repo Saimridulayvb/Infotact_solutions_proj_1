@@ -100,3 +100,4 @@ flowchart TD
 - **ADR-31: Single Point of Failure Flagging** — Flags any input entity with exactly one supplier having market share greater than 70 percent as a critical SPoF.
 - **ADR-32: Cascade Depth Throttling** — Caps ripple effect simulation recursion depth to 6 hops to avoid combinatorial explosion on dense subgraphs.
 - **ADR-33: Export Header Schema Validation** — Asserts that exported Neo4j LOAD CSV headers match exact property names defined in Cypher ingestion queries.
+- **ADR-34: Backward-Compatible Legacy Facade** — Preserves original select_companies.py function signatures as thin wrappers over modern pipeline classes.
