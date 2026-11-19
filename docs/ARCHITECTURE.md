@@ -122,3 +122,4 @@ flowchart TD
 - **ADR-53: Bounded In-Memory Queue** — Implements bounded producer-consumer queue for parallel CSV parsing during massive multi-country data ingest.
 - **ADR-54: Custom Cypher User Defined Procedures** — Prepares interfaces for compiled Java APOC graph algorithms for high-performance path expansions.
 - **ADR-55: Schema Evolution Version Tags** — Encodes schema version metadata directly into the root (:SchemaMetadata {version: '0.2.1'}) graph node.
+- **ADR-56: Dynamic Bottleneck Thresholding** — Calculates dynamic supplier risk percentiles rather than static absolute market share thresholds.
