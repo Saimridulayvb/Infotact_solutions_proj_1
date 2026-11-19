@@ -80,3 +80,4 @@ flowchart TD
 - **ADR-11: Structured JSON Diagnostic Telemetry** — Emits machine-parsable JSON execution metrics alongside human-readable console log outputs.
 - **ADR-12: Zero-Downtime Index Rebuilding** — Uses parallel background index workers in Neo4j enterprise configurations to eliminate write lockups.
 - **ADR-13: Parameterized UNWIND Batch Ingestion** — Packages tabular node and relationship arrays into 1,000-row parameterized UNWIND Cypher batches.
+- **ADR-14: Fail-Safe Dry-Run Mode** — Activates mock graph persistence layers when database credentials or active cluster sockets are unavailable.
