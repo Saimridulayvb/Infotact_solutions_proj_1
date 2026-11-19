@@ -125,3 +125,4 @@ flowchart TD
 - **ADR-56: Dynamic Bottleneck Thresholding** — Calculates dynamic supplier risk percentiles rather than static absolute market share thresholds.
 - **ADR-57: Geographic Concentration Alerting** — Detects regional geopolitical risk when over 80 percent of a material's supply originates from one country.
 - **ADR-58: Pipeline Health Heartbeat** — Emits heartbeat status events during long-running graph transformations to support orchestrator monitoring.
+- **ADR-59: Zero-Trust Input Sanitization** — Validates all external CSV strings against alphanumeric regex patterns to prevent injection payloads.
