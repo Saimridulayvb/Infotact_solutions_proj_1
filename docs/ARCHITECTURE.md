@@ -96,3 +96,4 @@ flowchart TD
 - **ADR-27: Cross-Platform File Path Resolution** — Wraps all filesystem path operations in pathlib.Path to prevent Windows/Linux path delimiter bugs.
 - **ADR-28: Configuration Environment Overrides** — Evaluates config priorities: CLI arguments override environment variables, which override YAML configs.
 - **ADR-29: Ephemeral Test Fixture Scoping** — Sets pytest fixture lifetimes to function scope for mutations and session scope for static raw CSV reads.
+- **ADR-30: Relationship Deduplication Priority** — Resolves duplicate (provider, input) tuples by preserving the record with the most recent year timestamp.
