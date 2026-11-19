@@ -110,3 +110,4 @@ flowchart TD
 - **ADR-41: Benchmark Execution Profiling** — Records monotonic wall-clock elapsed time for each pipeline stage and prints an execution duration summary.
 - **ADR-42: Graph Metric Telemetry Persistence** — Exports network density, diameter, and clustering coefficients into a processed graph summary artifact.
 - **ADR-43: Strict Type Hinting Compliance** — Enforces complete PEP 484 type annotations across all core loaders, validators, and preprocessors.
+- **ADR-44: Self-Loop Edge Rejection** — Validates that no input or company node can form a directed relationship targeting its own identifier.
