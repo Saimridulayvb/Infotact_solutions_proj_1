@@ -61,3 +61,10 @@ flowchart TD
 - **Raw Ingestion:** 5 relational tables totaling ~1,900 rows.
 - **Top Supplier Extraction:** Top 20 organizations ranked by unique input connectivity.
 - **Hierarchical Propagation:** Multi-tier stage assignment resolving missing stages for tool and material resources.
+
+
+---
+
+## 4. Architectural Design Decisions & Engineering Specifications
+
+- **ADR-01: Graph Traversal Latency Bounds** — Restricts multi-hop ripple propagation traversals to sub-50ms execution times across 5-tier supplier trees.
