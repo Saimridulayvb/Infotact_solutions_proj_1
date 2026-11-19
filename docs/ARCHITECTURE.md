@@ -68,3 +68,4 @@ flowchart TD
 ## 4. Architectural Design Decisions & Engineering Specifications
 
 - **ADR-01: Graph Traversal Latency Bounds** — Restricts multi-hop ripple propagation traversals to sub-50ms execution times across 5-tier supplier trees.
+- **ADR-02: Idempotent Schema Migrations** — Mandates IF NOT EXISTS clauses for all Cypher constraints and property indexes to prevent deployment drift.
