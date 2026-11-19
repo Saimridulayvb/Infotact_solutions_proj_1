@@ -116,3 +116,4 @@ flowchart TD
 - **ADR-47: Subgraph Boundary Serialization** — Serializes connected components into discrete JSON bundles for frontend graph visualization layers.
 - **ADR-48: Cache Invalidation on Pipeline Run** — Clears intermediate graph caches whenever raw dataset file checksums deviate from saved metadata.
 - **ADR-49: Automated Dependency Vulnerability Auditing** — Categorizes requirements.txt into production, development, and testing blocks with pinned hashes.
+- **ADR-50: Idempotent Database Teardown** — Provides safe test database cleanup scripts that purge only AtmoGraph labels without dropping other data.
