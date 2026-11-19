@@ -88,3 +88,4 @@ flowchart TD
 - **ADR-19: Canonical Unicode Sanitization** — Replaces smart quotes, non-breaking spaces, and accented diacritics with normalized UTF-8 equivalents.
 - **ADR-20: ACID Transactional Atomicity** — Wraps stage-by-stage graph ingestion in discrete transaction blocks with automatic rollback on network interrupts.
 - **ADR-21: Circuit Breaker for Neo4j Outages** — Halts write queries and triggers fallback local CSV serialization when consecutive driver errors exceed 3.
+- **ADR-22: Granular Error Hierarchy** — Extends Python standard exceptions into LoaderError, ValidationError, and GraphError domain hierarchies.
