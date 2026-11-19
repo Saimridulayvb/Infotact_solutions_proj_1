@@ -77,3 +77,4 @@ flowchart TD
 - **ADR-08: Generic Entity Isolation** — Strips placeholder entries like 'Other Countries' into a quarantine table before graph node construction.
 - **ADR-09: Multi-Hop Stage Propagation** — Traverses sequence IS_TYPE_OF hierarchies to impute missing stage names for 115 unclassified raw inputs.
 - **ADR-10: Memory-Bounded CSV Streaming** — Employs chunked Pandas read operations with explicit memory budgets for raw datasets exceeding 100MB.
+- **ADR-11: Structured JSON Diagnostic Telemetry** — Emits machine-parsable JSON execution metrics alongside human-readable console log outputs.
