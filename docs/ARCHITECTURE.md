@@ -106,3 +106,4 @@ flowchart TD
 - **ADR-37: Stage Sequence Invariant Verification** — Verifies that semiconductor stage progression strictly adheres to Design -> Fab -> ATP chronological order.
 - **ADR-38: Resource Classification Enforcement** — Validates that each input node belongs to one of tool_resource, material_resource, or process types.
 - **ADR-39: Country Code ISO Standard** — Enforces three-letter ISO 3166-1 alpha-3 uppercase country codes across all provider organization entries.
+- **ADR-40: Cypher Query Catalog Separation** — Extracts raw Cypher strings into dedicated query catalog classes away from database connection logic.
