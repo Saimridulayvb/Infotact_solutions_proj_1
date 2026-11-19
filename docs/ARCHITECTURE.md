@@ -103,3 +103,4 @@ flowchart TD
 - **ADR-34: Backward-Compatible Legacy Facade** — Preserves original select_companies.py function signatures as thin wrappers over modern pipeline classes.
 - **ADR-35: Log Level Dynamism** — Exposes runtime logging level modification via command line arguments without requiring application restarts.
 - **ADR-36: Defensive Copying in Data Bundles** — Returns immutable copies or read-only views of loaded dataframes to prevent accidental caller mutations.
+- **ADR-37: Stage Sequence Invariant Verification** — Verifies that semiconductor stage progression strictly adheres to Design -> Fab -> ATP chronological order.
