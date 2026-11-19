@@ -93,3 +93,4 @@ flowchart TD
 - **ADR-24: Edge Weight Normalization** — Scales SUPPLIES relationship market shares into normalized [0.0, 1.0] weight floats for shortest path algorithms.
 - **ADR-25: Semantic Versioning Contracts** — Mandates SemVer 2.0.0 compliance for all configuration schemas, CLI interfaces, and model representations.
 - **ADR-26: CLI Exit Code Standards** — Standardizes POSIX return codes: 0 for pipeline success, 1 for validation failures, and 2 for system errors.
+- **ADR-27: Cross-Platform File Path Resolution** — Wraps all filesystem path operations in pathlib.Path to prevent Windows/Linux path delimiter bugs.
