@@ -111,3 +111,4 @@ flowchart TD
 - **ADR-42: Graph Metric Telemetry Persistence** — Exports network density, diameter, and clustering coefficients into a processed graph summary artifact.
 - **ADR-43: Strict Type Hinting Compliance** — Enforces complete PEP 484 type annotations across all core loaders, validators, and preprocessors.
 - **ADR-44: Self-Loop Edge Rejection** — Validates that no input or company node can form a directed relationship targeting its own identifier.
+- **ADR-45: Zero-Suppression in Edge Weighting** — Discards supply relationships with confirmed 0.0 percent market share to keep the graph compact.
