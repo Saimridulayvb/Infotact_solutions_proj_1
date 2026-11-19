@@ -113,3 +113,4 @@ flowchart TD
 - **ADR-44: Self-Loop Edge Rejection** — Validates that no input or company node can form a directed relationship targeting its own identifier.
 - **ADR-45: Zero-Suppression in Edge Weighting** — Discards supply relationships with confirmed 0.0 percent market share to keep the graph compact.
 - **ADR-46: Graph Partitioning for Micro-Services** — Segregates tool dependency subgraphs from chemical material subgraphs for independent query scaling.
+- **ADR-47: Subgraph Boundary Serialization** — Serializes connected components into discrete JSON bundles for frontend graph visualization layers.
