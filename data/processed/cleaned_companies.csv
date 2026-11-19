@@ -1,0 +1,21 @@
+provider_id,provider_name,provider_type,country,aliases,connected_inputs
+P105,Tokyo Electron,organization,JPN,,22
+P106,Screen,organization,JPN,,7
+P111,Lam Research,organization,USA,,22
+P112,ASM International,organization,NLD,,8
+P115,NAURA,organization,CHN,,21
+P116,Kokusai,organization,JPN,Kokusai Electric,7
+P118,KLA,organization,USA,,19
+P121,Veeco,organization,USA,,6
+P123,AMEC,organization,CHN,Advanced Micro-Fabrication Equipment Inc. China,9
+P139,Onto Innovation,organization,USA,Nanometrics | Rudolph Technologies,6
+P145,ASM Pacific,organization,SGP,ASMPT Limited,20
+P159,Canon,organization,JPN,Canon ANELVA | Canon Machinery,8
+P164,Kulicke & Soffa,organization,SGP,,8
+P263,Wonik,organization,KOR,Wonik IPS,7
+P347,Shibaura Mechatronics,organization,JPN,,9
+P414,Yamaha Robotics,organization,JPN,YAMAHA ROBOTICS,9
+P73,SEMES,organization,KOR,,14
+P81,Applied Materials,organization,USA,,31
+P88,ASML,organization,NLD,,9
+P97,Hitachi,organization,JPN,Hitachi High-Tech,12
