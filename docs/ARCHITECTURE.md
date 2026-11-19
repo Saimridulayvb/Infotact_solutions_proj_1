@@ -99,3 +99,4 @@ flowchart TD
 - **ADR-30: Relationship Deduplication Priority** — Resolves duplicate (provider, input) tuples by preserving the record with the most recent year timestamp.
 - **ADR-31: Single Point of Failure Flagging** — Flags any input entity with exactly one supplier having market share greater than 70 percent as a critical SPoF.
 - **ADR-32: Cascade Depth Throttling** — Caps ripple effect simulation recursion depth to 6 hops to avoid combinatorial explosion on dense subgraphs.
+- **ADR-33: Export Header Schema Validation** — Asserts that exported Neo4j LOAD CSV headers match exact property names defined in Cypher ingestion queries.
