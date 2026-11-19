@@ -71,3 +71,4 @@ flowchart TD
 - **ADR-02: Idempotent Schema Migrations** — Mandates IF NOT EXISTS clauses for all Cypher constraints and property indexes to prevent deployment drift.
 - **ADR-03: Directed Acyclic Graph Invariant** — Enforces topological cycle detection on GOES_INTO relationship chains during intermediate stage validation.
 - **ADR-04: Resilient Connection Pooling** — Configures Neo4j driver with dynamic acquire timeout backoff and exponential keep-alive health checks.
+- **ADR-05: Pydantic Strict Coercion** — Applies strict validation on market share floats, rejecting values outside 0.0 to 100.0 percent ranges.
