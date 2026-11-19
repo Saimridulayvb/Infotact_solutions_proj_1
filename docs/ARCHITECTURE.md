@@ -87,3 +87,4 @@ flowchart TD
 - **ADR-18: Foreign Key Referential Integrity** — Asserts that all provider_id and provided_id foreign keys resolve to canonical entities before building edges.
 - **ADR-19: Canonical Unicode Sanitization** — Replaces smart quotes, non-breaking spaces, and accented diacritics with normalized UTF-8 equivalents.
 - **ADR-20: ACID Transactional Atomicity** — Wraps stage-by-stage graph ingestion in discrete transaction blocks with automatic rollback on network interrupts.
+- **ADR-21: Circuit Breaker for Neo4j Outages** — Halts write queries and triggers fallback local CSV serialization when consecutive driver errors exceed 3.
