@@ -104,3 +104,4 @@ flowchart TD
 - **ADR-35: Log Level Dynamism** — Exposes runtime logging level modification via command line arguments without requiring application restarts.
 - **ADR-36: Defensive Copying in Data Bundles** — Returns immutable copies or read-only views of loaded dataframes to prevent accidental caller mutations.
 - **ADR-37: Stage Sequence Invariant Verification** — Verifies that semiconductor stage progression strictly adheres to Design -> Fab -> ATP chronological order.
+- **ADR-38: Resource Classification Enforcement** — Validates that each input node belongs to one of tool_resource, material_resource, or process types.
