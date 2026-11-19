@@ -108,3 +108,4 @@ flowchart TD
 - **ADR-39: Country Code ISO Standard** — Enforces three-letter ISO 3166-1 alpha-3 uppercase country codes across all provider organization entries.
 - **ADR-40: Cypher Query Catalog Separation** — Extracts raw Cypher strings into dedicated query catalog classes away from database connection logic.
 - **ADR-41: Benchmark Execution Profiling** — Records monotonic wall-clock elapsed time for each pipeline stage and prints an execution duration summary.
+- **ADR-42: Graph Metric Telemetry Persistence** — Exports network density, diameter, and clustering coefficients into a processed graph summary artifact.
