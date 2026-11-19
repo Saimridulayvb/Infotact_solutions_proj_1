@@ -109,3 +109,4 @@ flowchart TD
 - **ADR-40: Cypher Query Catalog Separation** — Extracts raw Cypher strings into dedicated query catalog classes away from database connection logic.
 - **ADR-41: Benchmark Execution Profiling** — Records monotonic wall-clock elapsed time for each pipeline stage and prints an execution duration summary.
 - **ADR-42: Graph Metric Telemetry Persistence** — Exports network density, diameter, and clustering coefficients into a processed graph summary artifact.
+- **ADR-43: Strict Type Hinting Compliance** — Enforces complete PEP 484 type annotations across all core loaders, validators, and preprocessors.
