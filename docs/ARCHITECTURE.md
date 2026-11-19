@@ -118,3 +118,4 @@ flowchart TD
 - **ADR-49: Automated Dependency Vulnerability Auditing** — Categorizes requirements.txt into production, development, and testing blocks with pinned hashes.
 - **ADR-50: Idempotent Database Teardown** — Provides safe test database cleanup scripts that purge only AtmoGraph labels without dropping other data.
 - **ADR-51: Edge Attribute Timestamping** — Injects processing timestamp and pipeline version into every generated graph relationship edge.
+- **ADR-52: High-Concurreny Read Replicas** — Configures Neo4j routing drivers to direct intensive impact ripple queries to read-only cluster replicas.
