@@ -48,3 +48,9 @@ class MarketShareValidator:
     def get_total_share_per_input(self, provision_df: pd.DataFrame) -> dict:
         """Aggregate total furnished market share percentage grouped by input ID."""
         return provision_df.groupby("provided_id")["share_provided"].sum().to_dict() if "provided_id" in provision_df.columns else {}
+
+
+    def has_overallocated_shares(self, provision_df: pd.DataFrame, max_share: float = 100.0) -> bool:
+        """Check if any input entity exceeds the 100 percent maximum share threshold."""
+        shares = self.get_total_share_per_input(provision_df)
+        return any(total > (max_share + 1e-3) for total in shares.values())
