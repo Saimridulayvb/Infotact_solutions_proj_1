@@ -220,3 +220,4 @@ Infotact_solutions_proj_1/
 - **Telemetry Check 45 (checkpoint-45):** Burn-in socket multi-channel thermal control maintaining steady-state die junction temperature under load.
 - **Telemetry Check 46 (checkpoint-46):** High-speed progressive stamping punch wear monitoring ensuring leadframe pin dimensional tolerances.
 - **Telemetry Check 47 (checkpoint-47):** Corrosive acid dispense pump displacement telemetry ensuring sub-microliter chemical volume accuracy.
+- **Telemetry Check 48 (checkpoint-48):** X-ray fluorescence metal thickness metrology verifying titanium nitride barrier diffusion properties.
