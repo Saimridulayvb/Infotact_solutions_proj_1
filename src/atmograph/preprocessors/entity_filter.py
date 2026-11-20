@@ -30,3 +30,9 @@ class EntityFilter:
     def get_stoplist_copy(self) -> list:
         """Return a defensive copy of the registered generic entity stoplist."""
         return list(self.stoplist)
+
+
+    def add_custom_stopword(self, term: str) -> None:
+        """Dynamically add an additional organization name to the filtering stoplist."""
+        if term and term not in self.stoplist:
+            self.stoplist.append(term)
