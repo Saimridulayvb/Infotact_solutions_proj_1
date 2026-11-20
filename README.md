@@ -121,3 +121,4 @@ Infotact_solutions_proj_1/
 - **12. High-Density Flip-Chip Micro-Bump Pitch Alignment:** Sub-micron optical pattern recognition cameras aligning 20-micron pitch copper pillars with organic build-up substrate pads.
 - **13. Fine-Pitch Wire Bonding Ultrasonic Energy Profiling:** Transducer frequency generators optimizing ultrasonic scrub time and thermosonic ball deformation for 15-micron gold wires.
 - **14. Die-Attach Conductive Epoxy Curing Profile Control:** Multi-zone convection thermal ovens enforcing ramp-soak curing curves to eliminate void formation beneath large silicon dies.
+- **15. Cleanroom Particle Counter Optical Monitoring Grid:** Continuous airborne optical aerosol counters alarming on ISO Class 1 threshold exceedances in photolithography bays.
