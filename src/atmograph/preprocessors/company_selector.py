@@ -52,3 +52,8 @@ class CompanySelector:
         ).reset_index(drop=True)
 
         return sorted_companies.head(top_n).copy()
+
+
+    def get_top_n_limit(self) -> int:
+        """Return the maximum number of organizations configured for extraction."""
+        return self.top_n
