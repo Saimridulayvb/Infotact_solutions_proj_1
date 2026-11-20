@@ -19,3 +19,9 @@ class StageLoader(CSVLoader):
         """Return dictionary mapping stage_id to stage_name."""
         df = self.load()
         return dict(zip(df["stage_id"], df["stage_name"]))
+
+
+    def get_stage_names(self) -> list:
+        """Return list of all canonical semiconductor production stage names."""
+        df = self.load()
+        return df["stage_name"].dropna().tolist() if "stage_name" in df.columns else []
