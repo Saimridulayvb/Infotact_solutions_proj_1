@@ -35,3 +35,8 @@ class RelationshipExtractor:
         )
 
         return relationships.reset_index(drop=True)
+
+
+    def get_extracted_edge_count(self, extracted_df: pd.DataFrame) -> int:
+        """Return the total number of cleaned supply relationships extracted."""
+        return len(extracted_df)
