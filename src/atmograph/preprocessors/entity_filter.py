@@ -25,3 +25,8 @@ class EntityFilter:
             return df
         mask = ~df[col].astype(str).str.lower().str.strip().isin(self.stoplist)
         return df[mask].copy()
+
+
+    def get_stoplist_copy(self) -> list:
+        """Return a defensive copy of the registered generic entity stoplist."""
+        return list(self.stoplist)
