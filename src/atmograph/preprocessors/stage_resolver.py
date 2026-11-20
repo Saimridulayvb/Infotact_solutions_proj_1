@@ -44,3 +44,8 @@ class StageResolver:
     def has_stage_mapping(self, input_name: str) -> bool:
         """Check if an explicit stage name resolution exists for given input entity."""
         return input_name in self.get_default_stage_map()
+
+
+    def get_unresolved_count(self, inputs_df: pd.DataFrame) -> int:
+        """Count number of inputs in dataframe still lacking an assigned stage identifier."""
+        return int(inputs_df["stage_id"].isnull().sum()) if "stage_id" in inputs_df.columns else 0
