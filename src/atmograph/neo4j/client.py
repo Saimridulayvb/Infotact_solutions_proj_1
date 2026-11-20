@@ -69,3 +69,8 @@ class Neo4jClient:
     def is_active(self) -> bool:
         """Check if Neo4j driver connection is currently open and active."""
         return self._driver is not None
+
+
+    def get_database_name(self) -> str:
+        """Return the target database name configured for transactions."""
+        return self.database
