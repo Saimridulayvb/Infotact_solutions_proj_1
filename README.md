@@ -196,3 +196,4 @@ Infotact_solutions_proj_1/
 - **Telemetry Check 21 (checkpoint-21):** Through-silicon via high-aspect-ratio electroplating current density ramp control for void-free copper fill.
 - **Telemetry Check 22 (checkpoint-22):** Laser dicing optical focus tracking ensuring subsurface ablation plane maintains constant wafer depth.
 - **Telemetry Check 23 (checkpoint-23):** Transfer molding hydraulic ram speed and cavity pressure logging preventing internal wire sweep anomalies.
+- **Telemetry Check 24 (checkpoint-24):** Ball grid array solder ball coplanarity optical verification preventing board-level surface mount opens.
