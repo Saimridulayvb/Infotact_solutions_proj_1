@@ -32,3 +32,9 @@ class ProvisionLoader(CSVLoader):
         """Calculate arithmetic mean of non-null market share provided values."""
         df = self.load()
         return float(df["share_provided"].dropna().mean()) if "share_provided" in df.columns else 0.0
+
+
+    def get_year_distribution(self) -> list:
+        """Return sorted list of unique observation years recorded in provision dataset."""
+        df = self.load()
+        return sorted(df["year"].dropna().unique().tolist()) if "year" in df.columns else []
