@@ -37,3 +37,8 @@ class CSVLoader(BaseLoader):
         """Quickly inspect first n rows without full table processing."""
         self.validate_path()
         return pd.read_csv(self.file_path, nrows=n_rows)
+
+
+    def get_encoding(self) -> str:
+        """Return the configured character encoding string for CSV parsing."""
+        return self.encoding
