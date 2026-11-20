@@ -180,3 +180,4 @@ Infotact_solutions_proj_1/
 - **Telemetry Check 05 (checkpoint-05):** Electrostatic chuck clamping force telemetry monitoring helium backside cooling gas leakage rates.
 - **Telemetry Check 06 (checkpoint-06):** Optical emission spectroscopy peak monitoring during reactive ion etching to detect endpoint transition.
 - **Telemetry Check 07 (checkpoint-07):** Chemical mechanical planarization slurry density and pH monitoring with closed-loop automated titration.
+- **Telemetry Check 08 (checkpoint-08):** Extreme ultraviolet reticle cleanliness verification via multi-beam actinic optical inspection tools.
