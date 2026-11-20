@@ -29,3 +29,8 @@ class MarketShareImputer:
             result[col] = result[col].fillna(medians)
 
         return result
+
+
+    def get_default_share_rate(self) -> float:
+        """Return the baseline fallback market share percentage for unranked suppliers."""
+        return 0.05
