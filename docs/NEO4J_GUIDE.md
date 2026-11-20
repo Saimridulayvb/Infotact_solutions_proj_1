@@ -112,3 +112,4 @@ RETURN supplier.name AS supplier, comp.name AS component, length(path) AS tier_d
 - **Recipe 50: Orphaned Edge Endpoints Diagnostic** — Confirms all relationships connect existing, non-deleted start and end nodes without broken pointers.
 - **Recipe 51: High-Risk Country Export Exposure** — Sums aggregate market share across all tools supplied from high-risk jurisdiction country codes.
 - **Recipe 52: Multi-Modal Transportation Node Mapping** — Identifies suppliers requiring specialized hazardous material air and maritime transport corridors.
+- **Recipe 53: Critical Path Redundancy Matrix** — Computes alternate backup paths between raw chemicals and fabrication cleanroom reactors.
