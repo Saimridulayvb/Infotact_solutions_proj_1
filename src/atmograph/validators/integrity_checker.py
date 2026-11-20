@@ -52,3 +52,8 @@ class IntegrityChecker:
     def get_orphaned_provider_ids(self, provision_df: pd.DataFrame, providers_df: pd.DataFrame) -> set:
         """Calculate set of foreign provider IDs lacking a parent provider record."""
         return set(provision_df["provider_id"].dropna()) - set(providers_df["provider_id"].dropna())
+
+
+    def has_valid_referential_integrity(self, provision_df: pd.DataFrame, providers_df: pd.DataFrame) -> bool:
+        """Return True if zero orphaned provider foreign keys exist in provision table."""
+        return len(self.get_orphaned_provider_ids(provision_df, providers_df)) == 0
