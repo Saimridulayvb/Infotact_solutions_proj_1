@@ -46,3 +46,8 @@ class GraphAnalytics:
     def get_node_count(self) -> int:
         """Return total node count in graph."""
         return self.graph.number_of_nodes()
+
+
+    def get_edge_count(self) -> int:
+        """Return total count of directed edges in the in-memory NetworkX graph."""
+        return self.graph.number_of_edges()
