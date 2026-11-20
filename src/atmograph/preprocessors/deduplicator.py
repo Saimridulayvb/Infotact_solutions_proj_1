@@ -34,3 +34,8 @@ class RelationshipDeduplicator:
     def get_unique_pair_count(self, df: pd.DataFrame, key_cols: list) -> int:
         """Calculate count of distinct entity pairs according to key columns."""
         return len(df.drop_duplicates(subset=key_cols))
+
+
+    def is_deduplication_required(self, df: pd.DataFrame, key_cols: list) -> bool:
+        """Check if duplicate rows exist that require resolution in the candidate dataframe."""
+        return self.count_duplicates(df, key_cols) > 0
