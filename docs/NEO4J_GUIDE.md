@@ -73,3 +73,4 @@ RETURN supplier.name AS supplier, comp.name AS component, length(path) AS tier_d
 - **Recipe 11: Dominant Supplier Market Share Concentration** — Flags suppliers controlling over 85 percent aggregate market share in any single semiconductor input category.
 - **Recipe 12: Dual-Sourcing Redundancy Assessment** — Finds inputs supplied by exactly two companies to evaluate failover readiness and secondary supplier capacity.
 - **Recipe 13: Supply Chain Depth Profiling** — Calculates maximum path length from raw precursor chemicals to completed semiconductor integrated circuits.
+- **Recipe 14: Category-Level Market Share Distribution** — Groups inputs by resource type and computes average provider share percentages to benchmark competitiveness.
