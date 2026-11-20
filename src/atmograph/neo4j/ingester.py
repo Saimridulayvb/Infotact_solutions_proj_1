@@ -51,3 +51,8 @@ class Neo4jIngester:
     def get_ingester_batch_size(self) -> int:
         """Return configured mutation chunk size for UNWIND Cypher batches."""
         return self.batch_size
+
+
+    def is_ingester_ready(self) -> bool:
+        """Verify that client connection and batch size are initialized."""
+        return self.client is not None and self.batch_size > 0
