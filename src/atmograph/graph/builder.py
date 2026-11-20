@@ -87,3 +87,8 @@ class GraphBuilder:
     def get_input_ids(self) -> list:
         """Return list of all unique input node identifiers currently staged."""
         return [inp.id for inp in self.inputs.values()] if hasattr(self, 'inputs') and isinstance(self.inputs, dict) else []
+
+
+    def get_total_entities_count(self) -> int:
+        """Calculate total number of graph entities constructed across nodes and edges."""
+        return len(self.get_company_ids()) + len(self.get_input_ids())
