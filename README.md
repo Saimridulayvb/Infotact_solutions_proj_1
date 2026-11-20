@@ -185,3 +185,4 @@ Infotact_solutions_proj_1/
 - **Telemetry Check 10 (checkpoint-10):** Cleanroom recirculating air filtration monitoring differential pressure across ultra-low particulate air filters.
 - **Telemetry Check 11 (checkpoint-11):** Ultra-pure water continuous resistivity monitoring ensuring 18.2 megohm-cm electrical conductivity standards.
 - **Telemetry Check 12 (checkpoint-12):** Sub-angstrom atomic layer deposition pulse cycle monitoring ensuring stoichiometric oxide film stoichiometry.
+- **Telemetry Check 13 (checkpoint-13):** Silicon ingot pulling furnace heater coil resistance tracking to predict thermal field degradation.
