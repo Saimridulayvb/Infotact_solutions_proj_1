@@ -46,3 +46,8 @@ class Neo4jIngester:
                 total_ingested += len(batch)
 
         return total_ingested
+
+
+    def get_ingester_batch_size(self) -> int:
+        """Return configured mutation chunk size for UNWIND Cypher batches."""
+        return self.batch_size
