@@ -146,3 +146,4 @@ Infotact_solutions_proj_1/
 - **37. Static Timing Analysis Corner Coverage Verification:** Multi-corner multi-mode timing analyzers verifying setup and hold slack margins across voltage and temperature extremes.
 - **38. Formal Property Layout-Versus-Schematic Equivalence Checking:** Mathematical graph isomorphism solvers verifying structural correspondence between routed mask layouts and SPICE netlists.
 - **39. Inverse Lithography Technology Mask Synthesis Accelerator:** GPU-accelerated computational lithography engines computing complex pixelated mask patterns to compensate for optical diffraction.
+- **40. Manufacturing Execution System Real-Time Lot Dispatching:** Dynamic priority dispatching algorithms scheduling lot moves across 500 equipment bays to optimize overall equipment effectiveness.
