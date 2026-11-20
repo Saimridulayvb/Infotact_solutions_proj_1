@@ -191,3 +191,4 @@ Infotact_solutions_proj_1/
 - **Telemetry Check 16 (checkpoint-16):** Die-attach epoxy dispensing volume verification using laser displacement profilometers on leadframes.
 - **Telemetry Check 17 (checkpoint-17):** Flip-chip solder reflow furnace peak temperature and soak duration monitoring across 10 heating zones.
 - **Telemetry Check 18 (checkpoint-18):** Wire bonding capillary ultrasonic transducer amplitude logging to prevent bond pad cratering defects.
+- **Telemetry Check 19 (checkpoint-19):** Automated test equipment Kelvin contact resistance tracking across 100,000 socket insertions.
