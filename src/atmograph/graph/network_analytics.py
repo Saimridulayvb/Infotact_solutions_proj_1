@@ -51,3 +51,8 @@ class GraphAnalytics:
     def get_edge_count(self) -> int:
         """Return total count of directed edges in the in-memory NetworkX graph."""
         return self.graph.number_of_edges()
+
+
+    def is_directed(self) -> bool:
+        """Verify whether internal graph structure is a directed property graph."""
+        return self.graph.is_directed()
