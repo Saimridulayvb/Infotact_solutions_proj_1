@@ -112,3 +112,4 @@ Infotact_solutions_proj_1/
 - **03. Silicon Ingot Crystal Pulling Crucible Thermal Tracking:** High-precision pyrometry monitoring Czochralski quartz crucibles at 1420C to ensure uniform dislocation-free monocrystalline silicon boules.
 - **04. Ultra-High Purity Gas Distribution Integrity:** Automated mass spectrometer sniffers detecting sub-ppb oxygen and moisture impurities in pyrophoric silane and arsine delivery lines.
 - **05. Photomask Reticle Phase-Shift Defect Inspection:** Multi-beam actinic optical defect scanners classifying nanometer-scale phase defects across extreme ultraviolet reflective reticles.
+- **06. Atomic Layer Deposition Monolayer Growth Precision:** In-situ spectroscopic ellipsometry validating digital sub-angstrom monolayer growth of hafnium oxide gate dielectrics.
