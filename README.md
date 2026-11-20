@@ -208,3 +208,4 @@ Infotact_solutions_proj_1/
 - **Telemetry Check 33 (checkpoint-33):** Transistor layout parasitic extraction netlist validation verifying interconnect RC delays within spec.
 - **Telemetry Check 34 (checkpoint-34):** Static timing analysis multi-corner setup and hold slack verification across process voltage extremes.
 - **Telemetry Check 35 (checkpoint-35):** Design rule checking geometric spacing violation detection ensuring layout meets foundry design rules.
+- **Telemetry Check 36 (checkpoint-36):** Optical proximity correction mask edge placement error minimization across dense poly gate layers.
