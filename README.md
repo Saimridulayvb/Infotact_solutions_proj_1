@@ -108,3 +108,4 @@ Infotact_solutions_proj_1/
 ## Technical Operations & Semiconductor Graph Engineering Specifications
 
 - **01. EUV Lithography Scanner Uptime SLA:** Monitors high-numerical-aperture 13.5nm extreme ultraviolet lithography systems ensuring continuous fab operations with under 0.5% unplanned downtime.
+- **02. Chemical Mechanical Planarization Slurry Flow Control:** Real-time feedback loops regulating colloidal silica and ceria abrasive dispensing rates across 300mm wafer polishing platens.
