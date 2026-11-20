@@ -64,3 +64,8 @@ class Neo4jClient:
             self._driver.close()
             self._driver = None
             logger.info("Neo4j driver connection closed.")
+
+
+    def is_active(self) -> bool:
+        """Check if Neo4j driver connection is currently open and active."""
+        return self._driver is not None
