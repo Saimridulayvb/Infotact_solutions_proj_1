@@ -32,3 +32,9 @@ class ProviderLoader(CSVLoader):
     def get_organization_count(self) -> int:
         """Return total count of distinct organization entities loaded."""
         return len(self.load())
+
+
+    def get_country_frequency(self) -> dict:
+        """Calculate frequency distribution of providers grouped by country code."""
+        df = self.load()
+        return df["country"].value_counts().to_dict() if "country" in df.columns else {}
