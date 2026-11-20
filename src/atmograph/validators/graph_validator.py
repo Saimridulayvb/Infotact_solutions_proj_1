@@ -44,3 +44,8 @@ class GraphValidator:
                 edges.add((u, v))
 
         return result
+
+
+    def has_cycles(self, edges_df: pd.DataFrame, source_col: str = "source", target_col: str = "target") -> bool:
+        """Detect whether directed edge list forms one or more cycles."""
+        return not self.validate_dag(edges_df, source_col, target_col).is_valid
