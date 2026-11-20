@@ -127,3 +127,4 @@ Infotact_solutions_proj_1/
 - **18. Infrared Stealth Dicing Subsurface Laser Scribing:** Internal optical focus lenses creating subsurface micro-crack arrays inside silicon wafers for debris-free mechanical die expansion.
 - **19. Ball Grid Array Solder Ball Coplanarity Inspection:** Automated 3D optical triangulation cameras verifying height coplanarity across thousands of lead-free SAC305 micro-solder spheres.
 - **20. Capillary Underfill Epoxy Flow Capillarity Dynamics:** High-speed thermal cameras tracking edge-to-edge meniscus advance to verify complete zero-void underfill beneath flip-chips.
+- **21. Transfer Molding Thermosetting Resin Injection Pressure:** Hydraulic servo pumps profiling multi-stage transfer ram speed to prevent gold wire sweep during epoxy encapsulation.
