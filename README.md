@@ -118,3 +118,4 @@ Infotact_solutions_proj_1/
 - **09. Extreme Ultraviolet Pellicle Thermal Stress Telemetry:** Non-contact pyrometric sensors measuring heat dissipation on nanoscale carbon nanotube membranes subjected to 400W EUV laser power.
 - **10. Automated Cleanroom FOUP Transit Routing Matrix:** Decentralized overhead hoist transport heuristics minimizing pod travel latency and buffer congestion across 300mm wafer fab bays.
 - **11. Vertical MEMS Probe Card Electrical Contact Force:** Dynamic piezoelectric load cells regulating micro-spring needle deflection to prevent wafer bond pad scrub damage during sort testing.
+- **12. High-Density Flip-Chip Micro-Bump Pitch Alignment:** Sub-micron optical pattern recognition cameras aligning 20-micron pitch copper pillars with organic build-up substrate pads.
