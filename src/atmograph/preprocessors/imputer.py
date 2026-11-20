@@ -34,3 +34,8 @@ class MarketShareImputer:
     def get_default_share_rate(self) -> float:
         """Return the baseline fallback market share percentage for unranked suppliers."""
         return 0.05
+
+
+    def is_imputation_needed(self, df: pd.DataFrame, share_col: str = "share_provided") -> bool:
+        """Determine whether missing market share values exist in target column."""
+        return self.count_missing_shares(df, share_col) > 0
