@@ -101,3 +101,10 @@ Infotact_solutions_proj_1/
 ## Authors & Maintainers
 
 - **Subramani** (`Subramani` branch)
+
+
+---
+
+## Technical Operations & Semiconductor Graph Engineering Specifications
+
+- **01. EUV Lithography Scanner Uptime SLA:** Monitors high-numerical-aperture 13.5nm extreme ultraviolet lithography systems ensuring continuous fab operations with under 0.5% unplanned downtime.
