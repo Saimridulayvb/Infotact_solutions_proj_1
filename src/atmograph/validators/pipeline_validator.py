@@ -69,3 +69,8 @@ class PipelineValidator:
     def get_validator_count(self) -> int:
         """Return the number of registered validation stages in the composite pipeline."""
         return len(self.get_validators())
+
+
+    def is_all_passed(self, report) -> bool:
+        """Convenience method checking if all constituent validators reported success."""
+        return report.is_valid
