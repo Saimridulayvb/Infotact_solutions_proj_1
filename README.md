@@ -129,3 +129,4 @@ Infotact_solutions_proj_1/
 - **20. Capillary Underfill Epoxy Flow Capillarity Dynamics:** High-speed thermal cameras tracking edge-to-edge meniscus advance to verify complete zero-void underfill beneath flip-chips.
 - **21. Transfer Molding Thermosetting Resin Injection Pressure:** Hydraulic servo pumps profiling multi-stage transfer ram speed to prevent gold wire sweep during epoxy encapsulation.
 - **22. Silicon Interposer Through-Silicon Via Aspect Ratio Integrity:** Cross-sectional scanning electron microscopes validating 10:1 aspect ratio copper fill density in passive 2.5D interposers.
+- **23. Laser Marking Traceability Barcode Readability Verification:** Optical machine vision verifiers grading 2D Data Matrix code contrast on molded IC packages according to ISO/IEC 15415.
