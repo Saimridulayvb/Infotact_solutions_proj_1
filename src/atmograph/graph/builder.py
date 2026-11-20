@@ -82,3 +82,8 @@ class GraphBuilder:
                 source=str(row["source"]) if pd.notna(row.get("source")) else None
             ))
         return rels
+
+
+    def get_input_ids(self) -> list:
+        """Return list of all unique input node identifiers currently staged."""
+        return [inp.id for inp in self.inputs.values()] if hasattr(self, 'inputs') and isinstance(self.inputs, dict) else []
