@@ -46,3 +46,8 @@ class NullDetector:
                     ))
 
         return result
+
+
+    def get_columns_exceeding_threshold(self, df: pd.DataFrame, threshold: float = 0.5) -> list:
+        """Identify columns where null percentage exceeds the specified threshold."""
+        return [c for c, ratio in (df.isnull().mean()).items() if ratio > threshold]
