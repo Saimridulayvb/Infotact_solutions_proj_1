@@ -108,3 +108,4 @@ RETURN supplier.name AS supplier, comp.name AS component, length(path) AS tier_d
 - **Recipe 46: Supply Edge Count Verification** — Validates total edge count against processed CSV export records for end-to-end data integrity.
 - **Recipe 47: Node Label Cardinality Diagnostics** — Reports count of nodes per label (Company, Input, Stage) to verify ingestion completeness.
 - **Recipe 48: Relationship Type Cardinality Check** — Returns distribution of edges across SUPPLIES, GOES_INTO, and IS_TYPE_OF relationship types.
+- **Recipe 49: Self-Referencing Edge Verification** — Asserts that zero relationships have identical start and end node identifiers to prevent self-loops.
