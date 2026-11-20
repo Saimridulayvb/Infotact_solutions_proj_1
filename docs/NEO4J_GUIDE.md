@@ -62,3 +62,4 @@ RETURN supplier.name AS supplier, comp.name AS component, length(path) AS tier_d
 
 - **Recipe 01: Tier-1 Single-Source SPoF Identification** — Finds critical inputs that rely exclusively on a single supplying company with no redundant providers.
 - **Recipe 02: Multi-Hop Downstream Disruption Cascades** — Traces downstream inputs affected when a specific supplier halts delivery across multiple production stages.
+- **Recipe 03: Geographic Choke-Point Analysis** — Aggregates market shares of suppliers by country code to identify regional geopolitical concentration risks.
