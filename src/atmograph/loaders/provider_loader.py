@@ -27,3 +27,8 @@ class ProviderLoader(CSVLoader):
         """Return sorted list of distinct country codes where suppliers are headquartered."""
         df = self.load_organizations()
         return sorted([str(c) for c in df["country"].dropna().unique()])
+
+
+    def get_organization_count(self) -> int:
+        """Return total count of distinct organization entities loaded."""
+        return len(self.load())
