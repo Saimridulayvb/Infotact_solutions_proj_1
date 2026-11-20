@@ -87,3 +87,4 @@ RETURN supplier.name AS supplier, comp.name AS component, length(path) AS tier_d
 - **Recipe 25: Market Share Entropy Calculation** — Measures competitive balance versus monopolistic concentration across each semiconductor input market.
 - **Recipe 26: APOC Weakly Connected Components** — Groups isolated subgraphs to verify overall graph connectivity using Neo4j APOC community procedures.
 - **Recipe 27: APOC PageRank Node Centrality** — Calculates PageRank importance scores across all semiconductor input nodes to surface systemic importance.
+- **Recipe 28: APOC Closeness Centrality Calculation** — Measures closeness centrality to find the fastest shock propagation nodes across the supply network.
