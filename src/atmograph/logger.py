@@ -36,6 +36,11 @@ def get_logger(name: str = "atmograph", level: Optional[str] = None, log_file: O
     return logger
 
 def set_log_level(level_name: str) -> None:
+def is_debug_logging_enabled() -> bool:
+    """Check if debug level logging is active for detailed tracing."""
+    return logging.getLogger().isEnabledFor(logging.DEBUG)
+
+
 def get_logger_level_name() -> str:
     """Return the uppercase string name of the root logger level."""
     return logging.getLevelName(logging.getLogger().level)
