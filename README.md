@@ -113,3 +113,4 @@ Infotact_solutions_proj_1/
 - **04. Ultra-High Purity Gas Distribution Integrity:** Automated mass spectrometer sniffers detecting sub-ppb oxygen and moisture impurities in pyrophoric silane and arsine delivery lines.
 - **05. Photomask Reticle Phase-Shift Defect Inspection:** Multi-beam actinic optical defect scanners classifying nanometer-scale phase defects across extreme ultraviolet reflective reticles.
 - **06. Atomic Layer Deposition Monolayer Growth Precision:** In-situ spectroscopic ellipsometry validating digital sub-angstrom monolayer growth of hafnium oxide gate dielectrics.
+- **07. Deep Reactive Ion Etching Bosch Cycle Synchronization:** Microsecond gas switching controllers oscillating between sulfur hexafluoride etch and octafluorocyclobutane passivation steps.
