@@ -124,3 +124,4 @@ Infotact_solutions_proj_1/
 - **15. Cleanroom Particle Counter Optical Monitoring Grid:** Continuous airborne optical aerosol counters alarming on ISO Class 1 threshold exceedances in photolithography bays.
 - **16. Anhydrous Hydrofluoric Vapor Etching Selectivity:** Controlled-temperature vapor reactors stripping sacrificial silicon dioxide films with zero liquid capillary surface tension stiction.
 - **17. Wafer Backside Grinding Roughness Profilometry:** Laser confocal displacement sensors auditing silicon substrate thinning down to 50 microns with sub-nanometer surface roughness.
+- **18. Infrared Stealth Dicing Subsurface Laser Scribing:** Internal optical focus lenses creating subsurface micro-crack arrays inside silicon wafers for debris-free mechanical die expansion.
