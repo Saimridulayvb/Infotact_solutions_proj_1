@@ -189,3 +189,4 @@ Infotact_solutions_proj_1/
 - **Telemetry Check 14 (checkpoint-14):** Deep reactive ion etch sidewall scallop profile metrology verifying uniform vertical trench etching.
 - **Telemetry Check 15 (checkpoint-15):** Wafer edge trimming wheel rotation speed and feed rate telemetry minimizing mechanical vibration harmonics.
 - **Telemetry Check 16 (checkpoint-16):** Die-attach epoxy dispensing volume verification using laser displacement profilometers on leadframes.
+- **Telemetry Check 17 (checkpoint-17):** Flip-chip solder reflow furnace peak temperature and soak duration monitoring across 10 heating zones.
