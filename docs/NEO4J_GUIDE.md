@@ -84,3 +84,4 @@ RETURN supplier.name AS supplier, comp.name AS component, length(path) AS tier_d
 - **Recipe 22: High-Degree Input Choke Points** — Identifies inputs that feed into more than 10 downstream manufacturing steps as high-impact nexus points.
 - **Recipe 23: Stage Inflow/Outflow Balance** — Calculates ratio of incoming resources to outgoing manufactured outputs per life-cycle stage.
 - **Recipe 24: Direct vs Indirect Supplier Tracing** — Compares tier-1 direct equipment providers against tier-2 indirect component manufacturers.
+- **Recipe 25: Market Share Entropy Calculation** — Measures competitive balance versus monopolistic concentration across each semiconductor input market.
