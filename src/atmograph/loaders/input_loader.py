@@ -29,3 +29,9 @@ class InputLoader(CSVLoader):
         """Filter and return subset dataframe containing tool resource inputs."""
         df = self.load()
         return df[df["type"] == "tool_resource"] if "type" in df.columns else df
+
+
+    def get_material_inputs(self) -> pd.DataFrame:
+        """Filter and return subset dataframe containing material resource inputs."""
+        df = self.load()
+        return df[df["type"] == "material_resource"] if "type" in df.columns else df
