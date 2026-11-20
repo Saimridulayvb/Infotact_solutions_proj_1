@@ -140,3 +140,4 @@ Infotact_solutions_proj_1/
 - **31. Spectroscopic Film Thickness Mapping Across 300mm Wafers:** Broadband spectrophotometers capturing 49-point thickness maps to evaluate chemical vapor deposition non-uniformity across wafers.
 - **32. X-Ray Metrology for Multi-Layer Metal Stack Composition:** Non-destructive wavelength-dispersive X-ray fluorescence measuring titanium nitride barrier layer density and alloy ratios.
 - **33. Immersion Lithography Ultrapure Water Bubble Degassing Unit:** Vacuum membrane contactors extracting dissolved nitrogen and micro-bubbles from high-index immersion fluid below 20 ppb.
+- **34. Automated Reticle Stocker Nitrogen Purge Enclosure:** Hermetically sealed storage carousels maintaining ultra-pure nitrogen environments with relative humidity under 0.1% for masks.
