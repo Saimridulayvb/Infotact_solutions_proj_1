@@ -145,3 +145,4 @@ Infotact_solutions_proj_1/
 - **36. Transistor Layout Parasitic Extraction and Signoff RC:** Automated EDA parasitic extraction tools validating interconnect capacitance and resistance models against foundry design rules.
 - **37. Static Timing Analysis Corner Coverage Verification:** Multi-corner multi-mode timing analyzers verifying setup and hold slack margins across voltage and temperature extremes.
 - **38. Formal Property Layout-Versus-Schematic Equivalence Checking:** Mathematical graph isomorphism solvers verifying structural correspondence between routed mask layouts and SPICE netlists.
+- **39. Inverse Lithography Technology Mask Synthesis Accelerator:** GPU-accelerated computational lithography engines computing complex pixelated mask patterns to compensate for optical diffraction.
