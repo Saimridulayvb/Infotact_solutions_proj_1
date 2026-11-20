@@ -79,3 +79,4 @@ RETURN supplier.name AS supplier, comp.name AS component, length(path) AS tier_d
 - **Recipe 17: Packaging Substrate Upstream Tracing** — Traces chemical precursors and metal sputtering targets feeding high-density organic package substrates.
 - **Recipe 18: Cleanroom Consumable Exposure Audit** — Identifies suppliers of critical gases and chemical cleaners with zero buffer stock in supply chains.
 - **Recipe 19: Supplier Disruption Simulation Matrix** — Simulates simultaneous outage of top 3 suppliers and returns percentage coverage of halted manufacturing.
+- **Recipe 20: Shortest Path Between Providers** — Computes shortest dependency path between any two semiconductor manufacturing firms across the supply web.
