@@ -51,3 +51,8 @@ def load_dataset_bundle(data_dir: Union[str, Path] = "data/raw") -> DatasetBundl
     def get_total_record_count(self) -> int:
         """Calculate aggregate row count across all loaded semiconductor tables."""
         return sum(len(df) for df in [self.providers, self.provision, self.inputs, self.stages, self.sequence])
+
+
+    def has_valid_stages(self) -> bool:
+        """Confirm that production stages table contains non-empty stage records."""
+        return len(self.stages) > 0 and "stage_id" in self.stages.columns
