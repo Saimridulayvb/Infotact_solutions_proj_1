@@ -174,3 +174,4 @@ Infotact_solutions_proj_1/
 ## Automated Operational Telemetry & Health Audit Ledger
 
 - **Telemetry Check 01 (checkpoint-01):** Real-time photolithography dose sensor calibration tracking 193nm excimer pulse energy repeatability.
+- **Telemetry Check 02 (checkpoint-02):** High-vacuum cryopump regeneration cycle scheduling based on residual gas analyzer partial pressure readings.
