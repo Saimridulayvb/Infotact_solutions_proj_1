@@ -90,3 +90,4 @@ RETURN supplier.name AS supplier, comp.name AS component, length(path) AS tier_d
 - **Recipe 28: APOC Closeness Centrality Calculation** — Measures closeness centrality to find the fastest shock propagation nodes across the supply network.
 - **Recipe 29: APOC Betweenness Centrality Ranking** — Discovers structural bridge entities whose removal disconnects critical supplier subgraphs.
 - **Recipe 30: APOC Louvain Community Modularity** — Partitions supply network into tightly knit functional manufacturing clusters and technology domains.
+- **Recipe 31: Dynamic Weight Shortest Path Traversal** — Uses Dijkstra path search with inverse market share as edge traversal impedance for risk-weighted routing.
