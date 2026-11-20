@@ -25,3 +25,8 @@ class CypherGenerator:
     def get_constraint_count() -> int:
         """Return count of uniqueness constraints generated."""
         return 3
+
+
+    def get_index_names(self) -> list:
+        """Return list of expected property index names for graph schema."""
+        return ["company_name_idx", "input_name_idx", "input_type_idx"]
