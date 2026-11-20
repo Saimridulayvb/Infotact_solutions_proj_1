@@ -47,3 +47,8 @@ class IntegrityChecker:
             ))
 
         return result
+
+
+    def get_orphaned_provider_ids(self, provision_df: pd.DataFrame, providers_df: pd.DataFrame) -> set:
+        """Calculate set of foreign provider IDs lacking a parent provider record."""
+        return set(provision_df["provider_id"].dropna()) - set(providers_df["provider_id"].dropna())
