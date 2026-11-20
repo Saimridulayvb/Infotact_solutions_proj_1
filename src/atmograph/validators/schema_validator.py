@@ -44,3 +44,8 @@ class SchemaValidator:
             ))
 
         return result
+
+
+    def get_missing_columns(self, df: pd.DataFrame, expected_cols: list) -> list:
+        """Return list of expected column names absent in the candidate dataframe."""
+        return [c for c in expected_cols if c not in df.columns]
