@@ -37,3 +37,8 @@ class BaseLoader(ABC):
     def load(self) -> pd.DataFrame:
         """Load and return the dataset as a DataFrame."""
         pass
+
+
+    def get_file_extension(self) -> str:
+        """Return the lowercase file extension of the target dataset."""
+        return self.file_path.suffix.lower()
