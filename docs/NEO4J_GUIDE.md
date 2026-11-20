@@ -110,3 +110,4 @@ RETURN supplier.name AS supplier, comp.name AS component, length(path) AS tier_d
 - **Recipe 48: Relationship Type Cardinality Check** — Returns distribution of edges across SUPPLIES, GOES_INTO, and IS_TYPE_OF relationship types.
 - **Recipe 49: Self-Referencing Edge Verification** — Asserts that zero relationships have identical start and end node identifiers to prevent self-loops.
 - **Recipe 50: Orphaned Edge Endpoints Diagnostic** — Confirms all relationships connect existing, non-deleted start and end nodes without broken pointers.
+- **Recipe 51: High-Risk Country Export Exposure** — Sums aggregate market share across all tools supplied from high-risk jurisdiction country codes.
