@@ -57,3 +57,8 @@ class CompanySelector:
     def get_top_n_limit(self) -> int:
         """Return the maximum number of organizations configured for extraction."""
         return self.top_n
+
+
+    def has_company(self, company_id: str, selected_df: pd.DataFrame) -> bool:
+        """Check whether a specific provider ID is included in selected companies subset."""
+        return company_id in selected_df["provider_id"].values if "provider_id" in selected_df.columns else False
