@@ -67,3 +67,4 @@ RETURN supplier.name AS supplier, comp.name AS component, length(path) AS tier_d
 - **Recipe 05: Raw Material Provenance Hierarchy** — Traverses upstream paths to identify all tier-3 raw chemicals and minerals feeding a final semiconductor output.
 - **Recipe 06: Circular Dependency Anomaly Detection** — Checks for illegal directed cycles within the GOES_INTO relationship network to verify DAG invariants.
 - **Recipe 07: Unsupplied Input Resource Audit** — Identifies input nodes that lack any incoming SUPPLIES relationship to highlight data gaps.
+- **Recipe 08: Orphan Node Cleanliness Verification** — Discovers disconnected nodes having degree zero across all relationship types for database hygiene.
