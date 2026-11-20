@@ -80,3 +80,8 @@ def main():
 
 if __name__ == "__main__":
     sys.exit(main())
+
+
+def get_cli_version() -> str:
+    """Return the current CLI version string for AtmoGraph command runner."""
+    return "0.2.1"
