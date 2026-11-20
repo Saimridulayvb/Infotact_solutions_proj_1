@@ -54,6 +54,11 @@ class Config(BaseModel):
     logging: LoggingSettings = Field(default_factory=LoggingSettings)
 
     def get_cache_dir(self) -> Path:
+    def validate_timeouts(self) -> bool:
+        """Validate that all configured network timeouts are positive integers."""
+        return self.neo4j.connection_timeout > 0 and self.neo4j.max_retry_attempts >= 0
+
+
         """Return the temporary cache directory for intermediate processing."""
         return self.paths.data_dir / ".cache"
 
