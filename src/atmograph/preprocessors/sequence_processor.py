@@ -29,3 +29,8 @@ class SequenceProcessor:
         ].drop_duplicates().reset_index(drop=True)
 
         return goes_into_clean, is_type_of_clean
+
+
+    def get_goes_into_count(self, goes_into_df: pd.DataFrame) -> int:
+        """Return the count of physical assembly dependency edges extracted."""
+        return len(goes_into_df)
