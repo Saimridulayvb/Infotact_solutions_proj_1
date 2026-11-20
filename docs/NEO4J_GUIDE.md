@@ -72,3 +72,4 @@ RETURN supplier.name AS supplier, comp.name AS component, length(path) AS tier_d
 - **Recipe 10: Cross-Stage Material Transition Mapping** — Detects material flows bridging Fabrication stage inputs into Assembly, Testing, and Packaging.
 - **Recipe 11: Dominant Supplier Market Share Concentration** — Flags suppliers controlling over 85 percent aggregate market share in any single semiconductor input category.
 - **Recipe 12: Dual-Sourcing Redundancy Assessment** — Finds inputs supplied by exactly two companies to evaluate failover readiness and secondary supplier capacity.
+- **Recipe 13: Supply Chain Depth Profiling** — Calculates maximum path length from raw precursor chemicals to completed semiconductor integrated circuits.
