@@ -97,3 +97,4 @@ RETURN supplier.name AS supplier, comp.name AS component, length(path) AS tier_d
 - **Recipe 35: Leaf Node Final Output Extraction** — Identifies terminal node products that do not feed into any further manufacturing step within the graph.
 - **Recipe 36: Root Source Resource Identification** — Finds base mineral and raw chemical inputs that have no upstream dependencies in the modeled network.
 - **Recipe 37: Missing Market Share Audit Query** — Flags all SUPPLIES relationships where share_provided is null or zero for data quality remediation.
+- **Recipe 38: Historical Supplier Tenacity Query** — Compares multi-year provision reporting records to measure supplier persistence and partnership stability.
