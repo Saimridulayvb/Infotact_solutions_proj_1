@@ -142,3 +142,4 @@ Infotact_solutions_proj_1/
 - **33. Immersion Lithography Ultrapure Water Bubble Degassing Unit:** Vacuum membrane contactors extracting dissolved nitrogen and micro-bubbles from high-index immersion fluid below 20 ppb.
 - **34. Automated Reticle Stocker Nitrogen Purge Enclosure:** Hermetically sealed storage carousels maintaining ultra-pure nitrogen environments with relative humidity under 0.1% for masks.
 - **35. In-Line Defect Clustering Spatial Signature Recognition:** Unsupervised machine learning models clustering wafer probe defect patterns to pinpoint faulty vacuum chucks and robotic arms.
+- **36. Transistor Layout Parasitic Extraction and Signoff RC:** Automated EDA parasitic extraction tools validating interconnect capacitance and resistance models against foundry design rules.
