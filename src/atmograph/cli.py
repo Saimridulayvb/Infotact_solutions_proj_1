@@ -85,3 +85,8 @@ if __name__ == "__main__":
 def get_cli_version() -> str:
     """Return the current CLI version string for AtmoGraph command runner."""
     return "0.2.1"
+
+
+def is_cli_debug_mode() -> bool:
+    """Check if debug flag is enabled in CLI invocation arguments."""
+    return "--debug" in sys.argv
