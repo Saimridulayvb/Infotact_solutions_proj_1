@@ -207,3 +207,4 @@ Infotact_solutions_proj_1/
 - **Telemetry Check 32 (checkpoint-32):** High-purity chemical wet bench recirculation filter pressure drop tracking for particulate filtration.
 - **Telemetry Check 33 (checkpoint-33):** Transistor layout parasitic extraction netlist validation verifying interconnect RC delays within spec.
 - **Telemetry Check 34 (checkpoint-34):** Static timing analysis multi-corner setup and hold slack verification across process voltage extremes.
+- **Telemetry Check 35 (checkpoint-35):** Design rule checking geometric spacing violation detection ensuring layout meets foundry design rules.
