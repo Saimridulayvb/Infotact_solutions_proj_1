@@ -54,3 +54,10 @@ MATCH path = (origin:Input)<-[:GOES_INTO*1..3]-(comp:Input)<-[:SUPPLIES]-(suppli
 WHERE origin.name = "Wafer"
 RETURN supplier.name AS supplier, comp.name AS component, length(path) AS tier_depth;
 ```
+
+
+---
+
+## 4. Advanced Production Cypher Query Catalog & Operational Recipes
+
+- **Recipe 01: Tier-1 Single-Source SPoF Identification** — Finds critical inputs that rely exclusively on a single supplying company with no redundant providers.
