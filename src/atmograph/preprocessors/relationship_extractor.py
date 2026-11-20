@@ -40,3 +40,8 @@ class RelationshipExtractor:
     def get_extracted_edge_count(self, extracted_df: pd.DataFrame) -> int:
         """Return the total number of cleaned supply relationships extracted."""
         return len(extracted_df)
+
+
+    def has_positive_market_shares(self, extracted_df: pd.DataFrame) -> bool:
+        """Verify all extracted supply edges feature valid positive market shares."""
+        return (extracted_df["share_provided"] > 0).all() if "share_provided" in extracted_df.columns else True
