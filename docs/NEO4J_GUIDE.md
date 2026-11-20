@@ -95,3 +95,4 @@ RETURN supplier.name AS supplier, comp.name AS component, length(path) AS tier_d
 - **Recipe 33: Multi-Input Bundled Supplier Analysis** — Identifies conglomerates supplying both raw materials and precision machinery to semiconductor fabs.
 - **Recipe 34: Input Taxonomy Hierarchy Rollup** — Rolls up specific chemical inputs into their parent IS_TYPE_OF classification groups for executive summaries.
 - **Recipe 35: Leaf Node Final Output Extraction** — Identifies terminal node products that do not feed into any further manufacturing step within the graph.
+- **Recipe 36: Root Source Resource Identification** — Finds base mineral and raw chemical inputs that have no upstream dependencies in the modeled network.
