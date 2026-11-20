@@ -98,3 +98,4 @@ RETURN supplier.name AS supplier, comp.name AS component, length(path) AS tier_d
 - **Recipe 36: Root Source Resource Identification** — Finds base mineral and raw chemical inputs that have no upstream dependencies in the modeled network.
 - **Recipe 37: Missing Market Share Audit Query** — Flags all SUPPLIES relationships where share_provided is null or zero for data quality remediation.
 - **Recipe 38: Historical Supplier Tenacity Query** — Compares multi-year provision reporting records to measure supplier persistence and partnership stability.
+- **Recipe 39: Intermediate Component Fan-Out Metric** — Measures the fan-out multiplication factor from primary wafers to individual packaged micro-dies.
