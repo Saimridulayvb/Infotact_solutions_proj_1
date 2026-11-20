@@ -115,3 +115,4 @@ Infotact_solutions_proj_1/
 - **06. Atomic Layer Deposition Monolayer Growth Precision:** In-situ spectroscopic ellipsometry validating digital sub-angstrom monolayer growth of hafnium oxide gate dielectrics.
 - **07. Deep Reactive Ion Etching Bosch Cycle Synchronization:** Microsecond gas switching controllers oscillating between sulfur hexafluoride etch and octafluorocyclobutane passivation steps.
 - **08. Copper Electroplating Bath Acidic Chemistry Stabilization:** Closed-loop titrators replenishing organic accelerator, suppressor, and leveler additives for void-free dual-damascene interconnects.
+- **09. Extreme Ultraviolet Pellicle Thermal Stress Telemetry:** Non-contact pyrometric sensors measuring heat dissipation on nanoscale carbon nanotube membranes subjected to 400W EUV laser power.
