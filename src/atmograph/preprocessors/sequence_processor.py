@@ -34,3 +34,8 @@ class SequenceProcessor:
     def get_goes_into_count(self, goes_into_df: pd.DataFrame) -> int:
         """Return the count of physical assembly dependency edges extracted."""
         return len(goes_into_df)
+
+
+    def get_is_type_of_count(self, is_type_of_df: pd.DataFrame) -> int:
+        """Return the count of categorical classification taxonomy edges extracted."""
+        return len(is_type_of_df)
