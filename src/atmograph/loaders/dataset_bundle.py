@@ -46,3 +46,8 @@ def load_dataset_bundle(data_dir: Union[str, Path] = "data/raw") -> DatasetBundl
         stages=StageLoader(base_path / "stages.csv").load(),
         sequence=SequenceLoader(base_path / "sequence.csv").load()
     )
+
+
+    def get_total_record_count(self) -> int:
+        """Calculate aggregate row count across all loaded semiconductor tables."""
+        return sum(len(df) for df in [self.providers, self.provision, self.inputs, self.stages, self.sequence])
