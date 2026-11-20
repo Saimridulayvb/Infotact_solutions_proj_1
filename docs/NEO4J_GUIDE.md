@@ -102,3 +102,4 @@ RETURN supplier.name AS supplier, comp.name AS component, length(path) AS tier_d
 - **Recipe 40: Multi-Tier SPoF Propagation Warning** — Flags when a tier-1 supplier depends on a tier-2 single point of failure in their own upstream supply.
 - **Recipe 41: Critical Chemical SLA Monitoring** — Audits high-purity chemical suppliers with market share above 60 percent in wafer cleaning operations.
 - **Recipe 42: Tool Resource Supplier Monopolies** — Identifies proprietary machinery lines supplied by only one global vendor with high barrier to entry.
+- **Recipe 43: Process Step Precursor Validation** — Checks that every process node has at least one associated tool and material input assigned.
