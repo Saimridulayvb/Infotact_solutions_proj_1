@@ -77,3 +77,4 @@ RETURN supplier.name AS supplier, comp.name AS component, length(path) AS tier_d
 - **Recipe 15: Critical Photolithography Subgraph** — Isolates all suppliers, chemicals, and precision scanners connected to advanced photolithography processes.
 - **Recipe 16: Silicon Wafer Dependency Subgraph** — Extracts all upstream raw quartz and downstream fabrication edges directly linked to silicon wafers.
 - **Recipe 17: Packaging Substrate Upstream Tracing** — Traces chemical precursors and metal sputtering targets feeding high-density organic package substrates.
+- **Recipe 18: Cleanroom Consumable Exposure Audit** — Identifies suppliers of critical gases and chemical cleaners with zero buffer stock in supply chains.
