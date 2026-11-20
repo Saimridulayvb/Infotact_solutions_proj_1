@@ -27,3 +27,9 @@ class SequenceLoader(CSVLoader):
         """Return raw tuples of (input_id, goes_into_id)."""
         df = self.load_goes_into()
         return list(zip(df["input_id"], df["goes_into_id"]))
+
+
+    def get_goes_into_subset(self) -> pd.DataFrame:
+        """Return sequence records strictly corresponding to physical assembly dependencies."""
+        df = self.load()
+        return df[df["connection_type"] == "GOES_INTO"] if "connection_type" in df.columns else df
