@@ -201,3 +201,4 @@ Infotact_solutions_proj_1/
 - **Telemetry Check 26 (checkpoint-26):** Industrial effluent neutralization telemetry verifying pH compliance prior to municipal water discharge.
 - **Telemetry Check 27 (checkpoint-27):** Photoresist coating spin speed uniformity logging to ensure nanometer-level radial thickness tolerances.
 - **Telemetry Check 28 (checkpoint-28):** Photomask pellicle membrane tension monitoring preventing sag-induced reticle contact during exposure.
+- **Telemetry Check 29 (checkpoint-29):** Vacuum loadlock pumpdown rate monitoring detecting early elastomer seal degradation on cluster tools.
