@@ -137,3 +137,4 @@ Infotact_solutions_proj_1/
 - **28. Corrosive Chemical Wet Bench Acid Recirculation Filtration:** Dual-stage PTFE fluoropolymer membrane filters circulating concentrated sulfuric and peroxide piranha baths at 130C.
 - **29. Industrial Waste Acid Neutralization Effluent Telemetry:** Automated pH neutralization scrubbers monitoring fluorinated and heavy-metal rinse water discharge compliance continuously.
 - **30. Ultra-Pure Water Resistivity and TOC Metrology:** Online conductivity sensors ensuring ultra-pure rinse water maintains 18.2 megohm-cm resistivity and total organic carbon below 1 ppb.
+- **31. Spectroscopic Film Thickness Mapping Across 300mm Wafers:** Broadband spectrophotometers capturing 49-point thickness maps to evaluate chemical vapor deposition non-uniformity across wafers.
