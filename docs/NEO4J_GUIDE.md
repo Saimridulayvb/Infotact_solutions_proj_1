@@ -86,3 +86,4 @@ RETURN supplier.name AS supplier, comp.name AS component, length(path) AS tier_d
 - **Recipe 24: Direct vs Indirect Supplier Tracing** — Compares tier-1 direct equipment providers against tier-2 indirect component manufacturers.
 - **Recipe 25: Market Share Entropy Calculation** — Measures competitive balance versus monopolistic concentration across each semiconductor input market.
 - **Recipe 26: APOC Weakly Connected Components** — Groups isolated subgraphs to verify overall graph connectivity using Neo4j APOC community procedures.
+- **Recipe 27: APOC PageRank Node Centrality** — Calculates PageRank importance scores across all semiconductor input nodes to surface systemic importance.
