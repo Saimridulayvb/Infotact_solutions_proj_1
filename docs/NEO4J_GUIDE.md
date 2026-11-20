@@ -93,3 +93,4 @@ RETURN supplier.name AS supplier, comp.name AS component, length(path) AS tier_d
 - **Recipe 31: Dynamic Weight Shortest Path Traversal** — Uses Dijkstra path search with inverse market share as edge traversal impedance for risk-weighted routing.
 - **Recipe 32: Out-Degree Distribution Histogram** — Aggregates supplier connectivity counts to verify scale-free graph power law properties.
 - **Recipe 33: Multi-Input Bundled Supplier Analysis** — Identifies conglomerates supplying both raw materials and precision machinery to semiconductor fabs.
+- **Recipe 34: Input Taxonomy Hierarchy Rollup** — Rolls up specific chemical inputs into their parent IS_TYPE_OF classification groups for executive summaries.
