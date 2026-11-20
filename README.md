@@ -213,3 +213,4 @@ Infotact_solutions_proj_1/
 - **Telemetry Check 38 (checkpoint-38):** Parametric wafer probe test yield correlation mapping to specific cleanroom process chamber histories.
 - **Telemetry Check 39 (checkpoint-39):** Dual-arm vacuum wafer transfer robot motion kinematics calibration ensuring micron-level aligner accuracy.
 - **Telemetry Check 40 (checkpoint-40):** Turbomolecular pump magnetic levitation bearing vibration analysis predicting rotor fatigue failure.
+- **Telemetry Check 41 (checkpoint-41):** Secondary ion mass spectrometry dopant concentration profiling measuring boron and arsenic implants.
