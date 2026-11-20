@@ -39,3 +39,8 @@ class DuplicateDetector:
                 ))
 
         return result
+
+
+    def get_duplicate_indices(self, df: pd.DataFrame, subset: list) -> list:
+        """Return row index integers of all duplicate records based on subset keys."""
+        return df[df.duplicated(subset=subset, keep=False)].index.tolist()
