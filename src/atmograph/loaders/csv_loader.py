@@ -42,3 +42,8 @@ class CSVLoader(BaseLoader):
     def get_encoding(self) -> str:
         """Return the configured character encoding string for CSV parsing."""
         return self.encoding
+
+
+    def has_cached_data(self) -> bool:
+        """Check if the dataframe has already been loaded into memory cache."""
+        return self._data is not None
