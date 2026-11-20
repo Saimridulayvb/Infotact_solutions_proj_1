@@ -81,3 +81,4 @@ RETURN supplier.name AS supplier, comp.name AS component, length(path) AS tier_d
 - **Recipe 19: Supplier Disruption Simulation Matrix** — Simulates simultaneous outage of top 3 suppliers and returns percentage coverage of halted manufacturing.
 - **Recipe 20: Shortest Path Between Providers** — Computes shortest dependency path between any two semiconductor manufacturing firms across the supply web.
 - **Recipe 21: Cross-National Sourcing Vulnerability** — Finds inputs dependent on companies in geographically contested or sanction-risk international zones.
+- **Recipe 22: High-Degree Input Choke Points** — Identifies inputs that feed into more than 10 downstream manufacturing steps as high-impact nexus points.
