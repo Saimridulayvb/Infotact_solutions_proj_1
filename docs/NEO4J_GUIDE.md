@@ -117,3 +117,4 @@ RETURN supplier.name AS supplier, comp.name AS component, length(path) AS tier_d
 - **Recipe 55: Single-Node Graph Cut Detection** — Finds critical bridge nodes whose failure splits the supply graph into separate disconnected partitions.
 - **Recipe 56: Input Node Attribute Completeness** — Checks for missing description, type, or stage_name attributes on Input nodes for schema compliance.
 - **Recipe 57: Company Entity Normalization Check** — Flags duplicate company names with differing provider IDs for entity resolution deduplication.
+- **Recipe 58: Graph Density and Sparsity Metric** — Calculates graph sparsity ratio comparing actual edges against total possible edges in the network.
