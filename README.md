@@ -165,3 +165,4 @@ Infotact_solutions_proj_1/
 - **56. Logic Synthesis Area-Power-Timing Pareto Optimization:** Multi-objective synthesis algorithms balancing gate count, dynamic switching power, and clock cycle latency for critical paths.
 - **57. SPICE Transistor Model Monte Carlo Statistical Simulation:** 10,000-iteration Monte Carlo SPICE runs modeling threshold voltage variation and subthreshold leakage under process skew.
 - **58. Design Rule Checking Geometric Spacing Violation Isolation:** Hierarchical polygon boolean operations flagging sub-nanometer metal spacing and enclosure rule violations in ASIC layouts.
+- **59. Optical Proximity Correction Mask Polygon Edge Shifting:** Model-based rule engines shifting reticle polygon vertices by fractional nanometers to correct for optical phase diffraction.
