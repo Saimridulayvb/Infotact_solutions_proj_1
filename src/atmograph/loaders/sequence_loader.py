@@ -33,3 +33,9 @@ class SequenceLoader(CSVLoader):
         """Return sequence records strictly corresponding to physical assembly dependencies."""
         df = self.load()
         return df[df["connection_type"] == "GOES_INTO"] if "connection_type" in df.columns else df
+
+
+    def get_is_type_of_subset(self) -> pd.DataFrame:
+        """Return sequence records strictly corresponding to taxonomy classifications."""
+        df = self.load()
+        return df[df["connection_type"] == "IS_TYPE_OF"] if "connection_type" in df.columns else df
