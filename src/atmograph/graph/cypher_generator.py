@@ -30,3 +30,8 @@ class CypherGenerator:
     def get_index_names(self) -> list:
         """Return list of expected property index names for graph schema."""
         return ["company_name_idx", "input_name_idx", "input_type_idx"]
+
+
+    def has_constraints(self) -> bool:
+        """Check if uniqueness constraints are configured in Cypher generator."""
+        return self.get_constraint_count() > 0
