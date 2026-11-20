@@ -177,3 +177,4 @@ Infotact_solutions_proj_1/
 - **Telemetry Check 02 (checkpoint-02):** High-vacuum cryopump regeneration cycle scheduling based on residual gas analyzer partial pressure readings.
 - **Telemetry Check 03 (checkpoint-03):** Mass flow controller calibration verification across argon, silane, and nitrogen process gas manifolds.
 - **Telemetry Check 04 (checkpoint-04):** Automated wafer bevel edge inspection detecting micro-fissures and chipping prior to chemical mechanical polishing.
+- **Telemetry Check 05 (checkpoint-05):** Electrostatic chuck clamping force telemetry monitoring helium backside cooling gas leakage rates.
