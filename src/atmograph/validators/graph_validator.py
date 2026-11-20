@@ -49,3 +49,9 @@ class GraphValidator:
     def has_cycles(self, edges_df: pd.DataFrame, source_col: str = "source", target_col: str = "target") -> bool:
         """Detect whether directed edge list forms one or more cycles."""
         return not self.validate_dag(edges_df, source_col, target_col).is_valid
+
+
+    def get_isolated_nodes(self, nodes_set: set, edges_df: pd.DataFrame, source_col: str = "source", target_col: str = "target") -> set:
+        """Identify node IDs with degree zero across the directed edge list."""
+        connected = set(edges_df[source_col]).union(set(edges_df[target_col]))
+        return nodes_set - connected
