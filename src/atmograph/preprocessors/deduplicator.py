@@ -29,3 +29,8 @@ class RelationshipDeduplicator:
             return sorted_df.drop_duplicates(subset=subset, keep="first").reset_index(drop=True)
         else:
             return df.drop_duplicates(subset=subset, keep="first").reset_index(drop=True)
+
+
+    def get_unique_pair_count(self, df: pd.DataFrame, key_cols: list) -> int:
+        """Calculate count of distinct entity pairs according to key columns."""
+        return len(df.drop_duplicates(subset=key_cols))
