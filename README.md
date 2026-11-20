@@ -179,3 +179,4 @@ Infotact_solutions_proj_1/
 - **Telemetry Check 04 (checkpoint-04):** Automated wafer bevel edge inspection detecting micro-fissures and chipping prior to chemical mechanical polishing.
 - **Telemetry Check 05 (checkpoint-05):** Electrostatic chuck clamping force telemetry monitoring helium backside cooling gas leakage rates.
 - **Telemetry Check 06 (checkpoint-06):** Optical emission spectroscopy peak monitoring during reactive ion etching to detect endpoint transition.
+- **Telemetry Check 07 (checkpoint-07):** Chemical mechanical planarization slurry density and pH monitoring with closed-loop automated titration.
