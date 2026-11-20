@@ -163,3 +163,4 @@ Infotact_solutions_proj_1/
 - **54. Photomask Reticle Pellicle Frame Adhesive Degassing Audit:** Gas chromatography-mass spectrometry validating zero outgassing of volatile organic compounds from pellicle mounting adhesives.
 - **55. Wafer Probe Spatial Yield Correlation Heatmap Visualizer:** Real-time interactive spatial heatmaps overlaying parametric probe test failures onto cleanroom equipment maintenance histories.
 - **56. Logic Synthesis Area-Power-Timing Pareto Optimization:** Multi-objective synthesis algorithms balancing gate count, dynamic switching power, and clock cycle latency for critical paths.
+- **57. SPICE Transistor Model Monte Carlo Statistical Simulation:** 10,000-iteration Monte Carlo SPICE runs modeling threshold voltage variation and subthreshold leakage under process skew.
