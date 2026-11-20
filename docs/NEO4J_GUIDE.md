@@ -106,3 +106,4 @@ RETURN supplier.name AS supplier, comp.name AS component, length(path) AS tier_d
 - **Recipe 44: Downstream OEM Impact Scope Query** — Identifies final device manufacturers exposed to upstream raw wafer supply shocks and lead-time delays.
 - **Recipe 45: Transitive Closure of Sub-Assemblies** — Computes full transitive closure of all sub-components inside modern 2.5D/3D packaging lines.
 - **Recipe 46: Supply Edge Count Verification** — Validates total edge count against processed CSV export records for end-to-end data integrity.
+- **Recipe 47: Node Label Cardinality Diagnostics** — Reports count of nodes per label (Company, Input, Stage) to verify ingestion completeness.
