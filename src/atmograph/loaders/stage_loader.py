@@ -25,3 +25,8 @@ class StageLoader(CSVLoader):
         """Return list of all canonical semiconductor production stage names."""
         df = self.load()
         return df["stage_name"].dropna().tolist() if "stage_name" in df.columns else []
+
+
+    def is_valid_stage_id(self, stage_id: str) -> bool:
+        """Verify whether a given identifier represents an existing stage."""
+        return stage_id in self.get_stage_dict()
