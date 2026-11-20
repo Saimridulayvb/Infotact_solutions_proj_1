@@ -197,3 +197,4 @@ Infotact_solutions_proj_1/
 - **Telemetry Check 22 (checkpoint-22):** Laser dicing optical focus tracking ensuring subsurface ablation plane maintains constant wafer depth.
 - **Telemetry Check 23 (checkpoint-23):** Transfer molding hydraulic ram speed and cavity pressure logging preventing internal wire sweep anomalies.
 - **Telemetry Check 24 (checkpoint-24):** Ball grid array solder ball coplanarity optical verification preventing board-level surface mount opens.
+- **Telemetry Check 25 (checkpoint-25):** Cleanroom electrostatic field potential scanning across automated robot end-effectors and wafer boats.
