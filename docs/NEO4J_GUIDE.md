@@ -115,3 +115,4 @@ RETURN supplier.name AS supplier, comp.name AS component, length(path) AS tier_d
 - **Recipe 53: Critical Path Redundancy Matrix** — Computes alternate backup paths between raw chemicals and fabrication cleanroom reactors.
 - **Recipe 54: Tier-3 Supplier Visibility Horizon** — Measures percent of tier-3 suppliers with known company names versus unmapped generic entities.
 - **Recipe 55: Single-Node Graph Cut Detection** — Finds critical bridge nodes whose failure splits the supply graph into separate disconnected partitions.
+- **Recipe 56: Input Node Attribute Completeness** — Checks for missing description, type, or stage_name attributes on Input nodes for schema compliance.
