@@ -186,3 +186,4 @@ Infotact_solutions_proj_1/
 - **Telemetry Check 11 (checkpoint-11):** Ultra-pure water continuous resistivity monitoring ensuring 18.2 megohm-cm electrical conductivity standards.
 - **Telemetry Check 12 (checkpoint-12):** Sub-angstrom atomic layer deposition pulse cycle monitoring ensuring stoichiometric oxide film stoichiometry.
 - **Telemetry Check 13 (checkpoint-13):** Silicon ingot pulling furnace heater coil resistance tracking to predict thermal field degradation.
+- **Telemetry Check 14 (checkpoint-14):** Deep reactive ion etch sidewall scallop profile metrology verifying uniform vertical trench etching.
