@@ -134,3 +134,4 @@ Infotact_solutions_proj_1/
 - **25. High-Voltage Burn-In Socket Contact Resistance Monitoring:** Continuous 4-wire Kelvin sensing circuitry tracking pin degradation and contact resistance creep during 168-hour stress screens.
 - **26. High-Speed Copper Leadframe Stamping Precision Tooling:** Carbide progressive stamping dies operating at 1,000 strokes per minute maintaining 5-micron dimensional tolerances on inner leads.
 - **27. Cleanroom Electrostatic Discharge Neutralization Grid:** Pulse-DC ionization blowers suppressing surface charge potentials below 100 volts across non-conductive wafer carrier enclosures.
+- **28. Corrosive Chemical Wet Bench Acid Recirculation Filtration:** Dual-stage PTFE fluoropolymer membrane filters circulating concentrated sulfuric and peroxide piranha baths at 130C.
