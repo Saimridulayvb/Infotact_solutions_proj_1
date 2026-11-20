@@ -119,3 +119,4 @@ Infotact_solutions_proj_1/
 - **10. Automated Cleanroom FOUP Transit Routing Matrix:** Decentralized overhead hoist transport heuristics minimizing pod travel latency and buffer congestion across 300mm wafer fab bays.
 - **11. Vertical MEMS Probe Card Electrical Contact Force:** Dynamic piezoelectric load cells regulating micro-spring needle deflection to prevent wafer bond pad scrub damage during sort testing.
 - **12. High-Density Flip-Chip Micro-Bump Pitch Alignment:** Sub-micron optical pattern recognition cameras aligning 20-micron pitch copper pillars with organic build-up substrate pads.
+- **13. Fine-Pitch Wire Bonding Ultrasonic Energy Profiling:** Transducer frequency generators optimizing ultrasonic scrub time and thermosonic ball deformation for 15-micron gold wires.
