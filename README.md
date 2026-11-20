@@ -139,3 +139,4 @@ Infotact_solutions_proj_1/
 - **30. Ultra-Pure Water Resistivity and TOC Metrology:** Online conductivity sensors ensuring ultra-pure rinse water maintains 18.2 megohm-cm resistivity and total organic carbon below 1 ppb.
 - **31. Spectroscopic Film Thickness Mapping Across 300mm Wafers:** Broadband spectrophotometers capturing 49-point thickness maps to evaluate chemical vapor deposition non-uniformity across wafers.
 - **32. X-Ray Metrology for Multi-Layer Metal Stack Composition:** Non-destructive wavelength-dispersive X-ray fluorescence measuring titanium nitride barrier layer density and alloy ratios.
+- **33. Immersion Lithography Ultrapure Water Bubble Degassing Unit:** Vacuum membrane contactors extracting dissolved nitrogen and micro-bubbles from high-index immersion fluid below 20 ppb.
