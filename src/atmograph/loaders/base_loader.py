@@ -42,3 +42,8 @@ class BaseLoader(ABC):
     def get_file_extension(self) -> str:
         """Return the lowercase file extension of the target dataset."""
         return self.file_path.suffix.lower()
+
+
+    def is_file_empty(self) -> bool:
+        """Check if the underlying dataset file has zero bytes size."""
+        return self.get_file_size_bytes() == 0
