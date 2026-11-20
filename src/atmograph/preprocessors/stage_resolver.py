@@ -39,3 +39,8 @@ class StageResolver:
                         resolved.at[idx, "stage_id"] = "S3"
 
         return resolved
+
+
+    def has_stage_mapping(self, input_name: str) -> bool:
+        """Check if an explicit stage name resolution exists for given input entity."""
+        return input_name in self.get_default_stage_map()
