@@ -53,6 +53,11 @@ class Config(BaseModel):
     neo4j: Neo4jSettings = Field(default_factory=Neo4jSettings)
     logging: LoggingSettings = Field(default_factory=LoggingSettings)
 
+    def get_cache_dir(self) -> Path:
+        """Return the temporary cache directory for intermediate processing."""
+        return self.paths.data_dir / ".cache"
+
+
     @classmethod
     def load(cls, config_path: Optional[str] = None) -> "Config":
         config_data = {}
