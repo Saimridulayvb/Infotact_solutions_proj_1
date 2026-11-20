@@ -132,3 +132,4 @@ Infotact_solutions_proj_1/
 - **23. Laser Marking Traceability Barcode Readability Verification:** Optical machine vision verifiers grading 2D Data Matrix code contrast on molded IC packages according to ISO/IEC 15415.
 - **24. Automated Test Equipment Multi-Site Thermal Chuck Regulation:** Direct-chilled peltier test chucks maintaining junction temperatures at -40C to 125C during high-throughput parallel test sorting.
 - **25. High-Voltage Burn-In Socket Contact Resistance Monitoring:** Continuous 4-wire Kelvin sensing circuitry tracking pin degradation and contact resistance creep during 168-hour stress screens.
+- **26. High-Speed Copper Leadframe Stamping Precision Tooling:** Carbide progressive stamping dies operating at 1,000 strokes per minute maintaining 5-micron dimensional tolerances on inner leads.
