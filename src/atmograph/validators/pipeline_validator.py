@@ -64,3 +64,8 @@ class PipelineValidator:
         report.results.append(self.share_val.validate(bundle.provision))
 
         return report
+
+
+    def get_validator_count(self) -> int:
+        """Return the number of registered validation stages in the composite pipeline."""
+        return len(self.get_validators())
