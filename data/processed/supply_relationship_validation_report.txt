@@ -1,0 +1,59 @@
+
+SUPPLY RELATIONSHIP VALIDATION REPORT
+=====================================
+
+Total relationships: 254
+
+Unique providers: 20
+
+Unique inputs: 76
+
+PROVIDER ID VALIDATION
+---------------------
+Provider IDs not found: 0
+
+INPUT ID VALIDATION
+-------------------
+Input IDs not found: 0
+
+Provided ID and input ID mismatches: 0
+
+COMPANY NAME VALIDATION
+-----------------------
+Company name mismatches: 0
+
+INPUT NAME VALIDATION
+---------------------
+Input name mismatches: 0
+
+DUPLICATE VALIDATION
+--------------------
+Duplicate relationship rows: 0
+
+MISSING VALUES
+--------------
+Missing share_provided: 6
+
+Missing source: 4
+
+Missing stage_name: 254
+
+INPUT TYPE DISTRIBUTION
+-----------------------
+type
+tool_resource        248
+material_resource      6
+
+YEAR DISTRIBUTION
+-----------------
+year
+2025    248
+2019      6
+
+OVERALL RESULT
+--------------
+Provider IDs valid: True
+Input IDs valid: True
+No duplicate relationships: True
+Company names consistent: True
+Input names consistent: True
