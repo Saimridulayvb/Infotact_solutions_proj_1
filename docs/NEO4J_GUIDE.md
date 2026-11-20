@@ -83,3 +83,4 @@ RETURN supplier.name AS supplier, comp.name AS component, length(path) AS tier_d
 - **Recipe 21: Cross-National Sourcing Vulnerability** — Finds inputs dependent on companies in geographically contested or sanction-risk international zones.
 - **Recipe 22: High-Degree Input Choke Points** — Identifies inputs that feed into more than 10 downstream manufacturing steps as high-impact nexus points.
 - **Recipe 23: Stage Inflow/Outflow Balance** — Calculates ratio of incoming resources to outgoing manufactured outputs per life-cycle stage.
+- **Recipe 24: Direct vs Indirect Supplier Tracing** — Compares tier-1 direct equipment providers against tier-2 indirect component manufacturers.
