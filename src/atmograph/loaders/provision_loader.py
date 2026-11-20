@@ -26,3 +26,9 @@ class ProvisionLoader(CSVLoader):
         """Filter provisions observed within a specific calendar year range."""
         df = self.load_clean()
         return df[(df["year"] >= start_year) & (df["year"] <= end_year)].copy()
+
+
+    def get_mean_market_share(self) -> float:
+        """Calculate arithmetic mean of non-null market share provided values."""
+        df = self.load()
+        return float(df["share_provided"].dropna().mean()) if "share_provided" in df.columns else 0.0
