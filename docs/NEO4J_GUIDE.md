@@ -65,3 +65,4 @@ RETURN supplier.name AS supplier, comp.name AS component, length(path) AS tier_d
 - **Recipe 03: Geographic Choke-Point Analysis** — Aggregates market shares of suppliers by country code to identify regional geopolitical concentration risks.
 - **Recipe 04: Top-K Critical Supply Bottlenecks** — Computes bottleneck centrality by counting incoming supply edges and outgoing dependency paths.
 - **Recipe 05: Raw Material Provenance Hierarchy** — Traverses upstream paths to identify all tier-3 raw chemicals and minerals feeding a final semiconductor output.
+- **Recipe 06: Circular Dependency Anomaly Detection** — Checks for illegal directed cycles within the GOES_INTO relationship network to verify DAG invariants.
