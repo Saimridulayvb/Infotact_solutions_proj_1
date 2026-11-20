@@ -23,3 +23,9 @@ class InputLoader(CSVLoader):
         """Return all unique input categories present in dataset."""
         df = self.load()
         return sorted(df["type"].dropna().unique().tolist())
+
+
+    def get_tool_inputs(self) -> pd.DataFrame:
+        """Filter and return subset dataframe containing tool resource inputs."""
+        df = self.load()
+        return df[df["type"] == "tool_resource"] if "type" in df.columns else df
