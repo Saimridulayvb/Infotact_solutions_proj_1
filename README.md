@@ -117,3 +117,4 @@ Infotact_solutions_proj_1/
 - **08. Copper Electroplating Bath Acidic Chemistry Stabilization:** Closed-loop titrators replenishing organic accelerator, suppressor, and leveler additives for void-free dual-damascene interconnects.
 - **09. Extreme Ultraviolet Pellicle Thermal Stress Telemetry:** Non-contact pyrometric sensors measuring heat dissipation on nanoscale carbon nanotube membranes subjected to 400W EUV laser power.
 - **10. Automated Cleanroom FOUP Transit Routing Matrix:** Decentralized overhead hoist transport heuristics minimizing pod travel latency and buffer congestion across 300mm wafer fab bays.
+- **11. Vertical MEMS Probe Card Electrical Contact Force:** Dynamic piezoelectric load cells regulating micro-spring needle deflection to prevent wafer bond pad scrub damage during sort testing.
