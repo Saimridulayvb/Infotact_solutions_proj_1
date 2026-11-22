@@ -1,0 +1,397 @@
+provider_id,provider_name,provider_type,alias,country
+P1,USA,country,United States,
+P10,AMD,organization,,USA
+P100,HORIBA,organization,,JPN
+P101,Eurofins,organization,,LUX
+P102,A&D,organization,,JPN
+P103,Raith,organization,,DEU
+P104,FOCUS,organization,,DEU
+P105,Tokyo Electron,organization,,JPN
+P106,Screen,organization,,JPN
+P107,Kingsemi,organization,,CHN
+P108,Brewer Science,organization,,USA
+P109,Rite Track,organization,,USA
+P11,Nvidia,organization,,USA
+P110,GBR,country,United Kingdom,
+P111,Lam Research,organization,,USA
+P112,ASM International,organization,,NLD
+P113,Piotech,organization,,CHN
+P114,SKY Technology Development,organization,,CHN
+P115,NAURA,organization,,CHN
+P116,Kokusai,organization,Kokusai Electric,JPN
+P117,ULVAC,organization,,JPN
+P118,KLA,organization,,USA
+P119,Mattson Tech,organization,Mattson Technology,CHN
+P12,Jingjia Micro,organization,,CHN
+P120,AP Systems,organization,,KOR
+P121,Veeco,organization,,USA
+P122,Grand Process,organization,Grand Plastic Technology; Grand Process Technology,TWN
+P123,AMEC,organization,Advanced Micro-Fabrication Equipment Inc. China,CHN
+P124,Plasma-Therm,organization,,USA
+P125,SAMCO,organization,,JPN
+P126,GigaLane,organization,,KOR
+P127,Charm Engineering,organization,,KOR
+P128,EBARA,organization,,JPN
+P129,Hwatsing,organization,,CHN
+P13,Loongson,organization,,CHN
+P130,KCTech,organization,,KOR
+P131,Revasum,organization,,USA
+P132,FRA,country,France,
+P133,ISR,country,Israel,
+P134,BLR,country,Belarus,
+P135,Bruker,organization,"Bruker, AXS",USA
+P136,Rigaku,organization,Rigaku International,JPN
+P137,Raintree Scientific Instruments (RSIC),organization,RSIC Scientic Instrument,CHN
+P138,Nanotronics,organization,,USA
+P139,Onto Innovation,organization,Rudolph Technologies; Nanometrics,USA
+P14,Zhaoxin,organization,,CHN
+P140,Lasertec,organization,,JPN
+P141,CAMTEK,organization,,ISR
+P142,Keysight Tech,organization,Keysight Technologies,USA
+P143,Keithley Instruments,organization,,USA
+P144,Top Engineering,organization,,KOR
+P145,ASM Pacific,organization,ASMPT Limited,SGP
+P146,ASTI,organization,,SGP
+P147,Koh Young Tech,organization,Koh Young Technology,KOR
+P148,Cohu,organization,,USA
+P149,MIRTEC,organization,,KOR
+P15,Phytium,organization,,CHN
+P150,Grand Tec,organization,,CHN
+P154,Longhill Industries,organization,,CHN
+P155,SYNOVA,organization,,CHN
+P156,Besi,organization,BE Semiconductor Industries,NLD
+P158,Fasford Tech,organization,Fasford Technology,JPN
+P159,Canon,organization,Canon ANELVA; Canon Machinery,JPN
+P16,Efinix,organization,,CHN
+P160,Hoson,organization,,CHN
+P161,PROTEC,organization,,KOR
+P162,JIAFENG,organization,Jiafeng Automation,CHN
+P163,DIAS Automation,organization,,CHN
+P164,Kulicke & Soffa,organization,,SGP
+P165,Hesse,organization,,DEU
+P166,Shinkawa,organization,,JPN
+P167,SSP,organization,,KOR
+P168,KOSES,organization,,KOR
+P169,TOWA,organization,,JPN
+P17,HiSilicon,organization,,CHN
+P170,HANMI,organization,,KOR
+P171,Trinity Tech,organization,Trinity Technology,CHN
+P172,Grohmann,organization,Grohmann Engineering,USA
+P173,CZE,country,Czech Republic,
+P174,CAN,country,Canada,
+P175,Advantest,organization,,JPN
+P176,Teradyne,organization,,USA
+P177,UniTest,organization,,KOR
+P178,DI,organization,,KOR
+P179,Micro Control,organization,Micro Control Company,USA
+P18,Lattice,organization,,USA
+P180,National Instruments,organization,,USA
+P181,TESEC,organization,,JPN
+P182,AccoTEST,organization,AccoTEST (Beijing Huafeng Test),CHN
+P183,Shanghai Juno,organization,,CHN
+P184,JHT,organization,,CHN
+P185,Synopsys,organization,,USA
+P186,Cadence,organization,,USA
+P187,Mentor Graphics,organization,,USA
+P188,Ansys,organization,,USA
+P189,Silvaco,organization,,USA
+P19,Microchip,organization,,USA
+P190,PDF Solutions,organization,,USA
+P191,Huada Empyrean,organization,,CHN
+P192,Primarius,organization,,CHN
+P193,Xpeedic,organization,,CHN
+P194,Semitronix,organization,,CHN
+P195,Platform-da,organization,,CHN
+P196,Microscapes,organization,,CHN
+P197,Arcas-da,organization,,CHN
+P198,ARM,organization,,GBR
+P199,SST,organization,,USA
+P2,CHN,country,China,
+P20,Achronix,organization,,USA
+P200,Imagination Technologies,organization,,GBR
+P201,Ceva,organization,,USA
+P202,Verisilicon,organization,,CHN
+P203,Rambus,organization,,USA
+P204,eMemory Technology,organization,,TWN
+P205,Shenzhen Newway,organization,,CHN
+P206,JSR,organization,,JPN
+P207,Tokyo Ohka Kogyo,organization,,JPN
+P208,Shin-Etsu,organization,,JPN
+P209,Fujifilm Electronic Materials,organization,,JPN
+P21,Flex Logic,organization,,USA
+P211,Dongjin,organization,,KOR
+P212,DuPont Electronic Solutions,organization,,USA
+P213,EMD Electronics,organization,,USA
+P214,Inpria,organization,,USA
+P215,Ruihong,organization,,CHN
+P216,Kempur,organization,,CHN
+P217,Nata Opto-electronic Material,organization,,CHN
+P218,JHM,organization,,CHN
+P219,Fujimi,organization,,JPN
+P22,Google,organization,,USA
+P220,Saint-Gobain,organization,,FRA
+P221,Versum Materials,organization,,USA
+P222,DuPont,organization,,USA
+P224,Thomas West,organization,,USA
+P225,SUMCO,organization,,JPN
+P226,GlobalWafers,organization,,TWN
+P227,Siltronic,organization,,DEU
+P228,SK Siltron,organization,,KOR
+P229,Okmetic,organization,,CHN
+P23,Cerebras,organization,,USA
+P230,JRH,organization,,CHN
+P231,Zhonghuan Semiconductor,organization,,CHN
+P232,Gritek,organization,,CHN
+P233,MCL,organization,,CHN
+P234,Simgui,organization,,CHN
+P235,GuoSheng,organization,,CHN
+P236,POSHING,organization,,CHN
+P237,ZingSEMI,organization,,CHN
+P238,Dai Nippon,organization,,JPN
+P239,Photronics,organization,,USA
+P24,Tesla,organization,,USA
+P240,Toppan Photomasks,organization,,JPN
+P241,Hoya Corporation,organization,,JPN
+P242,Taiwan Mask Corporation,organization,,TWN
+P243,Merck Group,organization,,DEU
+P244,CMC,organization,,USA
+P245,Anji,organization,,CHN
+P246,Hubei Dinglong,organization,,CHN
+P247,JX Nippon,organization,,JPN
+P248,Honeywell,organization,,USA
+P249,Tosoh SMD,organization,,JPN
+P25,Graphcore,organization,,GBR
+P250,Linde,organization,,DEU
+P251,Praxair,organization,,USA
+P252,KFMI,organization,,CHN
+P253,Grikin,organization,,CHN
+P255,Entegris,organization,,USA
+P256,Air Products,organization,,USA
+P257,Air Liquide,organization,,FRA
+P26,Cambricon,organization,,CHN
+P260,BASF,organization,,DEU
+P261,TNSC,organization,,JPN
+P262,Showa Denko,organization,,JPN
+P263,Wonik,organization,Wonik IPS,KOR
+P264,SK Materials,organization,,KOR
+P265,Huate Gas,organization,,CHN
+P266,Jinhong Gas,organization,,CHN
+P267,PERIC,organization,,CHN
+P268,KMG Chemicals,organization,,USA
+P269,Avantor,organization,,USA
+P27,Horizon Robotics,organization,,CHN
+P270,Kanto Chemical,organization,,JPN
+P271,Runma,organization,,CHN
+P273,Sinophorus,organization,,CHN
+P274,Sinyang,organization,,CHN
+P276,Yongzhi,organization,,CHN
+P277,Heraeus,organization,,DEU
+P278,Tanaka Denshi,organization,,JPN
+P279,Nippon Micro,organization,,JPN
+P28,Intellifusion,organization,,CHN
+P280,Doublink,organization,,CHN
+P281,Kangqiang,organization,,CHN
+P282,YesDo,organization,,CHN
+P284,QP Technologies,organization,,USA
+P285,NGK,organization,,JPN
+P286,Alent,organization,,GBR
+P287,Kyocera,organization,,JPN
+P288,LG,organization,,KOR
+P289,Sumitomo,organization,,JPN
+P29,Gowin,organization,,CHN
+P290,Mitsui High-Tec,organization,,JPN
+P291,Henkel,organization,,DEU
+P292,Toray,organization,Toray Engineering,JPN
+P294,Tanaka,organization,,JPN
+P295,Zhongwei,organization,,CHN
+P296,Yixing,organization,,CHN
+P297,Ibiden,organization,,JPN
+P298,NanYa,organization,,TWN
+P299,Shinko,organization,SINFONIA,JPN
+P30,Shenzhen Pango,organization,,CHN
+P300,Shennan Circuits,organization,,CHN
+P301,Zhuhai Yueya,organization,,CHN
+P302,AKM,organization,,CHN
+P303,Sinopaco,organization,,CHN
+P304,HHCK,organization,,CHN
+P305,Darbond,organization,,CHN
+P306,Hysol Huawei,organization,,CHN
+P308,SH Material,organization,,JPN
+P309,Ningbo Hualong,organization,,CHN
+P31,Sunway,organization,,CHN
+P310,Pureon,organization,,USA
+P311,Renesas,organization,,JPN
+P312,EUR,country,Europe,EUR
+P313,ACM Research,organization,,USA
+P314,Aehr Test Systems,organization,,USA
+P315,Aemulus,organization,,MYS
+P316,APIC Yamada,organization,,JPN
+P317,Chroma ATE,organization,,TWN
+P318,ELES Semiconductor Equipment,organization,,ITA
+P319,EO Technics,organization,,KOR
+P32,DEU,country,Germany,
+P320,Eugene Technology,organization,,KOR
+P321,Evatec,organization,,CHE
+P322,Exicon,organization,,KOR
+P323,FormFactor,organization,,USA
+P324,Graco,organization,,USA
+P325,Hangzhou Changchuan Technology,organization,,CHN
+P326,Hanwha Semitech,organization,Hanwha Precision Machinery,KOR
+P327,Hon Technologies,organization,,TWN
+P328,IMS Nanofabrication,organization,IMS Nanofabrication AG,AUT
+P329,Incal Technology,organization,,USA
+P33,ITA,country,Italy,
+P330,Iwashita Engineering,organization,"Iwashita Engineering , Inc",JPN
+P331,JT Corp.,organization,,KOR
+P332,Jusung Engineering,organization,,KOR
+P333,MingSeal,organization,,CHN
+P334,Muehlbauer,organization,,DEU
+P335,Musashi Engineering,organization,Musashi Engineering Inc.,JPN
+P336,Nordson,organization,Nordson ASYMTEK,USA
+P337,Nova,organization,,ISR
+P338,Oxford Instruments,organization,,GBR
+P339,Pentamaster,organization,,MYS
+P34,TSMC,organization,,TWN
+P340,Precision Valve & Automation,organization,"Precision Valve & Automation, Inc.(PVA)",USA
+P341,PSK,organization,,KOR
+P342,Semics,organization,,KOR
+P343,Semilab,organization,,HUN
+P344,Shenzhen Axxon Automation,organization,"Shenzhen Axxon Automation Co.,Ltd",SWE
+P345,Tensun,organization,"Shenzhen Tensun Industrial Equipments Co., Ltd.",CHN
+P346,ShibaSoku,organization,,JPN
+P347,Shibaura Mechatronics,organization,,JPN
+P348,Shimadzu,organization,,JPN
+P349,TechWing,organization,,KOR
+P35,Samsung,organization,,KOR
+P350,Trymax,organization,,NLD
+P351,UnitySC,organization,Unity SC,FRA
+P352,YEST,organization,,KOR
+P353,YIKC,organization,,KOR
+P354,YoungTek Electronics (YTEC),organization,YTEC,TWN
+P355,All Ring Tech,organization,,TWN
+P356,BLUE Engineering,organization,,KOR
+P357,Thermco Epitaxy,organization,CSD Epitaxy,GBR
+P358,Dongfang Jingyuan Electron Ltd.,organization,"Dongfang Jingyuan Microelectronics Technology Co., Ltd. (Xinji)",CHN
+P359,Electroplating Engineers of Japan,organization,,JPN
+P36,GlobalFoundries,organization,,USA
+P360,F&K Delvotec,organization,,DEU
+P361,Innogrity,organization,,SGP
+P362,Intekplus,organization,,KOR
+P363,KES Systems,organization,KES System,USA
+P364,Leading Precision,organization,Leading Precision Inc,TWN
+P365,STATEC,organization,,KOR
+P366,STK Technology,organization,,JPN
+P367,Tokyo Weld,organization,,JPN
+P368,Trio-Tech International,organization,,USA
+P369,Trion Technology,organization,,USA
+P37,SMIC,organization,,CHN
+P370,Various companies,organization,,Various countries
+P371,LUX,country,Luxembourg,
+P372,Ushio,organization,,JPN
+P373,Panasonic,organization,Panasonic Factory Solutions,JPN
+P374,HUN,country,Hungary,
+P375,EDA Industries,organization,,ITA
+P376,Koyo Machinery,organization,,USA
+P377,TES,organization,,KOR
+P378,Minami,organization,,JPN
+P379,SAEJONG IND,organization,,KOR
+P38,UMC,organization,,TWN
+P380,MACHVISION,organization,,TWN
+P381,Shibuya Kogyo,organization,,JPN
+P382,SPEA,organization,,ITA
+P383,Genesem,organization,,KOR
+P384,SINGULUS TECHNOLOGIES,organization,,DEU
+P385,Vermes,organization,,DEU
+P386,Ultrasonic Engineering,organization,,JPN
+P387,Mirae,organization,,KOR
+P388,Electro Scientific Industries,organization,,USA
+P389,Royce Instruments,organization,,USA
+P39,Powerchip,organization,,TWN
+P390,Gallant Precision Machining,organization,,TWN
+P391,Focused Test,organization,,USA
+P392,Holon,organization,,JPN
+P393,Manufacturing Integration Tech,organization,,SGP
+P394,SCANNER TECH,organization,,USA
+P395,Auros Technology,organization,,KOR
+P396,E&R Engineering,organization,,TWN
+P397,KBTEM,organization,,BLR
+P398,Amerimade Technology,organization,,USA
+P399,Nextin,organization,,KOR
+P4,KOR,country,South Korea,
+P40,Hua Hong,organization,,CHN
+P400,Park Systems,organization,,KOR
+P401,Zygo,organization,,USA
+P402,KAIJO,organization,,JPN
+P403,Riber,organization,,FRA
+P404,LPE,organization,,ITA
+P405,Aixtron,organization,,DEU
+P406,Jingsheng Electromechanical,organization,,CHN
+P407,Shenzhen Naso Tech Co.,organization,,CHN
+P408,Intevac,organization,,USA
+P409,Palomar Technologies,organization,,USA
+P410,PacTech,organization,,JPN
+P411,Component Technology,organization,,SGP
+P412,Scientech Corporation,organization,,TWN
+P413,Hirata,organization,HIRATA,JPN
+P414,Yamaha Robotics,organization,YAMAHA ROBOTICS,JPN
+P42,STMicroelectronics,organization,,CHE
+P43,NXP,organization,,NLD
+P44,Kioxia,organization,,JPN
+P45,NLD,country,Netherlands,
+P46,MYS,country,Malaysia,
+P47,SGP,country,Singapore,
+P48,ASE,organization,,TWN
+P49,Amkor,organization,,USA
+P5,Various countries,country,,
+P50,JCET,organization,,CHN
+P52,TongFu,organization,,CHN
+P53,Tianshui Huatian Technology,organization,,CHN
+P54,UTAC,organization,,SGP
+P55,SK Hynix,organization,,KOR
+P56,Micron,organization,,USA
+P57,Powertech,organization,,TWN
+P58,PVA TePla,organization,,DEU
+P59,JSG,organization,,CHN
+P60,Accretech,organization,ACCRETECH - Tokyo Seimitsu,JPN
+P61,Okamoto,organization,Okamoto Machine Tool Works,JPN
+P62,Disco,organization,,JPN
+P63,Meyer Burger,organization,,CHE
+P64,Toyo,organization,,JPN
+P65,Lanzhou Rapid Equipment Manufacturing,organization,,CHN
+P66,Beijing JingYi Century Automatic Equipment,organization,,CHN
+P67,EV Group,organization,,AUT
+P68,SUSS MicroTec,organization,,DEU
+P69,Neutronix,organization,Neutronix Quintel,USA
+P7,JPN,country,Japan,
+P70,SMEE,organization,,CHN
+P71,Daifuku,organization,,JPN
+P72,Rorze,organization,,JPN
+P73,SEMES,organization,,KOR
+P74,Muratec,organization,,JPN
+P75,Gudeng,organization,Gudeng Precision Industrial,TWN
+P76,RECIF,organization,,FRA
+P77,Brooks,organization,Brooks Automation,USA
+P78,ESI,organization,,USA
+P79,CHE,country,Switzerland,
+P8,TWN,country,Taiwan,
+P80,AUT,country,Austria,
+P81,Applied Materials,organization,,USA
+P82,Nissin Ion,organization,,JPN
+P83,SMIT,organization,,JPN
+P84,Axcelis,organization,Axcelis Technologies,USA
+P85,CETC,organization,,CHN
+P86,Hermes-Epitek,organization,,TWN
+P87,Kingstone Semiconductor,organization,,CHN
+P88,ASML,organization,,NLD
+P89,Nikon,organization,,JPN
+P9,Intel,organization,,USA
+P90,SWE,country,Sweden,
+P91,NuFlare,organization,NuFlare Technology,JPN
+P92,JEOL,organization,,JPN
+P93,Vistec,organization,Vistec Semiconductor Systems,DEU
+P94,Mycronic,organization,,SWE
+P95,Heidelberg Instruments,organization,,DEU
+P96,Thermo Fisher,organization,,USA
+P97,Hitachi,organization,Hitachi High-Tech,JPN
+P98,Zeiss,organization,,DEU
+P99,Tescan,organization,,CZE

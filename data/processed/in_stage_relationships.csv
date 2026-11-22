@@ -1,0 +1,12 @@
+input_id,input_name,stage_id,stage_name
+N0,Chip design,S1,Design
+N7,EDA and Core IP,S1,Design
+N16,Ion implantation,S2,Fabrication
+N25,Photolithography,S2,Fabrication
+N35,Deposition,S2,Fabrication
+N46,Etch and clean,S2,Fabrication
+N57,Chemical mechanical planarization,S2,Fabrication
+N69,Assembly and packaging,S3,"Assembly, testing, and packaging (ATP)"
+N78,Testing,S3,"Assembly, testing, and packaging (ATP)"
+N117,Fabrication materials,S2,Fabrication
+N118,Process control and handling,S2,Fabrication
