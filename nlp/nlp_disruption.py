@@ -1,6 +1,6 @@
 import feedparser
 import spacy
-from spacy.matcher import PhraseMatcher
+from spacy.matcher import Matcher, PhraseMatcher
 
 # Load small English NLP model
 nlp = spacy.load("en_core_web_sm")
@@ -11,8 +11,8 @@ ruler.add_patterns([
     {"label": "GPE", "pattern": [{"LOWER": {"IN": ["chinese", "philippine", "egyptian", "russian", "indian", "american"]}}]}
 ])
 
-# Initialize PhraseMatcher (case-insensitive) for disruption event classification
-matcher = PhraseMatcher(nlp.vocab, attr="LOWER")
+# 1. Exact phrase matcher for multi-word disruption terms
+phrase_matcher = PhraseMatcher(nlp.vocab, attr="LOWER")
 
 DISRUPTION_PATTERNS = {
     "LABOR_STRIKE": ["strike", "workers strike", "walkout", "labor dispute", "union strike", "lay off", "layoffs"],
@@ -23,7 +23,32 @@ DISRUPTION_PATTERNS = {
 
 for category, phrases in DISRUPTION_PATTERNS.items():
     patterns = [nlp.make_doc(phrase) for phrase in phrases]
-    matcher.add(category, patterns)
+    phrase_matcher.add(category, patterns)
+
+# 2. Token-level lemma matcher to catch word variations & modifiers (e.g., "halts egg production", "congested Chinese ports")
+token_matcher = Matcher(nlp.vocab)
+token_matcher.add("PORT_CONGESTION", [
+    [{"LEMMA": {"IN": ["congest", "block", "close", "restrict", "delay"]}}, {"IS_ALPHA": True, "OP": "*"}, {"LEMMA": {"IN": ["port", "shipping", "vessel", "cargo"]}}],
+    [{"LEMMA": {"IN": ["port", "shipping", "cargo"]}}, {"IS_ALPHA": True, "OP": "*"}, {"LEMMA": {"IN": ["congest", "congestion", "delay", "backlog", "restrict"]}}]
+])
+token_matcher.add("FACILITY_SHUTDOWN", [
+    [{"LEMMA": {"IN": ["close", "shutdown", "halt", "suspend"]}}, {"IS_ALPHA": True, "OP": "*"}, {"LEMMA": {"IN": ["factory", "plant", "warehouse", "facility", "production"]}}],
+    [{"LEMMA": {"IN": ["factory", "plant", "warehouse", "facility"]}}, {"IS_ALPHA": True, "OP": "*"}, {"LEMMA": {"IN": ["closure", "close", "shutdown", "halt"]}}]
+])
+token_matcher.add("LABOR_STRIKE", [
+    [{"LEMMA": {"IN": ["worker", "staff", "union", "driver"]}}, {"IS_ALPHA": True, "OP": "*"}, {"LEMMA": {"IN": ["strike", "walkout", "protest"]}}]
+])
+
+# Base severity weights per disruption category
+CATEGORY_WEIGHTS = {
+    "FACILITY_SHUTDOWN": 4,
+    "PORT_CONGESTION": 3,
+    "LABOR_STRIKE": 3,
+    "GEOPOLITICAL_TRADE": 3,
+    "GENERAL_DISRUPTION": 1
+}
+
+HIGH_IMPACT_LEMMAS = {"halt", "shutdown", "closure", "blockade", "ban", "crisis", "severe", "indefinite", "suspend", "outbreak"}
 
 RSS_SOURCES = [
     ("Supply Chain Dive", "https://www.supplychaindive.com/feeds/news/"),
@@ -66,7 +91,6 @@ def fetch_supply_chain_news(query="supply chain strike OR port closure OR factor
                 "link": entry.get("link", "")
             })
 
-    # Fallback sample headlines if all RSS feeds are rate-limited or offline
     if not articles:
         sample_titles = [
             "Philippine DHL workers strike against warehouse closure - World Socialist Web Site",
@@ -80,22 +104,42 @@ def fetch_supply_chain_news(query="supply chain strike OR port closure OR factor
     return articles
 
 
+def calculate_severity(doc, event_types, organizations, locations):
+    """Computes a 1-10 severity score and risk level (LOW, MEDIUM, HIGH) from NLP signals."""
+    score = sum(CATEGORY_WEIGHTS.get(evt, 1) for evt in event_types)
+
+    if organizations:
+        score += 1
+    if locations:
+        score += 1
+    if any(token.lemma_.lower() in HIGH_IMPACT_LEMMAS for token in doc):
+        score += 2
+
+    score = min(score, 10)
+    if score >= 7:
+        level = "HIGH"
+    elif score >= 4:
+        level = "MEDIUM"
+    else:
+        level = "LOW"
+
+    return {"score": score, "level": level}
+
+
 def analyze_disruption_headline(text):
-    """Extracts affected entities (NER) and classifies disruption event types (PhraseMatcher)."""
+    """Extracts entities, classifies disruption events via phrase + lemma matching, and scores severity."""
     doc = nlp(text)
 
     organizations = []
     locations = []
     for ent in doc.ents:
-        # Filter out long Title-Case headline phrases misread as ORGs
         if ent.label_ == "ORG" and len(ent.text.split()) <= 4 and ent.text not in organizations:
             organizations.append(ent.text)
         elif ent.label_ in ("GPE", "LOC", "FAC") and ent.text not in locations:
             locations.append(ent.text)
 
-    matches = matcher(doc)
     event_types = []
-    for match_id, start, end in matches:
+    for match_id, start, end in phrase_matcher(doc) + token_matcher(doc):
         label = nlp.vocab.strings[match_id]
         if label not in event_types:
             event_types.append(label)
@@ -103,10 +147,13 @@ def analyze_disruption_headline(text):
     if not event_types:
         event_types.append("GENERAL_DISRUPTION")
 
+    severity = calculate_severity(doc, event_types, organizations, locations)
+
     return {
         "organizations": organizations,
         "locations": locations,
-        "event_types": event_types
+        "event_types": event_types,
+        "severity": severity
     }
 
 
@@ -117,6 +164,7 @@ if __name__ == "__main__":
         analysis = analyze_disruption_headline(item["title"])
         print(f"Headline: {item['title']} (Source: {item['source']})")
         print("  Event Types:", analysis["event_types"])
+        print(f"  Severity: {analysis['severity']['level']} ({analysis['severity']['score']}/10)")
         print("  Orgs:", analysis["organizations"])
         print("  Locations:", analysis["locations"])
         print("-" * 50)
