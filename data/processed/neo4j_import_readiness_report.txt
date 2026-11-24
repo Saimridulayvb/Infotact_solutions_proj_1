@@ -1,0 +1,105 @@
+ATMOGRAPH - NEO4J IMPORT READINESS CHECK
+==================================================
+
+NODE VALIDATION
+
+Provider
+Total records: 396
+Unique IDs: 396
+Missing IDs: 0
+Duplicate IDs: 0
+Status: PASS
+
+SupplyChainInput
+Total records: 126
+Unique IDs: 126
+Missing IDs: 0
+Duplicate IDs: 0
+Status: PASS
+
+Stage
+Total records: 3
+Unique IDs: 3
+Missing IDs: 0
+Duplicate IDs: 0
+Status: PASS
+
+==================================================
+RELATIONSHIP VALIDATION
+
+PROVIDES RELATIONSHIPS
+Total records: 1279
+Missing source IDs: 0
+Missing target IDs: 0
+Invalid source endpoints: 0
+Invalid target endpoints: 0
+Duplicate relationships: 0
+Status: PASS
+
+GOES_INTO RELATIONSHIPS
+Total records: 52
+Missing source IDs: 0
+Missing target IDs: 0
+Invalid source endpoints: 0
+Invalid target endpoints: 0
+Duplicate relationships: 0
+Status: PASS
+
+IS_TYPE_OF RELATIONSHIPS
+Total records: 87
+Missing source IDs: 0
+Missing target IDs: 0
+Invalid source endpoints: 0
+Invalid target endpoints: 0
+Duplicate relationships: 0
+Status: PASS
+
+IN_STAGE RELATIONSHIPS
+Total records: 11
+Missing source IDs: 0
+Missing target IDs: 0
+Invalid source endpoints: 0
+Invalid target endpoints: 0
+Duplicate relationships: 0
+Status: PASS
+
+==================================================
+
+PROVIDES PROPERTY QUALITY ANALYSIS
+==================================================
+Total PROVIDES records: 1279
+
+Property: year
+Available values: 1279
+Missing values: 0
+Missing percentage: 0.00%
+
+Property: share_provided
+Available values: 1033
+Missing values: 246
+Missing percentage: 19.23%
+
+Property: source
+Available values: 1173
+Missing values: 106
+Missing percentage: 8.29%
+
+YEAR-WISE RELATIONSHIP RECORDS
+----------------------------------------
+Year 2025: 977 records
+Year 2019: 264 records
+Year 2022: 22 records
+Year 2021: 16 records
+
+DATA QUALITY HANDLING
+Missing share values are preserved.
+Missing source values are preserved.
+Missing values are not replaced with zero.
+
+==================================================
+FINAL VALIDATION SUMMARY
+ALL VALIDATION CHECKS PASSED.
+Datasets are ready for Neo4j import validation.
+Total checks performed: 8
+Passed: 8
+Failed: 0
