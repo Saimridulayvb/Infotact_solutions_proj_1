@@ -1,3 +1,6 @@
+from datetime import datetime, timezone
+import hashlib
+import json
 import feedparser
 import spacy
 from spacy.matcher import Matcher, PhraseMatcher
@@ -5,11 +8,14 @@ from spacy.matcher import Matcher, PhraseMatcher
 # Load small English NLP model
 nlp = spacy.load("en_core_web_sm")
 
-# Add EntityRuler before NER to prevent Title-Case false positives and catch key locations
+# Add EntityRuler before NER to prevent false positives and catch key locations/companies
 ruler = nlp.add_pipe("entity_ruler", before="ner")
 ruler.add_patterns([
-    {"label": "GPE", "pattern": [{"LOWER": {"IN": ["chinese", "philippine", "egyptian", "russian", "indian", "american"]}}]}
+    {"label": "GPE", "pattern": [{"LOWER": {"IN": ["chinese", "philippine", "egyptian", "russian", "indian", "american"]}}]},
+    {"label": "ORG", "pattern": [{"LOWER": {"IN": ["nvidia", "walmart", "amazon", "dhl", "maersk", "tsmc"]}}]}
 ])
+
+IGNORED_LOCATIONS = {"ai", "q1", "q2", "q3", "q4"}
 
 # 1. Exact phrase matcher for multi-word disruption terms
 phrase_matcher = PhraseMatcher(nlp.vocab, attr="LOWER")
@@ -25,7 +31,7 @@ for category, phrases in DISRUPTION_PATTERNS.items():
     patterns = [nlp.make_doc(phrase) for phrase in phrases]
     phrase_matcher.add(category, patterns)
 
-# 2. Token-level lemma matcher to catch word variations & modifiers (e.g., "halts egg production", "congested Chinese ports")
+# 2. Token-level lemma matcher to catch word variations & modifiers
 token_matcher = Matcher(nlp.vocab)
 token_matcher.add("PORT_CONGESTION", [
     [{"LEMMA": {"IN": ["congest", "block", "close", "restrict", "delay"]}}, {"IS_ALPHA": True, "OP": "*"}, {"LEMMA": {"IN": ["port", "shipping", "vessel", "cargo"]}}],
@@ -39,7 +45,6 @@ token_matcher.add("LABOR_STRIKE", [
     [{"LEMMA": {"IN": ["worker", "staff", "union", "driver"]}}, {"IS_ALPHA": True, "OP": "*"}, {"LEMMA": {"IN": ["strike", "walkout", "protest"]}}]
 ])
 
-# Base severity weights per disruption category
 CATEGORY_WEIGHTS = {
     "FACILITY_SHUTDOWN": 4,
     "PORT_CONGESTION": 3,
@@ -65,6 +70,18 @@ def clean_headline(raw_title, default_source="Unknown"):
     return raw_title.strip(), default_source
 
 
+def deduplicate_articles(articles):
+    """Removes duplicate articles based on normalized headline text."""
+    seen = set()
+    unique = []
+    for article in articles:
+        norm_title = " ".join(article["title"].lower().split())
+        if norm_title and norm_title not in seen:
+            seen.add(norm_title)
+            unique.append(article)
+    return unique
+
+
 def fetch_supply_chain_news(query="supply chain strike OR port closure OR factory shutdown", limit=7):
     """Fetches recent supply-chain disruption headlines from reliable RSS feeds with fallback."""
     formatted_query = query.replace(" ", "+")
@@ -72,7 +89,7 @@ def fetch_supply_chain_news(query="supply chain strike OR port closure OR factor
     articles = []
 
     for source_name, url_template in RSS_SOURCES:
-        if len(articles) >= limit:
+        if len(articles) >= limit * 2:
             break
         rss_url = url_template.format(query=formatted_query)
         feed = feedparser.parse(rss_url, request_headers=headers)
@@ -81,8 +98,6 @@ def fetch_supply_chain_news(query="supply chain strike OR port closure OR factor
             continue
 
         for entry in feed.entries:
-            if len(articles) >= limit:
-                break
             headline, source = clean_headline(entry.get("title", ""), default_source=source_name)
             articles.append({
                 "title": headline,
@@ -97,11 +112,11 @@ def fetch_supply_chain_news(query="supply chain strike OR port closure OR factor
             "Congested Chinese Ports Cause Supply Chain Operation Issues - Supply Chain Digital Magazine",
             "Amazon to temporarily close Florida facility, lay off nearly 500 - Supply Chain Dive"
         ]
-        for raw in sample_titles[:limit]:
+        for raw in sample_titles:
             headline, source = clean_headline(raw)
             articles.append({"title": headline, "source": source, "published": "", "link": ""})
 
-    return articles
+    return deduplicate_articles(articles)[:limit]
 
 
 def calculate_severity(doc, event_types, organizations, locations):
@@ -135,7 +150,11 @@ def analyze_disruption_headline(text):
     for ent in doc.ents:
         if ent.label_ == "ORG" and len(ent.text.split()) <= 4 and ent.text not in organizations:
             organizations.append(ent.text)
-        elif ent.label_ in ("GPE", "LOC", "FAC") and ent.text not in locations:
+        elif (
+            ent.label_ in ("GPE", "LOC", "FAC")
+            and ent.text.lower() not in IGNORED_LOCATIONS
+            and ent.text not in locations
+        ):
             locations.append(ent.text)
 
     event_types = []
@@ -157,14 +176,39 @@ def analyze_disruption_headline(text):
     }
 
 
-if __name__ == "__main__":
-    news = fetch_supply_chain_news(limit=5)
-    print(f"Analyzed {len(news)} articles:\n")
-    for item in news:
+def get_disruption_report(query="supply chain strike OR port closure OR factory shutdown", limit=5):
+    """Builds a structured JSON-serializable disruption report for backend API integration."""
+    articles = fetch_supply_chain_news(query=query, limit=limit)
+    events = []
+
+    for item in articles:
         analysis = analyze_disruption_headline(item["title"])
-        print(f"Headline: {item['title']} (Source: {item['source']})")
-        print("  Event Types:", analysis["event_types"])
-        print(f"  Severity: {analysis['severity']['level']} ({analysis['severity']['score']}/10)")
-        print("  Orgs:", analysis["organizations"])
-        print("  Locations:", analysis["locations"])
-        print("-" * 50)
+        article_id = hashlib.sha256(item["title"].encode("utf-8")).hexdigest()[:12]
+        events.append({
+            "id": article_id,
+            "title": item["title"],
+            "source": item["source"],
+            "published": item["published"],
+            "link": item["link"],
+            "event_types": analysis["event_types"],
+            "organizations": analysis["organizations"],
+            "locations": analysis["locations"],
+            "severity": analysis["severity"]
+        })
+
+    # Sort highest-severity disruptions first
+    events.sort(key=lambda e: e["severity"]["score"], reverse=True)
+
+    return {
+        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "total_events": len(events),
+        "high_severity_count": sum(1 for e in events if e["severity"]["level"] == "HIGH"),
+        "events": events
+    }
+
+
+if __name__ == "__main__":
+    report = get_disruption_report(limit=5)
+    print(json.dumps(report, indent=2))
+    with open("nlp/sample_output.json", "w", encoding="utf-8") as f:
+        json.dump(report, f, indent=2)

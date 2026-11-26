@@ -1,0 +1,95 @@
+{
+  "generated_at": "2026-11-26T18:42:04.636661+00:00",
+  "total_events": 5,
+  "high_severity_count": 0,
+  "events": [
+    {
+      "id": "489c94780e1e",
+      "title": "US readies tariffs over manufacturing capacity, production concerns",
+      "source": "Supply Chain Dive",
+      "published": "Wed, 25 Nov 2026 11:34:26 -0500",
+      "link": "https://www.supplychaindive.com/news/us-readies-tariffs-over-manufacturing-capacity-production-concerns/875639/",
+      "event_types": [
+        "GENERAL_DISRUPTION"
+      ],
+      "organizations": [],
+      "locations": [
+        "US"
+      ],
+      "severity": {
+        "score": 2,
+        "level": "LOW"
+      }
+    },
+    {
+      "id": "06140a0501f9",
+      "title": "PETA alleges animal abuse in PepsiCo\u2019s supply chain",
+      "source": "Supply Chain Dive",
+      "published": "Wed, 25 Nov 2026 11:17:00 -0500",
+      "link": "https://www.supplychaindive.com/news/peta-alleges-animal-abuse-in-pepsicos-supply-chain/875654/",
+      "event_types": [
+        "GENERAL_DISRUPTION"
+      ],
+      "organizations": [
+        "PepsiCo"
+      ],
+      "locations": [],
+      "severity": {
+        "score": 2,
+        "level": "LOW"
+      }
+    },
+    {
+      "id": "1139f2d3a1b4",
+      "title": "USPS to upgrade 16 sites just before peak season rush",
+      "source": "Supply Chain Dive",
+      "published": "Wed, 25 Nov 2026 08:57:27 -0500",
+      "link": "https://www.supplychaindive.com/news/usps-to-upgrade-16-sites-just-before-peak-season-rush/875592/",
+      "event_types": [
+        "GENERAL_DISRUPTION"
+      ],
+      "organizations": [
+        "USPS"
+      ],
+      "locations": [],
+      "severity": {
+        "score": 2,
+        "level": "LOW"
+      }
+    },
+    {
+      "id": "f27996b1a9da",
+      "title": "Procter & Gamble plans supply chain workforce cuts as automation expands",
+      "source": "Supply Chain Dive",
+      "published": "Tue, 24 Nov 2026 12:11:00 -0500",
+      "link": "https://www.supplychaindive.com/news/procter-gamble-plans-supply-chain-workforce-cuts-as-automation-expands/875533/",
+      "event_types": [
+        "GENERAL_DISRUPTION"
+      ],
+      "organizations": [
+        "Procter & Gamble"
+      ],
+      "locations": [],
+      "severity": {
+        "score": 2,
+        "level": "LOW"
+      }
+    },
+    {
+      "id": "94cb9644e72e",
+      "title": "Molson Coors, Primo Brands use fuel hedging to tackle logistics costs",
+      "source": "Supply Chain Dive",
+      "published": "Wed, 25 Nov 2026 13:41:00 -0500",
+      "link": "https://www.supplychaindive.com/news/molson-coors-primo-brands-use-fuel-hedging-to-tackle-logistics-costs/875552/",
+      "event_types": [
+        "GENERAL_DISRUPTION"
+      ],
+      "organizations": [],
+      "locations": [],
+      "severity": {
+        "score": 1,
+        "level": "LOW"
+      }
+    }
+  ]
+}
