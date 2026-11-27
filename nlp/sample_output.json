@@ -1,8 +1,26 @@
 {
-  "generated_at": "2026-11-26T18:42:04.636661+00:00",
+  "generated_at": "2026-11-27T17:05:26.079738+00:00",
   "total_events": 5,
   "high_severity_count": 0,
   "events": [
+    {
+      "id": "f27996b1a9da",
+      "title": "Procter & Gamble plans supply chain workforce cuts as automation expands",
+      "source": "Supply Chain Dive",
+      "published": "Tue, 24 Nov 2026 12:11:00 -0500",
+      "link": "https://www.supplychaindive.com/news/procter-gamble-plans-supply-chain-workforce-cuts-as-automation-expands/875533/",
+      "event_types": [
+        "LABOR_STRIKE"
+      ],
+      "organizations": [
+        "Procter & Gamble"
+      ],
+      "locations": [],
+      "severity": {
+        "score": 4,
+        "level": "MEDIUM"
+      }
+    },
     {
       "id": "489c94780e1e",
       "title": "US readies tariffs over manufacturing capacity, production concerns",
@@ -22,8 +40,8 @@
       }
     },
     {
-      "id": "06140a0501f9",
-      "title": "PETA alleges animal abuse in PepsiCo\u2019s supply chain",
+      "id": "7e05cf8f157b",
+      "title": "PETA alleges animal abuse in PepsiCo's supply chain",
       "source": "Supply Chain Dive",
       "published": "Wed, 25 Nov 2026 11:17:00 -0500",
       "link": "https://www.supplychaindive.com/news/peta-alleges-animal-abuse-in-pepsicos-supply-chain/875654/",
@@ -50,24 +68,6 @@
       ],
       "organizations": [
         "USPS"
-      ],
-      "locations": [],
-      "severity": {
-        "score": 2,
-        "level": "LOW"
-      }
-    },
-    {
-      "id": "f27996b1a9da",
-      "title": "Procter & Gamble plans supply chain workforce cuts as automation expands",
-      "source": "Supply Chain Dive",
-      "published": "Tue, 24 Nov 2026 12:11:00 -0500",
-      "link": "https://www.supplychaindive.com/news/procter-gamble-plans-supply-chain-workforce-cuts-as-automation-expands/875533/",
-      "event_types": [
-        "GENERAL_DISRUPTION"
-      ],
-      "organizations": [
-        "Procter & Gamble"
       ],
       "locations": [],
       "severity": {

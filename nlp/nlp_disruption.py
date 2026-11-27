@@ -1,6 +1,7 @@
 from datetime import datetime, timezone
 import hashlib
 import json
+import unicodedata
 import feedparser
 import spacy
 from spacy.matcher import Matcher, PhraseMatcher
@@ -12,7 +13,7 @@ nlp = spacy.load("en_core_web_sm")
 ruler = nlp.add_pipe("entity_ruler", before="ner")
 ruler.add_patterns([
     {"label": "GPE", "pattern": [{"LOWER": {"IN": ["chinese", "philippine", "egyptian", "russian", "indian", "american"]}}]},
-    {"label": "ORG", "pattern": [{"LOWER": {"IN": ["nvidia", "walmart", "amazon", "dhl", "maersk", "tsmc"]}}]}
+    {"label": "ORG", "pattern": [{"LOWER": {"IN": ["nvidia", "walmart", "amazon", "dhl", "maersk", "tsmc", "pepsico", "usps"]}}]}
 ])
 
 IGNORED_LOCATIONS = {"ai", "q1", "q2", "q3", "q4"}
@@ -21,10 +22,22 @@ IGNORED_LOCATIONS = {"ai", "q1", "q2", "q3", "q4"}
 phrase_matcher = PhraseMatcher(nlp.vocab, attr="LOWER")
 
 DISRUPTION_PATTERNS = {
-    "LABOR_STRIKE": ["strike", "workers strike", "walkout", "labor dispute", "union strike", "lay off", "layoffs"],
-    "PORT_CONGESTION": ["port closure", "congested ports", "port congestion", "shipping delay", "vessel backlog", "port restrictions"],
-    "FACILITY_SHUTDOWN": ["factory shutdown", "warehouse closure", "plant closure", "temporarily close", "halt production", "production halt"],
-    "GEOPOLITICAL_TRADE": ["tariff", "sanctions", "export ban", "trade restriction", "blockade", "border closure"]
+    "LABOR_STRIKE": [
+        "strike", "workers strike", "walkout", "labor dispute",
+        "union strike", "lay off", "layoffs", "workforce cuts", "job cuts"
+    ],
+    "PORT_CONGESTION": [
+        "port closure", "congested ports", "port congestion",
+        "shipping delay", "vessel backlog", "port restrictions"
+    ],
+    "FACILITY_SHUTDOWN": [
+        "factory shutdown", "warehouse closure", "plant closure",
+        "temporarily close", "halt production", "production halt"
+    ],
+    "GEOPOLITICAL_TRADE": [
+        "tariff", "sanctions", "export ban", "trade restriction",
+        "blockade", "border closure"
+    ]
 }
 
 for category, phrases in DISRUPTION_PATTERNS.items():
@@ -42,7 +55,7 @@ token_matcher.add("FACILITY_SHUTDOWN", [
     [{"LEMMA": {"IN": ["factory", "plant", "warehouse", "facility"]}}, {"IS_ALPHA": True, "OP": "*"}, {"LEMMA": {"IN": ["closure", "close", "shutdown", "halt"]}}]
 ])
 token_matcher.add("LABOR_STRIKE", [
-    [{"LEMMA": {"IN": ["worker", "staff", "union", "driver"]}}, {"IS_ALPHA": True, "OP": "*"}, {"LEMMA": {"IN": ["strike", "walkout", "protest"]}}]
+    [{"LEMMA": {"IN": ["worker", "staff", "union", "driver", "workforce"]}}, {"IS_ALPHA": True, "OP": "*"}, {"LEMMA": {"IN": ["strike", "walkout", "protest", "cut", "layoff"]}}]
 ])
 
 CATEGORY_WEIGHTS = {
@@ -61,13 +74,28 @@ RSS_SOURCES = [
     ("Google News", "https://news.google.com/rss/search?q={query}&hl=en-US&gl=US&ceid=US:en")
 ]
 
+DEFAULT_QUERIES = [
+    "supply chain strike OR port closure",
+    "factory shutdown OR shipping delay"
+]
+
+
+def normalize_text(text):
+    """Normalizes smart quotes/dashes (e.g., '\\u2019') into clean ASCII-friendly punctuation."""
+    cleaned = unicodedata.normalize("NFKC", text)
+    replacements = {"\u2018": "'", "\u2019": "'", "\u201c": '"', "\u201d": '"', "\u2013": "-", "\u2014": "-"}
+    for bad, good in replacements.items():
+        cleaned = cleaned.replace(bad, good)
+    return " ".join(cleaned.split())
+
 
 def clean_headline(raw_title, default_source="Unknown"):
-    """Separates the core headline from the trailing ' - Publisher' added by Google News RSS."""
-    if " - " in raw_title:
-        parts = raw_title.rsplit(" - ", 1)
+    """Normalizes text and separates the core headline from trailing ' - Publisher'."""
+    normalized = normalize_text(raw_title)
+    if " - " in normalized:
+        parts = normalized.rsplit(" - ", 1)
         return parts[0].strip(), parts[1].strip()
-    return raw_title.strip(), default_source
+    return normalized.strip(), default_source
 
 
 def deduplicate_articles(articles):
@@ -75,36 +103,44 @@ def deduplicate_articles(articles):
     seen = set()
     unique = []
     for article in articles:
-        norm_title = " ".join(article["title"].lower().split())
+        norm_title = article["title"].lower().strip()
         if norm_title and norm_title not in seen:
             seen.add(norm_title)
             unique.append(article)
     return unique
 
 
-def fetch_supply_chain_news(query="supply chain strike OR port closure OR factory shutdown", limit=7):
-    """Fetches recent supply-chain disruption headlines from reliable RSS feeds with fallback."""
-    formatted_query = query.replace(" ", "+")
+def fetch_supply_chain_news(queries=None, limit=7):
+    """Aggregates supply-chain headlines across multiple queries and RSS sources with error handling."""
+    if isinstance(queries, str):
+        queries = [queries]
+    elif not queries:
+        queries = DEFAULT_QUERIES
+
     headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"}
     articles = []
 
-    for source_name, url_template in RSS_SOURCES:
-        if len(articles) >= limit * 2:
-            break
-        rss_url = url_template.format(query=formatted_query)
-        feed = feedparser.parse(rss_url, request_headers=headers)
+    for query in queries:
+        formatted_query = query.replace(" ", "+")
+        for source_name, url_template in RSS_SOURCES:
+            if len(articles) >= limit * 2:
+                break
+            rss_url = url_template.format(query=formatted_query)
+            try:
+                feed = feedparser.parse(rss_url, request_headers=headers)
+                if feed.get("status") in (403, 429, 503) or not feed.entries:
+                    continue
 
-        if feed.get("status") == 503 or not feed.entries:
-            continue
-
-        for entry in feed.entries:
-            headline, source = clean_headline(entry.get("title", ""), default_source=source_name)
-            articles.append({
-                "title": headline,
-                "source": source,
-                "published": entry.get("published", ""),
-                "link": entry.get("link", "")
-            })
+                for entry in feed.entries:
+                    headline, source = clean_headline(entry.get("title", ""), default_source=source_name)
+                    articles.append({
+                        "title": headline,
+                        "source": source,
+                        "published": entry.get("published", ""),
+                        "link": entry.get("link", "")
+                    })
+            except Exception:
+                continue
 
     if not articles:
         sample_titles = [
@@ -176,9 +212,9 @@ def analyze_disruption_headline(text):
     }
 
 
-def get_disruption_report(query="supply chain strike OR port closure OR factory shutdown", limit=5):
+def get_disruption_report(queries=None, limit=5):
     """Builds a structured JSON-serializable disruption report for backend API integration."""
-    articles = fetch_supply_chain_news(query=query, limit=limit)
+    articles = fetch_supply_chain_news(queries=queries, limit=limit)
     events = []
 
     for item in articles:
@@ -196,7 +232,6 @@ def get_disruption_report(query="supply chain strike OR port closure OR factory 
             "severity": analysis["severity"]
         })
 
-    # Sort highest-severity disruptions first
     events.sort(key=lambda e: e["severity"]["score"], reverse=True)
 
     return {
@@ -209,6 +244,6 @@ def get_disruption_report(query="supply chain strike OR port closure OR factory 
 
 if __name__ == "__main__":
     report = get_disruption_report(limit=5)
-    print(json.dumps(report, indent=2))
+    print(json.dumps(report, indent=2, ensure_ascii=False))
     with open("nlp/sample_output.json", "w", encoding="utf-8") as f:
-        json.dump(report, f, indent=2)
+        json.dump(report, f, indent=2, ensure_ascii=False)
