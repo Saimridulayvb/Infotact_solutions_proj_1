@@ -48,14 +48,13 @@ for category, phrases in DISRUPTION_PATTERNS.items():
 token_matcher = Matcher(nlp.vocab)
 token_matcher.add("PORT_CONGESTION", [
     [{"LEMMA": {"IN": ["congest", "block", "close", "restrict", "delay"]}}, {"IS_ALPHA": True, "OP": "*"}, {"LEMMA": {"IN": ["port", "shipping", "vessel", "cargo"]}}],
+    [{"LOWER": {"IN": ["congested", "blocked", "closed", "restricted", "delayed"]}}, {"IS_ALPHA": True, "OP": "*"}, {"LOWER": {"IN": ["port", "ports", "shipping", "vessel", "cargo"]}}],
     [{"LEMMA": {"IN": ["port", "shipping", "cargo"]}}, {"IS_ALPHA": True, "OP": "*"}, {"LEMMA": {"IN": ["congest", "congestion", "delay", "backlog", "restrict"]}}]
 ])
 token_matcher.add("FACILITY_SHUTDOWN", [
     [{"LEMMA": {"IN": ["close", "shutdown", "halt", "suspend"]}}, {"IS_ALPHA": True, "OP": "*"}, {"LEMMA": {"IN": ["factory", "plant", "warehouse", "facility", "production"]}}],
+    [{"LOWER": {"IN": ["closed", "halted", "suspended", "shuttered"]}}, {"IS_ALPHA": True, "OP": "*"}, {"LOWER": {"IN": ["factory", "factories", "plant", "plants", "warehouse", "warehouses", "facility", "facilities", "production"]}}],
     [{"LEMMA": {"IN": ["factory", "plant", "warehouse", "facility"]}}, {"IS_ALPHA": True, "OP": "*"}, {"LEMMA": {"IN": ["closure", "close", "shutdown", "halt"]}}]
-])
-token_matcher.add("LABOR_STRIKE", [
-    [{"LEMMA": {"IN": ["worker", "staff", "union", "driver", "workforce"]}}, {"IS_ALPHA": True, "OP": "*"}, {"LEMMA": {"IN": ["strike", "walkout", "protest", "cut", "layoff"]}}]
 ])
 
 CATEGORY_WEIGHTS = {
